@@ -1,2 +1,4 @@
+node-modules/
+
 // IDE specific
 .idea

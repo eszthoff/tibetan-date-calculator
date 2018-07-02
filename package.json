@@ -1,0 +1,31 @@
+{
+  "name": "tibetan-calendar-calculator",
+  "description": "A library to caclulate tibetan calendar details. It is based on Svante Janson's paper www2.math.uu.se/~svante/papers/calendars/tibet.pdf",
+  "version": "0.0.1",
+  "author": "Rigpa",
+  "license": "MIT",
+  "main": "phugpa.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/TibetanCalendar/TibetanDateCalcualtor.git"
+  },
+  "keywords": [
+    "javascript",
+    "tibetan",
+    "calendar"
+  ],
+  "bugs": {
+    "url": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor/issues"
+  },
+  "homepage": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor#README"
+}

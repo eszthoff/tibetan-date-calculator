@@ -8,5 +8,8 @@
         "no-unused-vars": "warn",
         "no-plusplus": "off",
         "comma-dangle": "off"
+    },
+    "env": {
+        "jest": true
     }
 }

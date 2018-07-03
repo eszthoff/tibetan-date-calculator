@@ -15,6 +15,8 @@ const YEAR_DIFF = 127;
 const JULIAN_TO_UNIX = 2440587.5;
 // number of miliseconds in a year
 const MS_IN_YEAR = 86400000;
+// number of minutes in day
+const MIN_IN_DAY = 1440;
 
 // calendrical constants: month calculations
 
@@ -114,23 +116,32 @@ const SPECIAL_DAYS = {
 const frac = a => a % 1;
 
 /**
- * Modulo of a number (a % b), but from 1..b instead of 0..b-1
+ * Modulo of a number (a % b), but from 1..b instead of 0..b-1.
+ * This means that
+ *    amod(a, b) = a % b
+ * unless a is a multiple of b. In that case:
+ *    a % b = 0 but amod(a, b) = b.
+ *
  * @param {number} a - number to be devided
  * @param {number} b - the number to be devided with
  * @return {number}
  */
+// TODO: add control for b <= 0. Not urgent as this is not what we expect in calendar calculations (?)
 const amod = (a, b) => (a % b) || b;
 
 /**
  * get Julian date from UNIX date
- * since we use only date calculations here, there is no need to correct for timezone differences
  * see explanation:
  * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
  *
  * @property {Date} unixTime - the date object to be converted
  * @return {number} - julian date
  */
-const getJulianDateFromUnix = unixTime => Math.floor((unixTime / MS_IN_YEAR) + JULIAN_TO_UNIX);
+const getJulianDateFromUnix = unixTime => Math.floor(
+  unixTime / MS_IN_YEAR
+  - unixTime.getTimezoneOffset() / MIN_IN_DAY
+  + JULIAN_TO_UNIX
+);
 
 /**
  * get Unix date from Julian date
@@ -146,6 +157,10 @@ const getUnixDateFromJulian = (julianDate) => {
 
   return new Date(unixDate);
 };
+
+
+// YEAR FUNCTIONS
+
 
 /**
  * figure out the animal and element for a tibetan year
@@ -163,9 +178,6 @@ const yearAttributes = (year) => {
 
   return thisYear;
 };
-
-
-// YEAR FUNCTIONS
 
 /**
  * Figures out a year's info based on the Tibetan calendar, ex. the 3rd year of the 15th Rabjung calendrical cycle.
@@ -690,4 +702,39 @@ const yearCalendar = (tibYear) => {
   }
 
   return year;
+};
+
+module.exports = {
+  frac,
+  amod,
+  getJulianDateFromUnix,
+  getUnixDateFromJulian,
+  yearAttributes,
+  westernYear,
+  westernYearFromRabjung,
+  tibetanYear,
+  toMonthCount,
+  fromMonthCount,
+  hasLeapMonth,
+  meanDate,
+  meanSun,
+  moonAnomaly,
+  moonTab,
+  moonTabInt,
+  moonEqu,
+  sunAnomaly,
+  sunTab,
+  sunTabInt,
+  sunEqu,
+  trueDate,
+  getDayBefore,
+  tibToJulian,
+  tibToWestern,
+  tibDayToJulian,
+  westernToTib,
+  losar,
+  tibetanMonthInfo,
+  specialDay,
+  generateMonth,
+  yearCalendar
 };

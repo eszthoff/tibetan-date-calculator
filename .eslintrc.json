@@ -6,6 +6,7 @@
         "no-cond-assign": [2, "except-parens"],
         "radix": 0,
         "no-unused-vars": "warn",
-        "no-plusplus": "off"
+        "no-plusplus": "off",
+        "comma-dangle": "off"
     }
 }

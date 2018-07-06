@@ -68,7 +68,7 @@ const SPECIAL_DAYS = {
 
 /**
  * A year
- * @typedef {Object} year
+ * @typedef {Object} Year
  * @property {number} rabjungCycle - number of the cycle
  * @property {number} rabjungYear - number of the year within the cycle, from 1 to 60.
  * @property {number} westernYear - western year during which most of the given tibetan year falls
@@ -81,7 +81,7 @@ const SPECIAL_DAYS = {
 
 /**
  * A month
- * @typedef {Object} month
+ * @typedef {Object} Month
  * @property {number} year - Tibetan year
  * @property {number} month - month within the Tibetan year
  * @property {boolean} isLeapMonth - true if leap month
@@ -92,10 +92,10 @@ const SPECIAL_DAYS = {
  */
 
 /**
- * a day object
- * @typedef {Object} day
- * @property {year | number} year - a year object
- * @property {month | number} month - tibetan month number
+ * A day
+ * @typedef {Object} Day
+ * @property {Year | number} year - a year object
+ * @property {Month | number} month - tibetan month number
  * @property {number} day - the day number within the Tibetan month
  * @property {boolean} skippedDay - whether this is a skipped day, which does not figure in the calendar
  * @property {boolean} isLeapDay - whether this is a leap day
@@ -165,8 +165,8 @@ const getUnixDateFromJulian = (julianDate) => {
 /**
  * figure out the animal and element for a tibetan year
  *
- * @param {year} year
- * @return {year} with additional attributes
+ * @param {Year} year
+ * @return {Year} with additional attributes
  */
 const yearAttributes = (year) => {
   const thisYear = { ...year };
@@ -180,28 +180,12 @@ const yearAttributes = (year) => {
 };
 
 /**
- * Figures out a year's info based on the Tibetan calendar, ex. the 3rd year of the 15th Rabjung calendrical cycle.
- *
- * @param rabjungCycle : number of the cycle
- * @param rabjungYear : number of the year within the cycle, from 1 to 60.
- * @returns {null | number} : western calendar year
- */
-const westernYearFromRabjung = (rabjungCycle, rabjungYear) => {
-  if (rabjungYear < 1 || rabjungYear > RABJUNG_CYCLE_LENGTH) {
-    console.log(`Year number must be between 1 and ${RABJUNG_CYCLE_LENGTH}`);
-    return null;
-  }
-
-  return RABJUNG_BEGINNING + (rabjungCycle - 1) * RABJUNG_CYCLE_LENGTH + (rabjungYear - 1);
-};
-
-/**
  * Figures out a year's info from a Western calendar year number, ex. 2008.
  *
  * @param wYear: Western calendar year number, ex. 2008
- * @returns {year}
+ * @returns {Year}
  */
-const westernYear = wYear => ({
+const yearFromWestern = wYear => ({
   rabjungCycle: Math.ceil((wYear - RABJUNG_BEGINNING + 1) / RABJUNG_CYCLE_LENGTH),
   rabjungYear: amod(wYear - RABJUNG_BEGINNING + 1, RABJUNG_CYCLE_LENGTH),
   tibYear: wYear + YEAR_DIFF,
@@ -210,12 +194,35 @@ const westernYear = wYear => ({
 
 
 /**
+ * Figures out a year's info based on the Tibetan calendar, ex. the 3rd year of the 15th Rabjung calendrical cycle.
+ *
+ * @param rabjungCycle : number of the cycle
+ * @param rabjungYear : number of the year within the cycle, from 1 to 60.
+ * @returns {null | Year}
+ */
+const yearFromRabjung = (rabjungCycle, rabjungYear) => {
+  if (rabjungYear < 1 || rabjungYear > RABJUNG_CYCLE_LENGTH) {
+    console.log(`Year number must be between 1 and ${RABJUNG_CYCLE_LENGTH}`);
+    return null;
+  }
+  const wYear = RABJUNG_BEGINNING + (rabjungCycle - 1) * RABJUNG_CYCLE_LENGTH + (rabjungYear - 1);
+
+  return {
+    rabjungCycle,
+    rabjungYear,
+    tibYear: wYear + YEAR_DIFF,
+    westernYear: wYear,
+  };
+};
+
+
+/**
  * Figures out a year's info from a Tibetan calendar year number, ex. 2135.
  *
  * @param tYear - Tibetan calendar year number, ex. 2135.
- * @returns {year}
+ * @returns {Year}
  */
-const tibetanYear = tYear => westernYear(tYear - YEAR_DIFF);
+const yearFromTibetan = tYear => yearFromWestern(tYear - YEAR_DIFF);
 
 
 // MONTH FUNCTIONS
@@ -226,7 +233,7 @@ const tibetanYear = tYear => westernYear(tYear - YEAR_DIFF);
  * "Tibetan Calendar Mathematics", p.8 ff.
  *
  * @param {number} monthCount: the "month count" since beginning of epoch
- * @returns {month}
+ * @returns {Month}
  */
 const fromMonthCount = (monthCount) => {
   // const x = ceil(12 * S1 * n + ALPHA);
@@ -242,7 +249,7 @@ const fromMonthCount = (monthCount) => {
  * This is the reverse of fromMonthCount(n): from a Tibetan year, month number
  * and leap month indicator, calculates the "month count" based on the epoch.
  *
- * @param {month} monthObject
+ * @param {Month} monthObject
  * @returns {number} month count since epoch
  */
 const toMonthCount = ({ year, month, isLeapMonth }) => {
@@ -454,7 +461,7 @@ const tibToJulian = (year, month, isLeapMonth, day) => {
  * @param {number} day - day number (1 to 30)
  * @param {boolean} isLeapDay - is this day a leap day
  *
- * @returns {day} day - with all its attributes. isLeapMonth and isLeapDay are checked and corrected compared to input
+ * @returns {Day} day - with all its attributes. isLeapMonth and isLeapDay are checked and corrected compared to input
  */
 const tibToWestern = (year, month, isLeapMonth, day, isLeapDay) => {
   let julianDate = tibToJulian(year, month, isLeapMonth, day);
@@ -477,7 +484,7 @@ const tibToWestern = (year, month, isLeapMonth, day, isLeapDay) => {
   const westernDate = getUnixDateFromJulian(julianDate);
 
   return ({
-    year: tibetanYear(year),
+    year: yearFromTibetan(year),
     month: {
       year,
       month,
@@ -515,7 +522,7 @@ const tibDayToJulian = (dayCount) => {
  * and then using the fact that julian dates and "tibetan day numbers" have a quasi-linear relation.
  *
  * @param {Date} date - the western date
- * @return {day}
+ * @return {Day}
  */
 const westernToTib = (date) => {
   // const date = new Date(wYear, wMonth - 1, wDay);
@@ -581,7 +588,7 @@ const losar = (tibYear) => {
  * @param {number} year - the Tibetan year
  * @param {number} month - the Tibetan month number (1 to 12)
  * @param {boolean} isLeapMonth - if leap month or not
- * @returns {month}
+ * @returns {Month}
  */
 const tibetanMonthInfo = (year, month, isLeapMonth) => {
   const hasLeap = hasLeapMonth(year, month);
@@ -645,7 +652,7 @@ const specialDay = (dayNumber, dayObject, carriedFromPrevious) => {
  * @param {number} year - tibetan year
  * @param {number} month - month number
  * @param {boolean} isLeapMonth - if leap month
- * @return {month}
+ * @return {Month}
  */
 const generateMonth = (year, month, isLeapMonth) => {
   const thisMonth = tibetanMonthInfo(year, month, isLeapMonth);
@@ -688,11 +695,11 @@ const generateMonth = (year, month, isLeapMonth) => {
 /**
  * Generate a calendar for a whole Tibetan year, given by Tib. year number.
  * @param tibYear
- * @return {year} - the year's info, including each of the months as an array within .months
+ * @return {Year} - the year's info, including each of the months as an array within .months
  *     Each month includes all the days as an array within .days
  */
 const yearCalendar = (tibYear) => {
-  const year = tibetanYear(tibYear);
+  const year = yearFromTibetan(tibYear);
   year.months = [];
   for (let m = 1; m <= 12; m++) {
     if (hasLeapMonth(tibYear, m)) {
@@ -710,9 +717,9 @@ module.exports = {
   getJulianDateFromUnix,
   getUnixDateFromJulian,
   yearAttributes,
-  westernYear,
-  westernYearFromRabjung,
-  tibetanYear,
+  yearFromWestern,
+  yearFromRabjung,
+  yearFromTibetan,
   toMonthCount,
   fromMonthCount,
   hasLeapMonth,

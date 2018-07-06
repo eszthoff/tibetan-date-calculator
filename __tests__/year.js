@@ -1,5 +1,5 @@
 const {
-  yearAttributes, westernYear, westernYearFromRabjung, tibetanYear
+  yearAttributes, yearFromWestern, yearFromRabjung, yearFromTibetan
 } = require('../phugpa');
 
 const mockYearBasic = {
@@ -15,23 +15,23 @@ const mockYearAttributes = {
 };
 const mockYearAll = { ...mockYearBasic, ...mockYearAttributes };
 
-describe('westernYear(wYear)', () => {
+describe('yearFromWestern(wYear)', () => {
   it('should retrun the correct year attributes', () => {
-    const year = westernYear(2018);
+    const year = yearFromWestern(2018);
     expect(year).toMatchObject(mockYearBasic);
   });
 });
 
-describe('westernYearFromRabjung(cycle, year)', () => {
+describe('yearFromRabjung(cycle, year)', () => {
   it('should give correct western year', () => {
-    const wYear = westernYearFromRabjung(mockYearBasic.rabjungCycle, mockYearBasic.rabjungYear);
-    expect(wYear).toEqual(mockYearBasic.westernYear);
+    const year = yearFromRabjung(mockYearBasic.rabjungCycle, mockYearBasic.rabjungYear);
+    expect(year).toEqual(mockYearBasic);
   });
 });
 
-describe('tibetanYear(tYear', () => {
+describe('yearFromTibetan(tYear', () => {
   it('should return correct year attributes', () => {
-    expect(tibetanYear(mockYearBasic.tibYear)).toMatchObject(mockYearBasic);
+    expect(yearFromTibetan(mockYearBasic.tibYear)).toMatchObject(mockYearBasic);
   });
 });
 

@@ -1,6 +1,6 @@
-const {
+import {
   frac, amod, getJulianDateFromUnix, getUnixDateFromJulian
-} = require('../phugpa');
+} from '../src/helpers';
 
 describe('Frac(a)', () => {
   it('should return 0 if integer is give', () => {

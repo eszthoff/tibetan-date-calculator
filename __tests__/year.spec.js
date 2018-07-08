@@ -1,6 +1,6 @@
-const {
+import {
   yearAttributes, yearFromWestern, yearFromRabjung, yearFromTibetan
-} = require('../phugpa');
+} from '../src/year';
 
 const mockYearBasic = {
   rabjungCycle: 17,

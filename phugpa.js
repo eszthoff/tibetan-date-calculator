@@ -40,4 +40,3 @@
  * @property {Date} westernDate - the Western date corresponding to the Tibetan day.
  * @property {number} julianDate - the Julian day number for this Western date
  */
-

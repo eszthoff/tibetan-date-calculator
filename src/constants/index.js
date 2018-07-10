@@ -53,10 +53,10 @@ export const YEAR_GENDER = ['Male', 'Female'];
 
 // Special Days
 export const SPECIAL_DAYS = {
-  8: 'Medicine Buddha & Tara Day',
-  10: 'Guru Rinpoche Day',
-  15: 'Amitabha Buddha Day; Full Moon',
-  25: 'Dakini Day',
-  29: 'Dharmapala Day',
-  30: 'Shakyamuni Buddha Day; New Moon',
+  8: ['Medicine Buddha', 'Tara Day'],
+  10: ['Guru Rinpoche Day'],
+  15: ['Amitabha Buddha Day', 'Full Moon'],
+  25: ['Dakini Day'],
+  29: ['Dharmapala Day'],
+  30: ['Shakyamuni Buddha Day', 'New Moon'],
 };

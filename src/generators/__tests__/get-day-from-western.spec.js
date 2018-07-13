@@ -3,12 +3,12 @@ import { dayInDuplicateMonthMock, skippedDayMock, duplicateDayMock } from '../..
 
 describe('getDayFromWestern()', () => {
   it('should return the correct object', () => {
-    expect(getDayFromWestern(dayInDuplicateMonthMock.westernLeap))
+    expect(getDayFromWestern(new Date(dayInDuplicateMonthMock.westernLeap)))
       .toEqual(dayInDuplicateMonthMock.dayInLeapMonth);
-    expect(getDayFromWestern(dayInDuplicateMonthMock.westernMain))
+    expect(getDayFromWestern(new Date(dayInDuplicateMonthMock.westernMain)))
       .toEqual(dayInDuplicateMonthMock.dayInMainMonth);
-    expect(getDayFromWestern(skippedDayMock.western)).not.toEqual(skippedDayMock.dayObject);
-    expect(getDayFromWestern(duplicateDayMock.westernLeap)).toEqual(duplicateDayMock.leapDay);
-    expect(getDayFromWestern(duplicateDayMock.westernMain)).toEqual(duplicateDayMock.mainDay);
+    expect(getDayFromWestern(new Date(skippedDayMock.western))).not.toEqual(skippedDayMock.dayObject);
+    expect(getDayFromWestern(new Date(duplicateDayMock.westernLeap))).toEqual(duplicateDayMock.leapDay);
+    expect(getDayFromWestern(new Date(duplicateDayMock.westernMain))).toEqual(duplicateDayMock.mainDay);
   });
 });

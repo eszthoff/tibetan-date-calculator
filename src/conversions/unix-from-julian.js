@@ -15,8 +15,9 @@ import {
    */
 const unixFromJulian = (julianDate) => {
   const unixDate = (julianDate - JULIAN_TO_UNIX) * MS_IN_YEAR;
+  const unix = new Date(unixDate);
 
-  return new Date(unixDate);
+  return unix.toJSON();
 };
 
 

@@ -1,6 +1,6 @@
 import getMonthFromTibetan from './get-month-from-tibetan';
 import getDayFromTibetan from './get-day-from-tibetan';
-import dayAttributes from '../helpers';
+import { dayAttributes } from '../helpers';
 
 /**
  * generate a month with all its days
@@ -27,9 +27,6 @@ const getCalendarForMonth = (year, month, isLeapMonth) => {
     }
 
     [day.attributes, carrySpecial] = dayAttributes(d, day, carrySpecial);
-    if (day.skippedDay) {
-      d++;
-    }
 
     days.push(day);
   }

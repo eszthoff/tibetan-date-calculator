@@ -16,7 +16,7 @@ const dayAttributes = (dayNumber, dayObject, carriedFromPrevious = []) => {
   // apply speciality if carried over from previous day
   if (carriedFromPrevious) {
     carriedFromPrevious.forEach((att) => {
-      if (!attributes.find(att)) {
+      if (!attributes.includes(att)) {
         attributes.push(att);
       }
     });

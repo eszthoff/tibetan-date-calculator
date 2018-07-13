@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "author": "Rigpa",
   "license": "MIT",
-  "main": "phugpa.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "lint": "eslint . --fix",
     "test": "jest --coverage",

@@ -39,9 +39,8 @@ const getDayFromTibetan = (year, month, isLeapMonth, day, isLeapDay) => {
   const westernDate = unixFromJulian(julianDate);
 
   return ({
-    year: getYearFromTibetan(year),
+    year,
     month: {
-      year,
       month,
       isLeapMonth: isLeapMonth && hasLeapMonthThis,
       hasLeapMonth: hasLeapMonthThis,
@@ -50,8 +49,7 @@ const getDayFromTibetan = (year, month, isLeapMonth, day, isLeapDay) => {
     skippedDay,
     isLeapDay: isLeapDayChecked,
     hasLeapDay: hasLeapDayThis,
-    westernDate,
-    julianDate,
+    westernDate
   });
 };
 

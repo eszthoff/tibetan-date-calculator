@@ -1,6 +1,5 @@
 import getMonthFromTibetan from './get-month-from-tibetan';
 import getDayFromTibetan from './get-day-from-tibetan';
-import { dayAttributes } from '../helpers';
 
 /**
  * generate a month with all its days
@@ -12,8 +11,8 @@ import { dayAttributes } from '../helpers';
  */
 const getCalendarForMonth = (year, month, isLeapMonth) => {
   const thisMonth = getMonthFromTibetan(year, month, isLeapMonth);
-  let carrySpecial = [];
-  const days = [];
+  const days = {};
+  const westernIndex = {};
 
   // loop over the days, taking care of duplicate and missing days
   for (let d = 1; d <= 30; d++) {
@@ -21,14 +20,16 @@ const getCalendarForMonth = (year, month, isLeapMonth) => {
 
     // insert leap days before the main day
     if (day.hasLeapDay) {
-      const day2 = getDayFromTibetan(year, month, isLeapMonth, d, true);
-      [day2.attributes, carrySpecial] = dayAttributes(d, day2, carrySpecial);
-      days.push(day2);
+      const main = getDayFromTibetan(year, month, isLeapMonth, d, true);
+
+      days[d] = { doubled: true };
+      days[`${d}-main`] = main;
+      days[`${d}-leap`] = day;
+      westernIndex[main.westernDate] = `${year}-${month}-${d}-main`;
+      westernIndex[day.westernDate] = `${year}-${month}-${d}-leap`;
+    } else {
+      days[d] = day;
     }
-
-    [day.attributes, carrySpecial] = dayAttributes(d, day, carrySpecial);
-
-    days.push(day);
   }
 
   thisMonth.days = days;

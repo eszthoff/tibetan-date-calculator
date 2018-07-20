@@ -31,12 +31,11 @@
 /**
  * A day
  * @typedef {Object} Day
- * @property {number} year - th tibetan year this day belong to (e.g. 2150)
- * @property {number} month - tibetan month number this day belongs to
+ * @property {number} year - th tibetan year this day belongs to (e.g. 2150)
+ * @property {{month, isLeapMonth, hasLeapMonth}} month - tibetan month description this day belongs to
  * @property {number} day - the day number within the Tibetan month
  * @property {boolean} skippedDay - whether this is a skipped day, which does not figure in the calendar
  * @property {boolean} isLeapDay - whether this is a leap day
  * @property {boolean} hasLeapDay - whether this is a duplicated day
  * @property {string} westernDate - the Western date corresponding to the Tibetan day (as provided by unixFromJulian()).
- * @property {number} julianDate - the Julian day number for this Western date
  */

@@ -1,6 +1,6 @@
 import getLosarForYear from '../get-losar-for-year';
 
-const losar2018 = '2018-02-16T12:00:00.000Z';
+const losar2018 = '2018-02-16';
 
 describe('getLosarForYear()', () => {
   it('should return the correct date if Tibetan year is given', () => {

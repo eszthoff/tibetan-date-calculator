@@ -1,5 +1,5 @@
 import {
-  simpleMonthMock, leapMonthMock, mainMonthMock, month214502
+  simpleMonthMock, leapMonthMock, mainMonthMock, month214502, month214008leap, month214008main
 } from './month-mock';
 import { dayInDuplicateMonthMock, skippedDayMock, duplicateDayMock } from './day-mock';
 import { yearMock, year2018, year2013 } from './year-mock';
@@ -26,6 +26,8 @@ export {
   mainMonthMock,
   yearMock,
   month214502,
+  month214008leap,
+  month214008main,
   year2018,
   year2013
 };

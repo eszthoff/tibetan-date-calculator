@@ -13,10 +13,15 @@ import {
    * @property {Date} unixTime - the date object to be converted
    * @return {number} - julian date
    */
-const julianFromUnix = unixTime => Math.floor(
-  unixTime / MS_IN_YEAR
+const julianFromUnix = (unixTime) => {
+  const dateOnly = unixTime.toJSON().split('T')[0];
+  const timeAfterNoon = new Date(`${dateOnly}T18:00:00`);
+
+  return Math.floor(
+    timeAfterNoon / MS_IN_YEAR
     - unixTime.getTimezoneOffset() / MIN_IN_DAY
     + JULIAN_TO_UNIX
-);
+  );
+};
 
 export default julianFromUnix;

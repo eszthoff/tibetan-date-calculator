@@ -4,22 +4,29 @@
   "version": "0.0.1",
   "author": "Rigpa",
   "license": "MIT",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.umd.js",
   "scripts": {
     "lint": "eslint . --fix",
     "test": "jest --coverage",
-    "build": "webpack --mode production"
+    "build": "rollup -c"
   },
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "jest": "^23.2.0",
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
   },

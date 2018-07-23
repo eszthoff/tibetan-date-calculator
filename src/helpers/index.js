@@ -1,5 +1,4 @@
 import { frac, amod } from './math';
-import dayAttributes from './day-attributes';
 import getDayBefore from './get-day-before';
 import hasLeapMonth from './has-leap-month';
 import meanDate from './mean-date';
@@ -9,7 +8,6 @@ import yearAttributes from './year-attributes';
 
 
 export {
-  dayAttributes,
   yearAttributes,
   getDayBefore,
   hasLeapMonth,

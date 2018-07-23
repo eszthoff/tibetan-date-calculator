@@ -2,7 +2,6 @@ import {
   julianFromTibetan, monthCountFromTibetan, trueDateFromMonthCountDay, unixFromJulian
 } from '../conversions';
 import { getDayBefore, hasLeapMonth } from '../helpers';
-import getYearFromTibetan from './get-year-from-tibetan';
 
 /**
    * Calculates full information for a given Tibetan date

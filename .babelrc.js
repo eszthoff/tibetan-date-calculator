@@ -8,6 +8,7 @@ module.exports = {
 	],
 	plugins: [
 		"transform-object-rest-spread",
+		"external-helpers",
 		cjs && 'transform-es2015-modules-commonjs'
 	].filter(Boolean)
 };

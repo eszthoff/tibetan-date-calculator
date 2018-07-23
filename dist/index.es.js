@@ -247,7 +247,31 @@ var sunEqu = function sunEqu(day, monthCount) {
   return sunTab(12 * sunAnomaly(day, monthCount));
 };
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var objectWithoutProperties = function (obj, keys) {
+  var target = {};
+
+  for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;
+    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+    target[i] = obj[i];
+  }
+
+  return target;
+};
 
 /**
    * figure out the animal and element for a tibetan year
@@ -498,16 +522,11 @@ var getYearFromTibetan = function getYearFromTibetan(tYear) {
    return getYearFromWestern(tYear - YEAR_DIFF);
 };
 
-var _extends$1 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 /** internal helper function */
 var getEssentialMonth = function getEssentialMonth(_ref) {
   var days = _ref.days,
       westernIndex = _ref.westernIndex,
-      rest = _objectWithoutProperties(_ref, ['days', 'westernIndex']);
-
+      rest = objectWithoutProperties(_ref, ['days', 'westernIndex']);
   return rest;
 };
 
@@ -535,14 +554,14 @@ var getCalendarForYear = function getCalendarForYear(tYear) {
       months[tibYear + '-' + m] = { doubled: true };
       months[tibYear + '-' + m + '-main'] = getEssentialMonth(mainMonth);
       months[tibYear + '-' + m + '-leap'] = getEssentialMonth(leapMonth);
-      days = _extends$1({}, days, mainMonth.days, leapMonth.days);
-      westernIndex = _extends$1({}, westernIndex, mainMonth.westernIndex, leapMonth.westernIndex);
+      days = _extends({}, days, mainMonth.days, leapMonth.days);
+      westernIndex = _extends({}, westernIndex, mainMonth.westernIndex, leapMonth.westernIndex);
     } else {
       var month = getCalendarForMonth(tibYear, m, false);
 
       months[tibYear + '-' + m] = getEssentialMonth(month);
-      days = _extends$1({}, days, month.days);
-      westernIndex = _extends$1({}, westernIndex, month.westernIndex);
+      days = _extends({}, days, month.days);
+      westernIndex = _extends({}, westernIndex, month.westernIndex);
     }
   }
 

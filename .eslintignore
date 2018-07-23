@@ -1,4 +1,5 @@
 /node-modules
 /coverage
+/dist
 /src/__mocks__/2013.js
 /src/__mocks__/2018.js

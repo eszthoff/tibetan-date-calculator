@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDayFromWestern() should return the correct object 1`] = `
+Object {
+  "day": 4,
+  "hasLeapDay": false,
+  "isLeapDay": false,
+  "isPreviousSkipped": false,
+  "month": Object {
+    "hasLeapMonth": true,
+    "isLeapMonth": true,
+    "month": 8,
+  },
+  "skippedDay": false,
+  "westernDate": "2013-09-09",
+  "year": 2140,
+}
+`;
+
+exports[`getDayFromWestern() should return the correct object 2`] = `
+Object {
+  "day": 4,
+  "hasLeapDay": false,
+  "isLeapDay": false,
+  "isPreviousSkipped": false,
+  "month": Object {
+    "hasLeapMonth": true,
+    "isLeapMonth": false,
+    "month": 8,
+  },
+  "skippedDay": false,
+  "westernDate": "2013-10-08",
+  "year": 2140,
+}
+`;
+
+exports[`getDayFromWestern() should return the correct object 3`] = `
+Object {
+  "day": 8,
+  "hasLeapDay": true,
+  "isLeapDay": true,
+  "isPreviousSkipped": false,
+  "month": Object {
+    "hasLeapMonth": false,
+    "isLeapMonth": false,
+    "month": 2,
+  },
+  "skippedDay": false,
+  "westernDate": "2013-03-19",
+  "year": 2140,
+}
+`;
+
+exports[`getDayFromWestern() should return the correct object 4`] = `
+Object {
+  "day": 8,
+  "hasLeapDay": true,
+  "isLeapDay": false,
+  "isPreviousSkipped": false,
+  "month": Object {
+    "hasLeapMonth": false,
+    "isLeapMonth": false,
+    "month": 2,
+  },
+  "skippedDay": false,
+  "westernDate": "2013-03-20",
+  "year": 2140,
+}
+`;

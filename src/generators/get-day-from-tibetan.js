@@ -24,11 +24,14 @@ const getDayFromTibetan = (year, month, isLeapMonth, day, isLeapDay) => {
   const monthCount = monthCountFromTibetan({ year, month, isLeapMonth });
   const dayBefore = getDayBefore(day, monthCount);
   const julianDatePrevious = Math.floor(trueDateFromMonthCountDay(dayBefore.day, dayBefore.monthCount));
+  const twoDaysBefore = getDayBefore(dayBefore.day, dayBefore.monthCount);
+  const julianDate2DaysBefore = Math.floor(trueDateFromMonthCountDay(twoDaysBefore.day, twoDaysBefore.monthCount));
 
   // figure out leap months, leap days & skipped days
   const hasLeapMonthThis = hasLeapMonth(year, month);
   const hasLeapDayThis = julianDate === julianDatePrevious + 2;
   const skippedDay = julianDate === julianDatePrevious;
+  const isPreviousSkipped = julianDatePrevious === julianDate2DaysBefore;
   const isLeapDayChecked = isLeapDay && hasLeapDayThis;
 
   // figure out western date info for the main or leap day
@@ -46,6 +49,7 @@ const getDayFromTibetan = (year, month, isLeapMonth, day, isLeapDay) => {
     },
     day,
     skippedDay,
+    isPreviousSkipped,
     isLeapDay: isLeapDayChecked,
     hasLeapDay: hasLeapDayThis,
     westernDate

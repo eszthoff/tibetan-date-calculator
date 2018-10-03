@@ -426,11 +426,14 @@
     var monthCount = monthCountFromTibetan({ year: year, month: month, isLeapMonth: isLeapMonth });
     var dayBefore = getDayBefore(day, monthCount);
     var julianDatePrevious = Math.floor(trueDateFromMonthCountDay(dayBefore.day, dayBefore.monthCount));
+    var twoDaysBefore = getDayBefore(dayBefore.day, dayBefore.monthCount);
+    var julianDate2DaysBefore = Math.floor(trueDateFromMonthCountDay(twoDaysBefore.day, twoDaysBefore.monthCount));
 
     // figure out leap months, leap days & skipped days
     var hasLeapMonthThis = hasLeapMonth(year, month);
     var hasLeapDayThis = julianDate === julianDatePrevious + 2;
     var skippedDay = julianDate === julianDatePrevious;
+    var isPreviousSkipped = julianDatePrevious === julianDate2DaysBefore;
     var isLeapDayChecked = isLeapDay && hasLeapDayThis;
 
     // figure out western date info for the main or leap day
@@ -448,6 +451,7 @@
       },
       day: day,
       skippedDay: skippedDay,
+      isPreviousSkipped: isPreviousSkipped,
       isLeapDay: isLeapDayChecked,
       hasLeapDay: hasLeapDayThis,
       westernDate: westernDate

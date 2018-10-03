@@ -16,7 +16,8 @@ export default [
       resolve(),
       commonjs(),
       babel({
-        exclude: ['node_modules/**']
+        exclude: ['node_modules/**'],
+        plugins: ['external-helpers']
       })
     ]
   },
@@ -26,7 +27,8 @@ export default [
     plugins: [
       resolve(),
       babel({
-        exclude: ['node_modules/**']
+        exclude: ['node_modules/**'],
+        plugins: ['external-helpers']
       })
     ],
     output: [

@@ -6,9 +6,13 @@ module.exports = {
 	presets: [
 		['env', { loose: true, modules: false }]
 	],
+	env: {
+		test: {
+		  presets: [["env"]]
+		}
+	},
 	plugins: [
 		"transform-object-rest-spread",
-		"external-helpers",
 		cjs && 'transform-es2015-modules-commonjs'
 	].filter(Boolean)
 };

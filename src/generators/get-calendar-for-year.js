@@ -8,7 +8,7 @@ const getEssentialMonth = ({ days, westernIndex, ...rest }) => rest;
 
 /**
  * Generate a calendar for a whole Tibetan year, given by Tib. year number.
- * @param tibYear
+ * @param {number} tibYear
  * @return {Year} - the year's info, including each of the months as an array within .months
  *     Each month includes all the days as an array within .days
  */

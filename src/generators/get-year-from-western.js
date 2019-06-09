@@ -8,7 +8,7 @@ import { amod, yearAttributes } from '../helpers';
 /**
      * Figures out a year's info from a Western calendar year number, ex. 2008.
      *
-     * @param wYear: Western calendar year number, ex. 2008
+     * @param {number} wYear: Western calendar year number, ex. 2008
      * @returns {Year}
      */
 const getYearFromWestern = wYear => (yearAttributes({

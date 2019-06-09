@@ -3,11 +3,11 @@
 exports[`getDayFromTibetan() should return the correct western date for day marked as leap even though it isn't 1`] = `
 Object {
   "day": 4,
-  "hasLeapDay": false,
+  "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": true,
+    "isDoubledMonth": true,
     "isLeapMonth": false,
     "month": 8,
   },
@@ -20,11 +20,11 @@ Object {
 exports[`getDayFromTibetan() should return the correct western date for leap day 1`] = `
 Object {
   "day": 8,
-  "hasLeapDay": true,
+  "isDoubledDay": true,
   "isLeapDay": true,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": false,
+    "isDoubledMonth": false,
     "isLeapMonth": false,
     "month": 2,
   },
@@ -37,11 +37,11 @@ Object {
 exports[`getDayFromTibetan() should return the correct western date for main day that has leap day 1`] = `
 Object {
   "day": 8,
-  "hasLeapDay": true,
+  "isDoubledDay": true,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": false,
+    "isDoubledMonth": false,
     "isLeapMonth": false,
     "month": 2,
   },
@@ -54,11 +54,11 @@ Object {
 exports[`getDayFromTibetan() should return the correct western date for skipped day 1`] = `
 Object {
   "day": 20,
-  "hasLeapDay": false,
+  "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": false,
+    "isDoubledMonth": false,
     "isLeapMonth": false,
     "month": 2,
   },
@@ -71,11 +71,11 @@ Object {
 exports[`getDayFromTibetan() should return the correct western date in leap month 1`] = `
 Object {
   "day": 4,
-  "hasLeapDay": false,
+  "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": true,
+    "isDoubledMonth": true,
     "isLeapMonth": true,
     "month": 8,
   },
@@ -88,11 +88,11 @@ Object {
 exports[`getDayFromTibetan() should return the correct western date in non-leap month 1`] = `
 Object {
   "day": 4,
-  "hasLeapDay": false,
+  "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": true,
+    "isDoubledMonth": true,
     "isLeapMonth": false,
     "month": 8,
   },

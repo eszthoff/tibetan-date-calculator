@@ -115,7 +115,7 @@
        * @param {number} month - month number
        * @returns {boolean}
        */
-  var hasLeapMonth = function hasLeapMonth(tYear, month) {
+  var isDoubledMonth = function isDoubledMonth(tYear, month) {
     var mp = 12 * (tYear - YEAR_DIFF - YEAR0) + month;
 
     return 2 * mp % 65 === BETA % 65 || 2 * mp % 65 === (BETA + 1) % 65;
@@ -311,7 +311,7 @@
     // the formulas on Svante's paper use western year numbers
     var wYear = year - YEAR_DIFF;
     var solarMonth = 12 * (wYear - YEAR0) + month - MONTH0;
-    var hasLeap = hasLeapMonth(year, month);
+    var hasLeap = isDoubledMonth(year, month);
     var isLeap = hasLeap && isLeapMonth ? 1 : 0;
 
     return Math.floor((67 * solarMonth + BETA_STAR + 17) / 65) - isLeap;
@@ -390,7 +390,7 @@
    * @returns {Month}
    */
   var getMonthFromTibetan = function getMonthFromTibetan(year, month, isLeapMonth) {
-    var hasLeap = hasLeapMonth(year, month);
+    var hasLeap = isDoubledMonth(year, month);
     var isLeap = isLeapMonth && hasLeap;
 
     // calculate the Julian date 1st and last of the month
@@ -401,7 +401,7 @@
     var endDate = unixFromJulian(jdLast);
 
     return {
-      year: year, month: month, isLeapMonth: isLeap, hasLeapMonth: hasLeap, startDate: startDate, endDate: endDate
+      year: year, month: month, isLeapMonth: isLeap, isDoubledMonth: hasLeap, startDate: startDate, endDate: endDate
     };
   };
 
@@ -430,7 +430,7 @@
     var julianDate2DaysBefore = Math.floor(trueDateFromMonthCountDay(twoDaysBefore.day, twoDaysBefore.monthCount));
 
     // figure out leap months, leap days & skipped days
-    var hasLeapMonthThis = hasLeapMonth(year, month);
+    var isDoubledMonthThis = isDoubledMonth(year, month);
     var hasLeapDayThis = julianDate === julianDatePrevious + 2;
     var skippedDay = julianDate === julianDatePrevious;
     var isPreviousSkipped = julianDatePrevious === julianDate2DaysBefore;
@@ -446,14 +446,14 @@
       year: year,
       month: {
         month: month,
-        isLeapMonth: isLeapMonth && hasLeapMonthThis,
-        hasLeapMonth: hasLeapMonthThis
+        isLeapMonth: isLeapMonth && isDoubledMonthThis,
+        isDoubledMonth: isDoubledMonthThis
       },
       day: day,
       skippedDay: skippedDay,
       isPreviousSkipped: isPreviousSkipped,
       isLeapDay: isLeapDayChecked,
-      hasLeapDay: hasLeapDayThis,
+      isDoubledDay: hasLeapDayThis,
       westernDate: westernDate
     };
   };
@@ -471,7 +471,7 @@
     var days = {};
     var westernIndex = {};
     var monthString = '';
-    if (hasLeapMonth(year, month)) {
+    if (isDoubledMonth(year, month)) {
       if (isLeapMonth) {
         monthString = year + '-' + month + '-leap';
       } else {
@@ -486,7 +486,7 @@
       var day = getDayFromTibetan(year, month, isLeapMonth, d, false);
       var dateString = monthString + '-' + d;
 
-      if (day.hasLeapDay) {
+      if (day.isDoubledDay) {
         var main = getDayFromTibetan(year, month, isLeapMonth, d, true);
 
         days[dateString] = { doubled: true };
@@ -557,7 +557,7 @@
     var westernIndex = {};
 
     for (var m = 1; m <= 12; m++) {
-      if (hasLeapMonth(tibYear, m)) {
+      if (isDoubledMonth(tibYear, m)) {
         var mainMonth = getCalendarForMonth(tibYear, m, true);
         var leapMonth = getCalendarForMonth(tibYear, m, false);
 

@@ -4,37 +4,37 @@ import { dayInDuplicateMonthMock, skippedDayMock, duplicateDayMock } from '../..
 describe('getDayFromTibetan()', () => {
   it('should return the correct western date in leap month', () => {
     const {
-      year, month, day, dayInLeapMonth
+      year, month, day
     } = dayInDuplicateMonthMock;
     expect(getDayFromTibetan(year, month, true, day, false)).toMatchSnapshot();
   });
   it('should return the correct western date in non-leap month', () => {
     const {
-      year, month, day, dayInMainMonth
+      year, month, day
     } = dayInDuplicateMonthMock;
     expect(getDayFromTibetan(year, month, false, day, false)).toMatchSnapshot();
   });
   it('should return the correct western date for day marked as leap even though it isn\'t', () => {
     const {
-      year, month, day, dayInMainMonth
+      year, month, day
     } = dayInDuplicateMonthMock;
     expect(getDayFromTibetan(year, month, false, day, true)).toMatchSnapshot();
   });
   it('should return the correct western date for skipped day', () => {
     const {
-      year, month, day, dayObject
+      year, month, day
     } = skippedDayMock;
     expect(getDayFromTibetan(year, month, true, day, false)).toMatchSnapshot();
   });
   it('should return the correct western date for leap day', () => {
     const {
-      year, month, day, leapDay
+      year, month, day
     } = duplicateDayMock;
     expect(getDayFromTibetan(year, month, false, day, true)).toMatchSnapshot();
   });
   it('should return the correct western date for main day that has leap day', () => {
     const {
-      year, month, day, mainDay
+      year, month, day
     } = duplicateDayMock;
     expect(getDayFromTibetan(year, month, false, day, false)).toMatchSnapshot();
   });

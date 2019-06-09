@@ -39,7 +39,7 @@ const getDayFromWestern = (date) => {
   // so we found it;
   let winnerJd;
   let winnerTrueDate;
-  // if the western date is the 1st of a duplicated tib. day, then jd[0] == jd - 1 and
+  // if the western date is the 1st of a doubled tib. day, then jd[0] == jd - 1 and
   // jd[1] == jd + 1, and the corresponding tib. day number is the one from jd[1].
   if (jds[0] === jd) {
     winnerJd = jds[0]; // eslint-disable-line prefer-destructuring

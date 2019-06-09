@@ -3,11 +3,11 @@
 exports[`getDayFromWestern() should return the correct object 1`] = `
 Object {
   "day": 4,
-  "hasLeapDay": false,
+  "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": true,
+    "isDoubledMonth": true,
     "isLeapMonth": true,
     "month": 8,
   },
@@ -20,11 +20,11 @@ Object {
 exports[`getDayFromWestern() should return the correct object 2`] = `
 Object {
   "day": 4,
-  "hasLeapDay": false,
+  "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": true,
+    "isDoubledMonth": true,
     "isLeapMonth": false,
     "month": 8,
   },
@@ -37,11 +37,11 @@ Object {
 exports[`getDayFromWestern() should return the correct object 3`] = `
 Object {
   "day": 8,
-  "hasLeapDay": true,
+  "isDoubledDay": true,
   "isLeapDay": true,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": false,
+    "isDoubledMonth": false,
     "isLeapMonth": false,
     "month": 2,
   },
@@ -54,11 +54,11 @@ Object {
 exports[`getDayFromWestern() should return the correct object 4`] = `
 Object {
   "day": 8,
-  "hasLeapDay": true,
+  "isDoubledDay": true,
   "isLeapDay": false,
   "isPreviousSkipped": false,
   "month": Object {
-    "hasLeapMonth": false,
+    "isDoubledMonth": false,
     "isLeapMonth": false,
     "month": 2,
   },

@@ -4,7 +4,7 @@ import {
   MONTH0,
   BETA_STAR
 } from '../constants';
-import { hasLeapMonth } from '../helpers';
+import { isDoubledMonth } from '../helpers';
 
 /**
      * This is the reverse of fromMonthCount(n): from a Tibetan year, month number
@@ -17,7 +17,7 @@ const monthCountFromTibetan = ({ year, month, isLeapMonth }) => {
   // the formulas on Svante's paper use western year numbers
   const wYear = year - YEAR_DIFF;
   const solarMonth = 12 * (wYear - YEAR0) + month - MONTH0;
-  const hasLeap = hasLeapMonth(year, month);
+  const hasLeap = isDoubledMonth(year, month);
   const isLeap = hasLeap && isLeapMonth ? 1 : 0;
 
   return Math.floor((67 * solarMonth + BETA_STAR + 17) / 65) - isLeap;

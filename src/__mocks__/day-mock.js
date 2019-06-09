@@ -8,10 +8,10 @@ const dayInDuplicateMonthMock = {
   westernMain: '2013-10-08',
   dayInLeapMonth: {
     day: 4,
-    hasLeapDay: false,
+    isDoubledDay: false,
     isLeapDay: false,
     month: {
-      hasLeapMonth: true, isLeapMonth: true, month: 8
+      isDoubledMonth: true, isLeapMonth: true, month: 8
     },
     skippedDay: false,
     westernDate: '2013-09-09',
@@ -19,10 +19,10 @@ const dayInDuplicateMonthMock = {
   },
   dayInMainMonth: {
     day: 4,
-    hasLeapDay: false,
+    isDoubledDay: false,
     isLeapDay: false,
     month: {
-      hasLeapMonth: true, isLeapMonth: false, month: 8,
+      isDoubledMonth: true, isLeapMonth: false, month: 8,
     },
     skippedDay: false,
     westernDate: '2013-10-08',
@@ -37,10 +37,10 @@ const skippedDayMock = {
   western: '2013-03-31',
   dayObject: {
     day: 20,
-    hasLeapDay: false,
+    isDoubledDay: false,
     isLeapDay: false,
     month: {
-      hasLeapMonth: false, isLeapMonth: false, month: 2
+      isDoubledMonth: false, isLeapMonth: false, month: 2
     },
     skippedDay: true,
     westernDate: '2013-03-31',
@@ -56,10 +56,10 @@ const duplicateDayMock = {
   westernMain: '2013-03-20',
   leapDay: {
     day: 8,
-    hasLeapDay: true,
+    isDoubledDay: true,
     isLeapDay: true,
     month: {
-      hasLeapMonth: false, isLeapMonth: false, month: 2
+      isDoubledMonth: false, isLeapMonth: false, month: 2
     },
     skippedDay: false,
     westernDate: '2013-03-19',
@@ -67,10 +67,10 @@ const duplicateDayMock = {
   },
   mainDay: {
     day: 8,
-    hasLeapDay: true,
+    isDoubledDay: true,
     isLeapDay: false,
     month: {
-      hasLeapMonth: false, isLeapMonth: false, month: 2
+      isDoubledMonth: false, isLeapMonth: false, month: 2
     },
     skippedDay: false,
     westernDate: '2013-03-20',

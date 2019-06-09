@@ -1,4 +1,4 @@
-import { hasLeapMonth } from '../helpers';
+import { isDoubledMonth } from '../helpers';
 import getYearFromTibetan from './get-year-from-tibetan';
 import getCalendarForMonth from './get-calendar-for-month';
 import { YEAR_DIFF } from '../constants';
@@ -21,7 +21,7 @@ const getCalendarForYear = (tYear, isTibetan = true) => {
   let westernIndex = {};
 
   for (let m = 1; m <= 12; m++) {
-    if (hasLeapMonth(tibYear, m)) {
+    if (isDoubledMonth(tibYear, m)) {
       const mainMonth = getCalendarForMonth(tibYear, m, true);
       const leapMonth = getCalendarForMonth(tibYear, m, false);
 

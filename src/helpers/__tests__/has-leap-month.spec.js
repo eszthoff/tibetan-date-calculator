@@ -1,15 +1,15 @@
-import hasLeapMonth from '../has-leap-month';
+import isDoubledMonth from '../is-doubled-month';
 import { simpleMonthMock, mainMonthMock } from '../../__mocks__';
 
-describe('hasLeapMonth()', () => {
+describe('isDoubledMonth()', () => {
   it('should return false when there is no leap month', () => {
-    expect(hasLeapMonth(simpleMonthMock.info.year, simpleMonthMock.info.month)).toBeFalsy();
-    expect(hasLeapMonth(2146, 2)).toBeFalsy();
-    expect(hasLeapMonth(2151, 5)).toBeFalsy();
+    expect(isDoubledMonth(simpleMonthMock.info.year, simpleMonthMock.info.month)).toBeFalsy();
+    expect(isDoubledMonth(2146, 2)).toBeFalsy();
+    expect(isDoubledMonth(2151, 5)).toBeFalsy();
   });
   it('should return true when there is leap month', () => {
-    expect(hasLeapMonth(mainMonthMock.info.year, mainMonthMock.info.month)).toBeTruthy();
-    expect(hasLeapMonth(2146, 1)).toBeTruthy();
-    expect(hasLeapMonth(2151, 6)).toBeTruthy();
+    expect(isDoubledMonth(mainMonthMock.info.year, mainMonthMock.info.month)).toBeTruthy();
+    expect(isDoubledMonth(2146, 1)).toBeTruthy();
+    expect(isDoubledMonth(2151, 6)).toBeTruthy();
   });
 });

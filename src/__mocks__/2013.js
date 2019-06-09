@@ -11,7 +11,7 @@ export default `{
             "year": 2140,
             "month": 1,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-02-11",
             "endDate": "2013-03-11"
         },
@@ -19,7 +19,7 @@ export default `{
             "year": 2140,
             "month": 2,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-03-12",
             "endDate": "2013-04-10"
         },
@@ -27,7 +27,7 @@ export default `{
             "year": 2140,
             "month": 3,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-04-11",
             "endDate": "2013-05-09"
         },
@@ -35,7 +35,7 @@ export default `{
             "year": 2140,
             "month": 4,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-05-10",
             "endDate": "2013-06-08"
         },
@@ -43,7 +43,7 @@ export default `{
             "year": 2140,
             "month": 5,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-06-09",
             "endDate": "2013-07-08"
         },
@@ -51,7 +51,7 @@ export default `{
             "year": 2140,
             "month": 6,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-07-09",
             "endDate": "2013-08-06"
         },
@@ -59,7 +59,7 @@ export default `{
             "year": 2140,
             "month": 7,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-08-07",
             "endDate": "2013-09-05"
         },
@@ -70,7 +70,7 @@ export default `{
             "year": 2140,
             "month": 8,
             "isLeapMonth": true,
-            "hasLeapMonth": true,
+            "isDoubledMonth": true,
             "startDate": "2013-09-06",
             "endDate": "2013-10-04"
         },
@@ -78,7 +78,7 @@ export default `{
             "year": 2140,
             "month": 8,
             "isLeapMonth": false,
-            "hasLeapMonth": true,
+            "isDoubledMonth": true,
             "startDate": "2013-10-05",
             "endDate": "2013-11-03"
         },
@@ -86,7 +86,7 @@ export default `{
             "year": 2140,
             "month": 9,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-11-04",
             "endDate": "2013-12-02"
         },
@@ -94,7 +94,7 @@ export default `{
             "year": 2140,
             "month": 10,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2013-12-03",
             "endDate": "2014-01-01"
         },
@@ -102,7 +102,7 @@ export default `{
             "year": 2140,
             "month": 11,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2014-01-02",
             "endDate": "2014-01-30"
         },
@@ -110,7 +110,7 @@ export default `{
             "year": 2140,
             "month": 12,
             "isLeapMonth": false,
-            "hasLeapMonth": false,
+            "isDoubledMonth": false,
             "startDate": "2014-01-31",
             "endDate": "2014-03-01"
         }
@@ -121,12 +121,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-11"
         },
         "2140-1-2": {
@@ -134,12 +134,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-12"
         },
         "2140-1-3": {
@@ -147,12 +147,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-13"
         },
         "2140-1-4": {
@@ -160,12 +160,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-14"
         },
         "2140-1-5": {
@@ -173,12 +173,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-15"
         },
         "2140-1-6": {
@@ -186,12 +186,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-16"
         },
         "2140-1-7": {
@@ -199,12 +199,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-17"
         },
         "2140-1-8": {
@@ -212,12 +212,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-18"
         },
         "2140-1-9": {
@@ -225,12 +225,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-19"
         },
         "2140-1-10": {
@@ -238,12 +238,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-20"
         },
         "2140-1-11": {
@@ -251,12 +251,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-21"
         },
         "2140-1-12": {
@@ -264,12 +264,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-22"
         },
         "2140-1-13": {
@@ -277,12 +277,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-23"
         },
         "2140-1-14": {
@@ -290,12 +290,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-24"
         },
         "2140-1-15": {
@@ -303,12 +303,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-25"
         },
         "2140-1-16": {
@@ -316,12 +316,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-26"
         },
         "2140-1-17": {
@@ -329,12 +329,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-27"
         },
         "2140-1-18": {
@@ -342,12 +342,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-02-28"
         },
         "2140-1-19": {
@@ -355,12 +355,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-01"
         },
         "2140-1-20": {
@@ -368,12 +368,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-02"
         },
         "2140-1-21": {
@@ -381,12 +381,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-03"
         },
         "2140-1-22": {
@@ -394,12 +394,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-04"
         },
         "2140-1-23": {
@@ -407,12 +407,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-05"
         },
         "2140-1-24": {
@@ -420,12 +420,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-06"
         },
         "2140-1-25": {
@@ -433,12 +433,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-07"
         },
         "2140-1-26": {
@@ -446,12 +446,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-07"
         },
         "2140-1-27": {
@@ -459,12 +459,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-08"
         },
         "2140-1-28": {
@@ -472,12 +472,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-09"
         },
         "2140-1-29": {
@@ -485,12 +485,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-10"
         },
         "2140-1-30": {
@@ -498,12 +498,12 @@ export default `{
             "month": {
                 "month": 1,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-11"
         },
         "2140-2-1": {
@@ -511,12 +511,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-12"
         },
         "2140-2-2": {
@@ -524,12 +524,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-13"
         },
         "2140-2-3": {
@@ -537,12 +537,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-14"
         },
         "2140-2-4": {
@@ -550,12 +550,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-15"
         },
         "2140-2-5": {
@@ -563,12 +563,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-16"
         },
         "2140-2-6": {
@@ -576,12 +576,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-17"
         },
         "2140-2-7": {
@@ -589,12 +589,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-18"
         },
         "2140-2-8": {
@@ -605,12 +605,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-03-19"
         },
         "2140-2-8-leap": {
@@ -618,12 +618,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-03-20"
         },
         "2140-2-9": {
@@ -631,12 +631,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-21"
         },
         "2140-2-10": {
@@ -644,12 +644,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-22"
         },
         "2140-2-11": {
@@ -657,12 +657,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-23"
         },
         "2140-2-12": {
@@ -670,12 +670,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-24"
         },
         "2140-2-13": {
@@ -683,12 +683,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-25"
         },
         "2140-2-14": {
@@ -696,12 +696,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-26"
         },
         "2140-2-15": {
@@ -709,12 +709,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-27"
         },
         "2140-2-16": {
@@ -722,12 +722,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-28"
         },
         "2140-2-17": {
@@ -735,12 +735,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-29"
         },
         "2140-2-18": {
@@ -748,12 +748,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-30"
         },
         "2140-2-19": {
@@ -761,12 +761,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-31"
         },
         "2140-2-20": {
@@ -774,12 +774,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-03-31"
         },
         "2140-2-21": {
@@ -787,12 +787,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-01"
         },
         "2140-2-22": {
@@ -800,12 +800,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-02"
         },
         "2140-2-23": {
@@ -813,12 +813,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-03"
         },
         "2140-2-24": {
@@ -826,12 +826,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-04"
         },
         "2140-2-25": {
@@ -839,12 +839,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-05"
         },
         "2140-2-26": {
@@ -852,12 +852,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-06"
         },
         "2140-2-27": {
@@ -865,12 +865,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-07"
         },
         "2140-2-28": {
@@ -878,12 +878,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-08"
         },
         "2140-2-29": {
@@ -891,12 +891,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-09"
         },
         "2140-2-30": {
@@ -904,12 +904,12 @@ export default `{
             "month": {
                 "month": 2,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-10"
         },
         "2140-3-1": {
@@ -917,12 +917,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-11"
         },
         "2140-3-2": {
@@ -930,12 +930,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-12"
         },
         "2140-3-3": {
@@ -943,12 +943,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-13"
         },
         "2140-3-4": {
@@ -956,12 +956,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-14"
         },
         "2140-3-5": {
@@ -969,12 +969,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-15"
         },
         "2140-3-6": {
@@ -982,12 +982,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-16"
         },
         "2140-3-7": {
@@ -995,12 +995,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-17"
         },
         "2140-3-8": {
@@ -1008,12 +1008,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-18"
         },
         "2140-3-9": {
@@ -1021,12 +1021,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-19"
         },
         "2140-3-10": {
@@ -1034,12 +1034,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-20"
         },
         "2140-3-11": {
@@ -1047,12 +1047,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-21"
         },
         "2140-3-12": {
@@ -1060,12 +1060,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-22"
         },
         "2140-3-13": {
@@ -1073,12 +1073,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-23"
         },
         "2140-3-14": {
@@ -1086,12 +1086,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-24"
         },
         "2140-3-15": {
@@ -1099,12 +1099,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-25"
         },
         "2140-3-16": {
@@ -1112,12 +1112,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-26"
         },
         "2140-3-17": {
@@ -1125,12 +1125,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-27"
         },
         "2140-3-18": {
@@ -1138,12 +1138,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-28"
         },
         "2140-3-19": {
@@ -1151,12 +1151,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-29"
         },
         "2140-3-20": {
@@ -1164,12 +1164,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-04-30"
         },
         "2140-3-21": {
@@ -1177,12 +1177,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-01"
         },
         "2140-3-22": {
@@ -1190,12 +1190,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-02"
         },
         "2140-3-23": {
@@ -1203,12 +1203,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-03"
         },
         "2140-3-24": {
@@ -1216,12 +1216,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-03"
         },
         "2140-3-25": {
@@ -1229,12 +1229,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-04"
         },
         "2140-3-26": {
@@ -1242,12 +1242,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-05"
         },
         "2140-3-27": {
@@ -1255,12 +1255,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-06"
         },
         "2140-3-28": {
@@ -1268,12 +1268,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-07"
         },
         "2140-3-29": {
@@ -1281,12 +1281,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-08"
         },
         "2140-3-30": {
@@ -1294,12 +1294,12 @@ export default `{
             "month": {
                 "month": 3,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-09"
         },
         "2140-4-1": {
@@ -1307,12 +1307,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-10"
         },
         "2140-4-2": {
@@ -1323,12 +1323,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-05-11"
         },
         "2140-4-2-leap": {
@@ -1336,12 +1336,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-05-12"
         },
         "2140-4-3": {
@@ -1349,12 +1349,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-13"
         },
         "2140-4-4": {
@@ -1362,12 +1362,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-14"
         },
         "2140-4-5": {
@@ -1375,12 +1375,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-15"
         },
         "2140-4-6": {
@@ -1388,12 +1388,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-16"
         },
         "2140-4-7": {
@@ -1401,12 +1401,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-17"
         },
         "2140-4-8": {
@@ -1414,12 +1414,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-18"
         },
         "2140-4-9": {
@@ -1427,12 +1427,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-19"
         },
         "2140-4-10": {
@@ -1440,12 +1440,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-20"
         },
         "2140-4-11": {
@@ -1453,12 +1453,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-21"
         },
         "2140-4-12": {
@@ -1466,12 +1466,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-22"
         },
         "2140-4-13": {
@@ -1479,12 +1479,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-23"
         },
         "2140-4-14": {
@@ -1492,12 +1492,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-24"
         },
         "2140-4-15": {
@@ -1505,12 +1505,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-25"
         },
         "2140-4-16": {
@@ -1518,12 +1518,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-26"
         },
         "2140-4-17": {
@@ -1531,12 +1531,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-27"
         },
         "2140-4-18": {
@@ -1544,12 +1544,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-27"
         },
         "2140-4-19": {
@@ -1557,12 +1557,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-28"
         },
         "2140-4-20": {
@@ -1570,12 +1570,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-29"
         },
         "2140-4-21": {
@@ -1583,12 +1583,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-30"
         },
         "2140-4-22": {
@@ -1596,12 +1596,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-05-31"
         },
         "2140-4-23": {
@@ -1609,12 +1609,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-01"
         },
         "2140-4-24": {
@@ -1622,12 +1622,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-02"
         },
         "2140-4-25": {
@@ -1635,12 +1635,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-03"
         },
         "2140-4-26": {
@@ -1648,12 +1648,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-04"
         },
         "2140-4-27": {
@@ -1661,12 +1661,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-05"
         },
         "2140-4-28": {
@@ -1674,12 +1674,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-06"
         },
         "2140-4-29": {
@@ -1687,12 +1687,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-07"
         },
         "2140-4-30": {
@@ -1700,12 +1700,12 @@ export default `{
             "month": {
                 "month": 4,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-08"
         },
         "2140-5-1": {
@@ -1713,12 +1713,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-09"
         },
         "2140-5-2": {
@@ -1726,12 +1726,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-10"
         },
         "2140-5-3": {
@@ -1739,12 +1739,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-11"
         },
         "2140-5-4": {
@@ -1752,12 +1752,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-12"
         },
         "2140-5-5": {
@@ -1765,12 +1765,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-13"
         },
         "2140-5-6": {
@@ -1778,12 +1778,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-14"
         },
         "2140-5-7": {
@@ -1791,12 +1791,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-15"
         },
         "2140-5-8": {
@@ -1804,12 +1804,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-16"
         },
         "2140-5-9": {
@@ -1817,12 +1817,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-17"
         },
         "2140-5-10": {
@@ -1830,12 +1830,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-18"
         },
         "2140-5-11": {
@@ -1843,12 +1843,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-19"
         },
         "2140-5-12": {
@@ -1856,12 +1856,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-20"
         },
         "2140-5-13": {
@@ -1869,12 +1869,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-21"
         },
         "2140-5-14": {
@@ -1882,12 +1882,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-22"
         },
         "2140-5-15": {
@@ -1895,12 +1895,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-23"
         },
         "2140-5-16": {
@@ -1908,12 +1908,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-24"
         },
         "2140-5-17": {
@@ -1921,12 +1921,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-25"
         },
         "2140-5-18": {
@@ -1934,12 +1934,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-26"
         },
         "2140-5-19": {
@@ -1947,12 +1947,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-27"
         },
         "2140-5-20": {
@@ -1960,12 +1960,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-28"
         },
         "2140-5-21": {
@@ -1973,12 +1973,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-28"
         },
         "2140-5-22": {
@@ -1986,12 +1986,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-29"
         },
         "2140-5-23": {
@@ -1999,12 +1999,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-06-30"
         },
         "2140-5-24": {
@@ -2012,12 +2012,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-01"
         },
         "2140-5-25": {
@@ -2025,12 +2025,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-02"
         },
         "2140-5-26": {
@@ -2038,12 +2038,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-03"
         },
         "2140-5-27": {
@@ -2051,12 +2051,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-04"
         },
         "2140-5-28": {
@@ -2067,12 +2067,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-07-05"
         },
         "2140-5-28-leap": {
@@ -2080,12 +2080,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-07-06"
         },
         "2140-5-29": {
@@ -2093,12 +2093,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-07"
         },
         "2140-5-30": {
@@ -2106,12 +2106,12 @@ export default `{
             "month": {
                 "month": 5,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-08"
         },
         "2140-6-1": {
@@ -2119,12 +2119,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-09"
         },
         "2140-6-2": {
@@ -2132,12 +2132,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-10"
         },
         "2140-6-3": {
@@ -2145,12 +2145,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-11"
         },
         "2140-6-4": {
@@ -2158,12 +2158,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-12"
         },
         "2140-6-5": {
@@ -2171,12 +2171,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-13"
         },
         "2140-6-6": {
@@ -2184,12 +2184,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-14"
         },
         "2140-6-7": {
@@ -2197,12 +2197,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-15"
         },
         "2140-6-8": {
@@ -2210,12 +2210,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-16"
         },
         "2140-6-9": {
@@ -2223,12 +2223,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-17"
         },
         "2140-6-10": {
@@ -2236,12 +2236,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-18"
         },
         "2140-6-11": {
@@ -2249,12 +2249,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-19"
         },
         "2140-6-12": {
@@ -2262,12 +2262,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-20"
         },
         "2140-6-13": {
@@ -2275,12 +2275,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-20"
         },
         "2140-6-14": {
@@ -2288,12 +2288,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-21"
         },
         "2140-6-15": {
@@ -2301,12 +2301,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-22"
         },
         "2140-6-16": {
@@ -2314,12 +2314,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-23"
         },
         "2140-6-17": {
@@ -2327,12 +2327,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-24"
         },
         "2140-6-18": {
@@ -2340,12 +2340,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-25"
         },
         "2140-6-19": {
@@ -2353,12 +2353,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-26"
         },
         "2140-6-20": {
@@ -2366,12 +2366,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-27"
         },
         "2140-6-21": {
@@ -2379,12 +2379,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-28"
         },
         "2140-6-22": {
@@ -2392,12 +2392,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-29"
         },
         "2140-6-23": {
@@ -2405,12 +2405,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-30"
         },
         "2140-6-24": {
@@ -2418,12 +2418,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-07-31"
         },
         "2140-6-25": {
@@ -2431,12 +2431,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-01"
         },
         "2140-6-26": {
@@ -2444,12 +2444,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-02"
         },
         "2140-6-27": {
@@ -2457,12 +2457,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-03"
         },
         "2140-6-28": {
@@ -2470,12 +2470,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-04"
         },
         "2140-6-29": {
@@ -2483,12 +2483,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-05"
         },
         "2140-6-30": {
@@ -2496,12 +2496,12 @@ export default `{
             "month": {
                 "month": 6,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-06"
         },
         "2140-7-1": {
@@ -2509,12 +2509,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-07"
         },
         "2140-7-2": {
@@ -2522,12 +2522,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-08"
         },
         "2140-7-3": {
@@ -2535,12 +2535,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-09"
         },
         "2140-7-4": {
@@ -2548,12 +2548,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-10"
         },
         "2140-7-5": {
@@ -2561,12 +2561,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-11"
         },
         "2140-7-6": {
@@ -2574,12 +2574,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-12"
         },
         "2140-7-7": {
@@ -2587,12 +2587,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-13"
         },
         "2140-7-8": {
@@ -2600,12 +2600,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-14"
         },
         "2140-7-9": {
@@ -2613,12 +2613,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-15"
         },
         "2140-7-10": {
@@ -2626,12 +2626,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-16"
         },
         "2140-7-11": {
@@ -2639,12 +2639,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-17"
         },
         "2140-7-12": {
@@ -2652,12 +2652,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-18"
         },
         "2140-7-13": {
@@ -2665,12 +2665,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-19"
         },
         "2140-7-14": {
@@ -2678,12 +2678,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-20"
         },
         "2140-7-15": {
@@ -2691,12 +2691,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-21"
         },
         "2140-7-16": {
@@ -2704,12 +2704,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-21"
         },
         "2140-7-17": {
@@ -2717,12 +2717,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-22"
         },
         "2140-7-18": {
@@ -2730,12 +2730,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-23"
         },
         "2140-7-19": {
@@ -2743,12 +2743,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-24"
         },
         "2140-7-20": {
@@ -2756,12 +2756,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-25"
         },
         "2140-7-21": {
@@ -2769,12 +2769,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-26"
         },
         "2140-7-22": {
@@ -2782,12 +2782,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-27"
         },
         "2140-7-23": {
@@ -2795,12 +2795,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-28"
         },
         "2140-7-24": {
@@ -2811,12 +2811,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-08-29"
         },
         "2140-7-24-leap": {
@@ -2824,12 +2824,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-08-30"
         },
         "2140-7-25": {
@@ -2837,12 +2837,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-08-31"
         },
         "2140-7-26": {
@@ -2850,12 +2850,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-01"
         },
         "2140-7-27": {
@@ -2863,12 +2863,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-02"
         },
         "2140-7-28": {
@@ -2876,12 +2876,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-03"
         },
         "2140-7-29": {
@@ -2889,12 +2889,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-04"
         },
         "2140-7-30": {
@@ -2902,12 +2902,12 @@ export default `{
             "month": {
                 "month": 7,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-05"
         },
         "2140-8-leap-1": {
@@ -2915,12 +2915,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-06"
         },
         "2140-8-leap-2": {
@@ -2928,12 +2928,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-07"
         },
         "2140-8-leap-3": {
@@ -2941,12 +2941,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-08"
         },
         "2140-8-leap-4": {
@@ -2954,12 +2954,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-09"
         },
         "2140-8-leap-5": {
@@ -2967,12 +2967,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-10"
         },
         "2140-8-leap-6": {
@@ -2980,12 +2980,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-11"
         },
         "2140-8-leap-7": {
@@ -2993,12 +2993,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-12"
         },
         "2140-8-leap-8": {
@@ -3006,12 +3006,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-13"
         },
         "2140-8-leap-9": {
@@ -3019,12 +3019,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 9,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-13"
         },
         "2140-8-leap-10": {
@@ -3032,12 +3032,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-14"
         },
         "2140-8-leap-11": {
@@ -3045,12 +3045,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-15"
         },
         "2140-8-leap-12": {
@@ -3058,12 +3058,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-16"
         },
         "2140-8-leap-13": {
@@ -3071,12 +3071,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-17"
         },
         "2140-8-leap-14": {
@@ -3084,12 +3084,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-18"
         },
         "2140-8-leap-15": {
@@ -3097,12 +3097,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-19"
         },
         "2140-8-leap-16": {
@@ -3110,12 +3110,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-20"
         },
         "2140-8-leap-17": {
@@ -3123,12 +3123,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-21"
         },
         "2140-8-leap-18": {
@@ -3136,12 +3136,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-22"
         },
         "2140-8-leap-19": {
@@ -3149,12 +3149,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-23"
         },
         "2140-8-leap-20": {
@@ -3162,12 +3162,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-24"
         },
         "2140-8-leap-21": {
@@ -3175,12 +3175,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-25"
         },
         "2140-8-leap-22": {
@@ -3188,12 +3188,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-26"
         },
         "2140-8-leap-23": {
@@ -3201,12 +3201,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-27"
         },
         "2140-8-leap-24": {
@@ -3214,12 +3214,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-28"
         },
         "2140-8-leap-25": {
@@ -3227,12 +3227,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-29"
         },
         "2140-8-leap-26": {
@@ -3240,12 +3240,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-09-30"
         },
         "2140-8-leap-27": {
@@ -3253,12 +3253,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-01"
         },
         "2140-8-leap-28": {
@@ -3266,12 +3266,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-02"
         },
         "2140-8-leap-29": {
@@ -3279,12 +3279,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-03"
         },
         "2140-8-leap-30": {
@@ -3292,12 +3292,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": true,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-04"
         },
         "2140-8-main-1": {
@@ -3305,12 +3305,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-05"
         },
         "2140-8-main-2": {
@@ -3318,12 +3318,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-06"
         },
         "2140-8-main-3": {
@@ -3331,12 +3331,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-07"
         },
         "2140-8-main-4": {
@@ -3344,12 +3344,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-08"
         },
         "2140-8-main-5": {
@@ -3357,12 +3357,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-09"
         },
         "2140-8-main-6": {
@@ -3370,12 +3370,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-10"
         },
         "2140-8-main-7": {
@@ -3383,12 +3383,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-11"
         },
         "2140-8-main-8": {
@@ -3396,12 +3396,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-12"
         },
         "2140-8-main-9": {
@@ -3409,12 +3409,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-13"
         },
         "2140-8-main-10": {
@@ -3422,12 +3422,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-14"
         },
         "2140-8-main-11": {
@@ -3435,12 +3435,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-15"
         },
         "2140-8-main-12": {
@@ -3448,12 +3448,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 12,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-15"
         },
         "2140-8-main-13": {
@@ -3461,12 +3461,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-16"
         },
         "2140-8-main-14": {
@@ -3474,12 +3474,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-17"
         },
         "2140-8-main-15": {
@@ -3487,12 +3487,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-18"
         },
         "2140-8-main-16": {
@@ -3500,12 +3500,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-19"
         },
         "2140-8-main-17": {
@@ -3513,12 +3513,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-20"
         },
         "2140-8-main-18": {
@@ -3526,12 +3526,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-21"
         },
         "2140-8-main-19": {
@@ -3539,12 +3539,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-22"
         },
         "2140-8-main-20": {
@@ -3555,12 +3555,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-10-23"
         },
         "2140-8-main-20-leap": {
@@ -3568,12 +3568,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-10-24"
         },
         "2140-8-main-21": {
@@ -3581,12 +3581,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-25"
         },
         "2140-8-main-22": {
@@ -3594,12 +3594,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-26"
         },
         "2140-8-main-23": {
@@ -3607,12 +3607,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-27"
         },
         "2140-8-main-24": {
@@ -3620,12 +3620,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-28"
         },
         "2140-8-main-25": {
@@ -3633,12 +3633,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-29"
         },
         "2140-8-main-26": {
@@ -3646,12 +3646,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-30"
         },
         "2140-8-main-27": {
@@ -3659,12 +3659,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-10-31"
         },
         "2140-8-main-28": {
@@ -3672,12 +3672,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-01"
         },
         "2140-8-main-29": {
@@ -3685,12 +3685,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-02"
         },
         "2140-8-main-30": {
@@ -3698,12 +3698,12 @@ export default `{
             "month": {
                 "month": 8,
                 "isLeapMonth": false,
-                "hasLeapMonth": true
+                "isDoubledMonth": true
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-03"
         },
         "2140-9-1": {
@@ -3711,12 +3711,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-04"
         },
         "2140-9-2": {
@@ -3724,12 +3724,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-05"
         },
         "2140-9-3": {
@@ -3737,12 +3737,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-06"
         },
         "2140-9-4": {
@@ -3750,12 +3750,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-07"
         },
         "2140-9-5": {
@@ -3763,12 +3763,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-08"
         },
         "2140-9-6": {
@@ -3776,12 +3776,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-08"
         },
         "2140-9-7": {
@@ -3789,12 +3789,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-09"
         },
         "2140-9-8": {
@@ -3802,12 +3802,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-10"
         },
         "2140-9-9": {
@@ -3815,12 +3815,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-11"
         },
         "2140-9-10": {
@@ -3828,12 +3828,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-12"
         },
         "2140-9-11": {
@@ -3841,12 +3841,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-13"
         },
         "2140-9-12": {
@@ -3854,12 +3854,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-14"
         },
         "2140-9-13": {
@@ -3867,12 +3867,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-15"
         },
         "2140-9-14": {
@@ -3880,12 +3880,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-16"
         },
         "2140-9-15": {
@@ -3893,12 +3893,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-17"
         },
         "2140-9-16": {
@@ -3906,12 +3906,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-18"
         },
         "2140-9-17": {
@@ -3919,12 +3919,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-19"
         },
         "2140-9-18": {
@@ -3932,12 +3932,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-20"
         },
         "2140-9-19": {
@@ -3945,12 +3945,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-21"
         },
         "2140-9-20": {
@@ -3958,12 +3958,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-22"
         },
         "2140-9-21": {
@@ -3971,12 +3971,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-23"
         },
         "2140-9-22": {
@@ -3984,12 +3984,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-24"
         },
         "2140-9-23": {
@@ -3997,12 +3997,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-25"
         },
         "2140-9-24": {
@@ -4013,12 +4013,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-11-26"
         },
         "2140-9-24-leap": {
@@ -4026,12 +4026,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2013-11-27"
         },
         "2140-9-25": {
@@ -4039,12 +4039,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-28"
         },
         "2140-9-26": {
@@ -4052,12 +4052,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-29"
         },
         "2140-9-27": {
@@ -4065,12 +4065,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-11-30"
         },
         "2140-9-28": {
@@ -4078,12 +4078,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-01"
         },
         "2140-9-29": {
@@ -4091,12 +4091,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-01"
         },
         "2140-9-30": {
@@ -4104,12 +4104,12 @@ export default `{
             "month": {
                 "month": 9,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-02"
         },
         "2140-10-1": {
@@ -4117,12 +4117,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-03"
         },
         "2140-10-2": {
@@ -4130,12 +4130,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-04"
         },
         "2140-10-3": {
@@ -4143,12 +4143,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-05"
         },
         "2140-10-4": {
@@ -4156,12 +4156,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-06"
         },
         "2140-10-5": {
@@ -4169,12 +4169,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-07"
         },
         "2140-10-6": {
@@ -4182,12 +4182,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-08"
         },
         "2140-10-7": {
@@ -4195,12 +4195,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-09"
         },
         "2140-10-8": {
@@ -4208,12 +4208,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-10"
         },
         "2140-10-9": {
@@ -4221,12 +4221,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-11"
         },
         "2140-10-10": {
@@ -4234,12 +4234,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-12"
         },
         "2140-10-11": {
@@ -4247,12 +4247,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-13"
         },
         "2140-10-12": {
@@ -4260,12 +4260,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-14"
         },
         "2140-10-13": {
@@ -4273,12 +4273,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-15"
         },
         "2140-10-14": {
@@ -4286,12 +4286,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-16"
         },
         "2140-10-15": {
@@ -4299,12 +4299,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-17"
         },
         "2140-10-16": {
@@ -4312,12 +4312,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-18"
         },
         "2140-10-17": {
@@ -4325,12 +4325,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-19"
         },
         "2140-10-18": {
@@ -4338,12 +4338,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-20"
         },
         "2140-10-19": {
@@ -4351,12 +4351,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-21"
         },
         "2140-10-20": {
@@ -4364,12 +4364,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-22"
         },
         "2140-10-21": {
@@ -4377,12 +4377,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-23"
         },
         "2140-10-22": {
@@ -4390,12 +4390,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-24"
         },
         "2140-10-23": {
@@ -4403,12 +4403,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-25"
         },
         "2140-10-24": {
@@ -4416,12 +4416,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-26"
         },
         "2140-10-25": {
@@ -4429,12 +4429,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-27"
         },
         "2140-10-26": {
@@ -4442,12 +4442,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-28"
         },
         "2140-10-27": {
@@ -4455,12 +4455,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-29"
         },
         "2140-10-28": {
@@ -4468,12 +4468,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-30"
         },
         "2140-10-29": {
@@ -4481,12 +4481,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2013-12-31"
         },
         "2140-10-30": {
@@ -4494,12 +4494,12 @@ export default `{
             "month": {
                 "month": 10,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-01"
         },
         "2140-11-1": {
@@ -4507,12 +4507,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-02"
         },
         "2140-11-2": {
@@ -4520,12 +4520,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-03"
         },
         "2140-11-3": {
@@ -4533,12 +4533,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-04"
         },
         "2140-11-4": {
@@ -4546,12 +4546,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-04"
         },
         "2140-11-5": {
@@ -4559,12 +4559,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-05"
         },
         "2140-11-6": {
@@ -4572,12 +4572,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-06"
         },
         "2140-11-7": {
@@ -4585,12 +4585,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-07"
         },
         "2140-11-8": {
@@ -4598,12 +4598,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-08"
         },
         "2140-11-9": {
@@ -4611,12 +4611,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-09"
         },
         "2140-11-10": {
@@ -4624,12 +4624,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-10"
         },
         "2140-11-11": {
@@ -4637,12 +4637,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-11"
         },
         "2140-11-12": {
@@ -4650,12 +4650,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-12"
         },
         "2140-11-13": {
@@ -4663,12 +4663,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-13"
         },
         "2140-11-14": {
@@ -4676,12 +4676,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-14"
         },
         "2140-11-15": {
@@ -4689,12 +4689,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-15"
         },
         "2140-11-16": {
@@ -4705,12 +4705,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": true,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2014-01-16"
         },
         "2140-11-16-leap": {
@@ -4718,12 +4718,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": true,
+            "isDoubledDay": true,
             "westernDate": "2014-01-17"
         },
         "2140-11-17": {
@@ -4731,12 +4731,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-18"
         },
         "2140-11-18": {
@@ -4744,12 +4744,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-19"
         },
         "2140-11-19": {
@@ -4757,12 +4757,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-20"
         },
         "2140-11-20": {
@@ -4770,12 +4770,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-21"
         },
         "2140-11-21": {
@@ -4783,12 +4783,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-22"
         },
         "2140-11-22": {
@@ -4796,12 +4796,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-23"
         },
         "2140-11-23": {
@@ -4809,12 +4809,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-24"
         },
         "2140-11-24": {
@@ -4822,12 +4822,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-25"
         },
         "2140-11-25": {
@@ -4835,12 +4835,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-26"
         },
         "2140-11-26": {
@@ -4848,12 +4848,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-27"
         },
         "2140-11-27": {
@@ -4861,12 +4861,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-28"
         },
         "2140-11-28": {
@@ -4874,12 +4874,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": true,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-28"
         },
         "2140-11-29": {
@@ -4887,12 +4887,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-29"
         },
         "2140-11-30": {
@@ -4900,12 +4900,12 @@ export default `{
             "month": {
                 "month": 11,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-30"
         },
         "2140-12-1": {
@@ -4913,12 +4913,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 1,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-01-31"
         },
         "2140-12-2": {
@@ -4926,12 +4926,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 2,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-01"
         },
         "2140-12-3": {
@@ -4939,12 +4939,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 3,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-02"
         },
         "2140-12-4": {
@@ -4952,12 +4952,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 4,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-03"
         },
         "2140-12-5": {
@@ -4965,12 +4965,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 5,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-04"
         },
         "2140-12-6": {
@@ -4978,12 +4978,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 6,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-05"
         },
         "2140-12-7": {
@@ -4991,12 +4991,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 7,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-06"
         },
         "2140-12-8": {
@@ -5004,12 +5004,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 8,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-07"
         },
         "2140-12-9": {
@@ -5017,12 +5017,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 9,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-08"
         },
         "2140-12-10": {
@@ -5030,12 +5030,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 10,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-09"
         },
         "2140-12-11": {
@@ -5043,12 +5043,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 11,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-10"
         },
         "2140-12-12": {
@@ -5056,12 +5056,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 12,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-11"
         },
         "2140-12-13": {
@@ -5069,12 +5069,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 13,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-12"
         },
         "2140-12-14": {
@@ -5082,12 +5082,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 14,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-13"
         },
         "2140-12-15": {
@@ -5095,12 +5095,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 15,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-14"
         },
         "2140-12-16": {
@@ -5108,12 +5108,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 16,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-15"
         },
         "2140-12-17": {
@@ -5121,12 +5121,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 17,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-16"
         },
         "2140-12-18": {
@@ -5134,12 +5134,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 18,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-17"
         },
         "2140-12-19": {
@@ -5147,12 +5147,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 19,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-18"
         },
         "2140-12-20": {
@@ -5160,12 +5160,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 20,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-19"
         },
         "2140-12-21": {
@@ -5173,12 +5173,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 21,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-20"
         },
         "2140-12-22": {
@@ -5186,12 +5186,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 22,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-21"
         },
         "2140-12-23": {
@@ -5199,12 +5199,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 23,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-22"
         },
         "2140-12-24": {
@@ -5212,12 +5212,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 24,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-23"
         },
         "2140-12-25": {
@@ -5225,12 +5225,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 25,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-24"
         },
         "2140-12-26": {
@@ -5238,12 +5238,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 26,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-25"
         },
         "2140-12-27": {
@@ -5251,12 +5251,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 27,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-26"
         },
         "2140-12-28": {
@@ -5264,12 +5264,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 28,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-27"
         },
         "2140-12-29": {
@@ -5277,12 +5277,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 29,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-02-28"
         },
         "2140-12-30": {
@@ -5290,12 +5290,12 @@ export default `{
             "month": {
                 "month": 12,
                 "isLeapMonth": false,
-                "hasLeapMonth": false
+                "isDoubledMonth": false
             },
             "day": 30,
             "skippedDay": false,
             "isLeapDay": false,
-            "hasLeapDay": false,
+            "isDoubledDay": false,
             "westernDate": "2014-03-01"
         }
     },

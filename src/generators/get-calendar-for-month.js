@@ -1,6 +1,6 @@
 import getMonthFromTibetan from './get-month-from-tibetan';
 import getDayFromTibetan from './get-day-from-tibetan';
-import { hasLeapMonth } from '../helpers';
+import { isDoubledMonth } from '../helpers';
 
 /**
  * generate a month with all its days
@@ -15,7 +15,7 @@ const getCalendarForMonth = (year, month, isLeapMonth) => {
   const days = {};
   const westernIndex = {};
   let monthString = '';
-  if (hasLeapMonth(year, month)) {
+  if (isDoubledMonth(year, month)) {
     if (isLeapMonth) {
       monthString = `${year}-${month}-leap`;
     } else {
@@ -30,7 +30,7 @@ const getCalendarForMonth = (year, month, isLeapMonth) => {
     const day = getDayFromTibetan(year, month, isLeapMonth, d, false);
     const dateString = `${monthString}-${d}`;
 
-    if (day.hasLeapDay) {
+    if (day.isDoubledDay) {
       const main = getDayFromTibetan(year, month, isLeapMonth, d, true);
 
       days[dateString] = { doubled: true };

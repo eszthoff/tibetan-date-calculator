@@ -1,9 +1,9 @@
 import { unixFromJulian, monthCountFromTibetan, trueDateFromMonthCountDay as getTrueDate } from '../conversions';
-import { hasLeapMonth } from '../helpers';
+import { isDoubledMonth } from '../helpers';
 
 
 /**
- * Calculates full information about a Tibetan month: whether it is duplicated or not,
+ * Calculates full information about a Tibetan month: whether it is doubled or not,
  * and the western start and end date for it.
  * The start_date and end_date correspond to the leap month if isLeapMonth is passed,
  * otherwise to the main month (i.e the second of the two).
@@ -14,7 +14,7 @@ import { hasLeapMonth } from '../helpers';
  * @returns {Month}
  */
 const getMonthFromTibetan = (year, month, isLeapMonth) => {
-  const hasLeap = hasLeapMonth(year, month);
+  const hasLeap = isDoubledMonth(year, month);
   const isLeap = isLeapMonth && hasLeap;
 
   // calculate the Julian date 1st and last of the month
@@ -25,7 +25,7 @@ const getMonthFromTibetan = (year, month, isLeapMonth) => {
   const endDate = unixFromJulian(jdLast);
 
   return {
-    year, month, isLeapMonth: isLeap, hasLeapMonth: hasLeap, startDate, endDate,
+    year, month, isLeapMonth: isLeap, isDoubledMonth: hasLeap, startDate, endDate,
   };
 };
 

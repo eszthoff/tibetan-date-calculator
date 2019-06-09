@@ -12,7 +12,7 @@ const simpleMonthMock = {
     year: 2145,
     month: 1,
     isLeapMonth: false,
-    hasLeapMonth: false,
+    isDoubledMonth: false,
     startDate: '2018-02-16',
     endDate: '2018-03-17'
   },
@@ -29,7 +29,7 @@ const leapMonthMock = {
     year: 2140,
     month: 8,
     isLeapMonth: true,
-    hasLeapMonth: true,
+    isDoubledMonth: true,
     startDate: '2013-09-06',
     endDate: '2013-10-04'
   },
@@ -46,7 +46,7 @@ const mainMonthMock = {
     year: 2140,
     month: 8,
     isLeapMonth: false,
-    hasLeapMonth: true,
+    isDoubledMonth: true,
     startDate: '2013-10-05',
     endDate: '2013-11-03'
   },

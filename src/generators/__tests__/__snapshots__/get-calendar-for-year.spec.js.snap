@@ -11332,19 +11332,19 @@ Object {
       "doubled": true,
     },
     "2140-8-leap": Object {
-      "endDate": "2013-11-03",
-      "isDoubledMonth": true,
-      "isLeapMonth": false,
-      "month": 8,
-      "startDate": "2013-10-05",
-      "year": 2140,
-    },
-    "2140-8-main": Object {
       "endDate": "2013-10-04",
       "isDoubledMonth": true,
       "isLeapMonth": true,
       "month": 8,
       "startDate": "2013-09-06",
+      "year": 2140,
+    },
+    "2140-8-main": Object {
+      "endDate": "2013-11-03",
+      "isDoubledMonth": true,
+      "isLeapMonth": false,
+      "month": 8,
+      "startDate": "2013-10-05",
       "year": 2140,
     },
     "2140-9": Object {

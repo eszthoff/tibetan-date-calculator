@@ -5,7 +5,7 @@ import { isDoubledMonth } from '../helpers';
 /**
  * Calculates full information about a Tibetan month: whether it is doubled or not,
  * and the western start and end date for it.
- * The start_date and end_date correspond to the leap month if isLeapMonth is passed,
+ * The start_date and end_date correspond to the leap month if isLeapMonth is true,
  * otherwise to the main month (i.e the second of the two).
  *
  * @param {object} arg

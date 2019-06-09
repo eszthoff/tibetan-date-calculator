@@ -5,12 +5,13 @@ import { isDoubledMonth } from '../helpers';
 /**
  * generate a month with all its days
  *
- * @param {number} year - tibetan year
- * @param {number} month - month number
- * @param {boolean} isLeapMonth - if leap month
+ * @param {object} arg
+ * @param {number} arg.year - tibetan year
+ * @param {number} arg.month - month number
+ * @param {boolean} [arg.isLeapMonth=false] - if leap month
  * @return {Month}
  */
-const getCalendarForMonth = (year, month, isLeapMonth) => {
+const getCalendarForMonth = ({ year, month, isLeapMonth = false }) => {
   const thisMonth = getMonthFromTibetan({ year, month, isLeapMonth });
   const days = {};
   const westernIndex = {};

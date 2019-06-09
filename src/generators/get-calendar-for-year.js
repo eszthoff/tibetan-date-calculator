@@ -22,8 +22,8 @@ const getCalendarForYear = (tYear, isTibetan = true) => {
 
   for (let m = 1; m <= 12; m++) {
     if (isDoubledMonth(tibYear, m)) {
-      const mainMonth = getCalendarForMonth(tibYear, m, true);
-      const leapMonth = getCalendarForMonth(tibYear, m, false);
+      const mainMonth = getCalendarForMonth({ year: tibYear, month: m });
+      const leapMonth = getCalendarForMonth({ year: tibYear, month: m, isLeapMonth: true });
 
       months[`${tibYear}-${m}`] = { doubled: true };
       months[`${tibYear}-${m}-main`] = getEssentialMonth(mainMonth);
@@ -31,7 +31,7 @@ const getCalendarForYear = (tYear, isTibetan = true) => {
       days = { ...days, ...mainMonth.days, ...leapMonth.days };
       westernIndex = { ...westernIndex, ...mainMonth.westernIndex, ...leapMonth.westernIndex };
     } else {
-      const month = getCalendarForMonth(tibYear, m, false);
+      const month = getCalendarForMonth({ year: tibYear, month: m, isLeapMonth: false });
 
       months[`${tibYear}-${m}`] = getEssentialMonth(month);
       days = { ...days, ...month.days };

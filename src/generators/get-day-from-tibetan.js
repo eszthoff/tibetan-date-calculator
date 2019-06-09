@@ -9,15 +9,22 @@ import { getDayBefore, isDoubledMonth } from '../helpers';
    * For doubled days, just as with doubled months, the "main" day or month is
    * the second, and the "leap" day or month is the first.
    *
-   * @param {number} year - Tibetan year number (ex. 2135)
-   * @param {number} month - month number (1 to 12)
-   * @param {boolean} isLeapMonth - is this month a leap month
-   * @param {number} day - day number (1 to 30)
-   * @param {boolean} isLeapDay - is this day a leap day
+   * @param {object} arg
+   * @param {number} arg.year - Tibetan year number (ex. 2135)
+   * @param {number} arg.month - month number (1 to 12)
+   * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+   * @param {number} arg.day - day number (1 to 30)
+   * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
    *
    * @returns {Day} day - with all its attributes. isLeapMonth and isLeapDay are checked and corrected compared to input
    */
-const getDayFromTibetan = (year, month, isLeapMonth, day, isLeapDay) => {
+const getDayFromTibetan = ({
+  year,
+  month,
+  isLeapMonth = false,
+  day,
+  isLeapDay = false
+}) => {
   let julianDate = julianFromTibetan(year, month, isLeapMonth, day);
 
   // also calculate the Julian date of the previous Tib. day

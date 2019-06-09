@@ -55,7 +55,9 @@ const getDayFromWestern = (date) => {
   const day = (winnerTrueDate % 30) || 30;
   const { year, month, isLeapMonth } = getMonthFromMonthCount(monthCount);
 
-  return getDayFromTibetan(year, month, isLeapMonth, day, isLeapDay);
+  return getDayFromTibetan({
+    year, month, isLeapMonth, day, isLeapDay
+  });
 };
 
 export default getDayFromWestern;

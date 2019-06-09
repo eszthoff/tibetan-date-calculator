@@ -27,11 +27,15 @@ const getCalendarForMonth = (year, month, isLeapMonth) => {
 
   // loop over the days, taking care of duplicate and missing days
   for (let d = 1; d <= 30; d++) {
-    const day = getDayFromTibetan(year, month, isLeapMonth, d, false);
+    const day = getDayFromTibetan({
+      year, month, isLeapMonth, day: d, isLeapDay: false
+    });
     const dateString = `${monthString}-${d}`;
 
     if (day.isDoubledDay) {
-      const main = getDayFromTibetan(year, month, isLeapMonth, d, true);
+      const main = getDayFromTibetan({
+        year, month, isLeapMonth, day: d, isLeapDay: true
+      });
 
       days[dateString] = { doubled: true };
       days[`${dateString}-main`] = main;

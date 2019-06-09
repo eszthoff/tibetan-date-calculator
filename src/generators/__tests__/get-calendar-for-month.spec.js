@@ -1,5 +1,4 @@
 import getCalendarForMonth from '../get-calendar-for-month';
-import { month214502, month214008leap, month214008main } from '../../__mocks__';
 
 describe('getCalendarForMonth()', () => {
   it('should return the correct month object for a simple month', () => {

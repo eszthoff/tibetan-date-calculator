@@ -8,12 +8,13 @@ import { isDoubledMonth } from '../helpers';
  * The start_date and end_date correspond to the leap month if isLeapMonth is passed,
  * otherwise to the main month (i.e the second of the two).
  *
- * @param {number} year - the Tibetan year
- * @param {number} month - the Tibetan month number (1 to 12)
- * @param {boolean} isLeapMonth - if leap month or not
+ * @param {object} arg
+ * @param {number} arg.year - the Tibetan year
+ * @param {number} arg.month - the Tibetan month number (1 to 12)
+ * @param {boolean} [arg.isLeapMonth=false] - if leap month or not
  * @returns {Month}
  */
-const getMonthFromTibetan = (year, month, isLeapMonth) => {
+const getMonthFromTibetan = ({ year, month, isLeapMonth = false }) => {
   const hasLeap = isDoubledMonth(year, month);
   const isLeap = isLeapMonth && hasLeap;
 

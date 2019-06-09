@@ -11,7 +11,7 @@ import { isDoubledMonth } from '../helpers';
  * @return {Month}
  */
 const getCalendarForMonth = (year, month, isLeapMonth) => {
-  const thisMonth = getMonthFromTibetan(year, month, isLeapMonth);
+  const thisMonth = getMonthFromTibetan({ year, month, isLeapMonth });
   const days = {};
   const westernIndex = {};
   let monthString = '';

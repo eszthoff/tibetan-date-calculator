@@ -3,9 +3,9 @@ import {
   MIN_IN_DAY,
   JULIAN_TO_UNIX
 } from '../constants';
+import { getDateStr } from '../helpers';
 
-
-  /**
+/**
    * get Julian date from UNIX date
    * see explanation:
    * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
@@ -14,7 +14,7 @@ import {
    * @return {number} - julian date
    */
 const julianFromUnix = (unixTime) => {
-  const dateOnly = unixTime.toJSON().split('T')[0];
+  const dateOnly = getDateStr(unixTime);
   const timeAfterNoon = new Date(`${dateOnly}T18:00:00`);
 
   return Math.floor(

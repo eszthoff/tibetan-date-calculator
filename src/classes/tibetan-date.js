@@ -3,6 +3,7 @@ import getDayFromTibetan from '../generators/get-day-from-tibetan';
 import getYearFromTibetan from '../generators/get-year-from-tibetan';
 import { getDateStr } from '../helpers';
 import TibetanMonth from './tibetan-month'; // eslint-disable-line import/no-cycle
+import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
 
 /**
  * A TibetanDate class
@@ -44,11 +45,11 @@ class TibetanDate {
 
   /** GETTERS */
   get day() {
-    return this.westernDate.getDate();
+    return this.westernDate.getDay();
   }
 
   get yearObj() {
-    return getYearFromTibetan(this.year);
+    return new TibetanYear(this.year);
   }
 
   get westernDateStr() {
@@ -56,7 +57,6 @@ class TibetanDate {
   }
 
   /** METHODS */
-
   getWesternDate() {
     return this.westernDate;
   }
@@ -82,7 +82,7 @@ class TibetanDate {
   }
 
   getYearObj() {
-    return getYearFromTibetan(this.year);
+    return this.yearObj;
   }
 }
 

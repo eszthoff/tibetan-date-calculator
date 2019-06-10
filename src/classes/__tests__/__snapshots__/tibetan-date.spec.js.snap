@@ -46,7 +46,7 @@ TibetanDate {
 
 exports[`TibetanDate should create a correct class when invoked without arg 1`] = `
 TibetanDate {
-  "date": 3,
+  "date": 4,
   "isDoubledDay": false,
   "isLeapDay": false,
   "isPreviousSkipped": false,
@@ -61,7 +61,20 @@ TibetanDate {
     "startDateStr": "2019-06-04",
     "year": 2146,
   },
-  "westernDate": 2019-06-06T22:00:00.000Z,
+  "westernDate": 2019-06-07T00:00:00.000Z,
   "year": 2146,
+}
+`;
+
+exports[`TibetanDate should return year object correctly 1`] = `
+TibetanYear {
+  "animal": "Pig",
+  "element": "Earth",
+  "gender": "Female",
+  "months": Array [],
+  "rabjungCycle": 17,
+  "rabjungYear": 33,
+  "tibYearNum": 2146,
+  "westernYear": 2019,
 }
 `;

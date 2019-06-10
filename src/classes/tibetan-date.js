@@ -83,7 +83,7 @@ class TibetanDate {
   }
 
   getDay() {
-    return this.westernDate.getDate();
+    return this.westernDate.getDay();
   }
 
   getMonth() {

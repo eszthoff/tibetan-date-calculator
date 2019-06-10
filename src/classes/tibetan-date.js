@@ -2,6 +2,7 @@ import getDayFromWestern from '../generators/get-day-from-western';
 import getDayFromTibetan from '../generators/get-day-from-tibetan';
 import getYearFromTibetan from '../generators/get-year-from-tibetan';
 import { getDateStr } from '../helpers';
+import TibetanMonth from './tibetan-month'; // eslint-disable-line import/no-cycle
 
 /**
  * A TibetanDate class
@@ -14,7 +15,7 @@ import { getDateStr } from '../helpers';
  */
 class TibetanDate {
   constructor(arg) {
-      let tibDate;
+    let tibDate;
     if (!arg) {
       this.westernDate = new Date();
       tibDate = getDayFromWestern(this.westernDate);
@@ -32,9 +33,13 @@ class TibetanDate {
     this.isLeapDay = tibDate.isLeapDay;
     this.isDoubledDay = tibDate.isDoubledDay;
     this.date = tibDate.day;
-    this.month = tibDate.month.month;
-    this.monthObj = tibDate.month;
     this.year = tibDate.year;
+    this.month = tibDate.month.month;
+    this.monthObj = new TibetanMonth({
+      year: tibDate.year,
+      month: tibDate.month.month,
+      isLeapMonth: tibDate.isLeapMonth
+    });
   }
 
   /** GETTERS */

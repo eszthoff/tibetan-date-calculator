@@ -1,4 +1,4 @@
-import TibetanDate from './tibetan-date';
+import TibetanDate from './tibetan-date'; // eslint-disable-line import/no-cycle
 import getMonthFromTibetan from '../generators/get-month-from-tibetan';
 import getYearFromTibetan from '../generators/get-year-from-tibetan';
 

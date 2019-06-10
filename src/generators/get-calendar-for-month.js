@@ -1,5 +1,5 @@
 import getMonthFromTibetan from './get-month-from-tibetan';
-import getDayFromTibetan from './get-day-from-tibetan';
+import TibetanDate from '../classes/tibetan-date';
 import { isDoubledMonth } from '../helpers';
 
 /**
@@ -28,26 +28,26 @@ const getCalendarForMonth = ({ year, month, isLeapMonth = false }) => {
 
   // loop over the days, taking care of duplicate and missing days
   for (let d = 1; d <= 30; d++) {
-    const day = getDayFromTibetan({
+    const day = new TibetanDate({
       year, month, isLeapMonth, day: d, isLeapDay: false
     });
     const dateString = `${monthString}-${d}`;
 
     if (day.isDoubledDay) {
-      const main = getDayFromTibetan({
+      const main = new TibetanDate({
         year, month, isLeapMonth, day: d, isLeapDay: true
       });
 
       days[dateString] = { doubled: true };
       days[`${dateString}-main`] = main;
       days[`${dateString}-leap`] = day;
-      westernIndex[main.westernDate] = `${dateString}-main`;
-      westernIndex[day.westernDate] = `${dateString}-leap`;
-    } else if (day.skippedDay) {
+      westernIndex[main.westernDateStr] = `${dateString}-main`;
+      westernIndex[day.westernDateStr] = `${dateString}-leap`;
+    } else if (day.isSkippedDay) {
       days[dateString] = day;
     } else {
       days[dateString] = day;
-      westernIndex[day.westernDate] = dateString;
+      westernIndex[day.westernDateStr] = dateString;
     }
   }
 

@@ -1,11 +1,8 @@
-export {
-  getCalendarForMonth,
-  getCalendarForYear,
-  getDayFromTibetan,
-  getDayFromWestern,
-  getYearFromRabjung,
-  getYearFromTibetan,
-  getYearFromWestern,
-  getLosarForYear,
-  getMonthFromTibetan
-} from './generators';
+export { default as getCalendarForMonth } from './generators/get-calendar-for-month';
+export { default as getCalendarForYear } from './generators/get-calendar-for-year';
+export { default as getYearFromRabjung } from './generators/get-year-from-rabjung';
+export { default as getYearFromTibetan } from './generators/get-year-from-tibetan';
+export { default as getYearFromWestern } from './generators/get-year-from-western';
+export { default as getLosarForYear } from './generators/get-losar-for-year';
+export { default as getMonthFromTibetan } from './generators/get-month-from-tibetan';
+export { default as TibetanDate } from './classes/tibetan-date';

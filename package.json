@@ -25,6 +25,7 @@
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "jest": "^23.2.0",
+    "mockdate": "^2.0.2",
     "rollup": "^0.63.4",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.3",

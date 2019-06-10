@@ -2,60 +2,54 @@
 
 exports[`TibetanDate should create a correct class when invoked with object arg 1`] = `
 TibetanDate {
-  "tibDate": Object {
-    "day": 10,
-    "isDoubledDay": false,
-    "isLeapDay": false,
-    "isPreviousSkipped": false,
-    "month": Object {
-      "isDoubledMonth": false,
-      "isLeapMonth": false,
-      "month": 3,
-    },
-    "skippedDay": false,
-    "westernDate": "2019-05-14",
-    "year": 2146,
+  "date": 10,
+  "isDoubledDay": false,
+  "isLeapDay": false,
+  "isPreviousSkipped": false,
+  "isSkippedDay": false,
+  "month": 3,
+  "monthObj": Object {
+    "isDoubledMonth": false,
+    "isLeapMonth": false,
+    "month": 3,
   },
   "westernDate": 2019-05-14T00:00:00.000Z,
+  "year": 2146,
 }
 `;
 
 exports[`TibetanDate should create a correct class when invoked with string arg 1`] = `
 TibetanDate {
-  "tibDate": Object {
-    "day": 19,
-    "isDoubledDay": false,
-    "isLeapDay": false,
-    "isPreviousSkipped": false,
-    "month": Object {
-      "isDoubledMonth": false,
-      "isLeapMonth": false,
-      "month": 4,
-    },
-    "skippedDay": false,
-    "westernDate": "2019-06-21",
-    "year": 2146,
+  "date": 19,
+  "isDoubledDay": false,
+  "isLeapDay": false,
+  "isPreviousSkipped": false,
+  "isSkippedDay": false,
+  "month": 4,
+  "monthObj": Object {
+    "isDoubledMonth": false,
+    "isLeapMonth": false,
+    "month": 4,
   },
   "westernDate": 2019-06-21T22:00:00.000Z,
+  "year": 2146,
 }
 `;
 
 exports[`TibetanDate should create a correct class when invoked without arg 1`] = `
 TibetanDate {
-  "tibDate": Object {
-    "day": 3,
-    "isDoubledDay": false,
-    "isLeapDay": false,
-    "isPreviousSkipped": false,
-    "month": Object {
-      "isDoubledMonth": false,
-      "isLeapMonth": false,
-      "month": 4,
-    },
-    "skippedDay": false,
-    "westernDate": "2019-06-06",
-    "year": 2146,
+  "date": 3,
+  "isDoubledDay": false,
+  "isLeapDay": false,
+  "isPreviousSkipped": false,
+  "isSkippedDay": false,
+  "month": 4,
+  "monthObj": Object {
+    "isDoubledMonth": false,
+    "isLeapMonth": false,
+    "month": 4,
   },
   "westernDate": 2019-06-06T22:00:00.000Z,
+  "year": 2146,
 }
 `;

@@ -14,58 +14,36 @@ import { getDateStr } from '../helpers';
  */
 class TibetanDate {
   constructor(arg) {
+      let tibDate;
     if (!arg) {
       this.westernDate = new Date();
-      this.tibDate = getDayFromWestern(this.westernDate);
+      tibDate = getDayFromWestern(this.westernDate);
     } else if (typeof arg === 'string') {
       this.westernDate = new Date(arg);
-      this.tibDate = getDayFromWestern(this.westernDate);
+      tibDate = getDayFromWestern(this.westernDate);
     } else {
-      this.tibDate = getDayFromTibetan(arg);
-      this.westernDate = new Date(this.tibDate.westernDate);
+      tibDate = getDayFromTibetan(arg);
+      this.westernDate = new Date(tibDate.westernDate);
     }
+
+    this.isSkippedDay = tibDate.skippedDay;
+    this.isPreviousSkipped = tibDate.isPreviousSkipped;
+    // the first of doubled days
+    this.isLeapDay = tibDate.isLeapDay;
+    this.isDoubledDay = tibDate.isDoubledDay;
+    this.date = tibDate.day;
+    this.month = tibDate.month.month;
+    this.monthObj = tibDate.month;
+    this.year = tibDate.year;
   }
 
   /** GETTERS */
-  get isSkippedDay() {
-    return this.tibDate.skippedDay;
-  }
-
-  get isPreviousSkipped() {
-    return this.tibDate.isPreviousSkipped;
-  }
-
-  // the first of doubled days
-  get isLeapDay() {
-    return this.tibDate.isLeapDay;
-  }
-
-  get isDoubledDay() {
-    return this.tibDate.isDoubledDay;
-  }
-
-  get date() {
-    return this.tibDate.day;
-  }
-
   get day() {
     return this.westernDate.getDate();
   }
 
-  get month() {
-    return this.tibDate.month.month;
-  }
-
-  get monthObj() {
-    return this.tibDate.month;
-  }
-
-  get year() {
-    return this.tibDate.year;
-  }
-
   get yearObj() {
-    return getYearFromTibetan(this.tibDate.year);
+    return getYearFromTibetan(this.year);
   }
 
   get westernDateStr() {
@@ -79,7 +57,7 @@ class TibetanDate {
   }
 
   getDate() {
-    return this.tibDate.day;
+    return this.date;
   }
 
   getDay() {
@@ -87,19 +65,19 @@ class TibetanDate {
   }
 
   getMonth() {
-    return this.tibDate.month.month;
+    return this.month;
   }
 
   getMonthObj() {
-    return this.tibDate.month;
+    return this.monthObj;
   }
 
   getYear() {
-    return this.tibDate.year;
+    return this.year;
   }
 
   getYearObj() {
-    return getYearFromTibetan(this.tibDate.year);
+    return getYearFromTibetan(this.year);
   }
 }
 

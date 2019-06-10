@@ -57,21 +57,6 @@
   var YEAR_GENDER = ['Male', 'Female'];
 
   /**
-   * get Julian date from UNIX date
-   * see explanation:
-   * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
-   *
-   * @property {Date} unixTime - the date object to be converted
-   * @return {number} - julian date
-   */
-  var julianFromUnix = function julianFromUnix(unixTime) {
-    var dateOnly = unixTime.toJSON().split('T')[0];
-    var timeAfterNoon = new Date(dateOnly + 'T18:00:00');
-
-    return Math.floor(timeAfterNoon / MS_IN_YEAR - unixTime.getTimezoneOffset() / MIN_IN_DAY + JULIAN_TO_UNIX);
-  };
-
-  /**
    * fraction part a number
    *
    * @param {number} a - a number to check
@@ -97,6 +82,10 @@
     return a % b || b;
   };
 
+  var getDateStr = function getDateStr(date) {
+    return date.toISOString().split('T')[0];
+  };
+
   /**
    * substract 1 day from a date
    * @param {number} day - the tibetan day
@@ -108,7 +97,7 @@
   };
 
   /**
-       * Calculates whether a given Tibetan year and month number is duplicated, i.e
+       * Calculates whether a given Tibetan year and month number is doubled, i.e
        * is preceded by a leap month.
        *
        * @param {number} tYear - tibetan year
@@ -253,6 +242,30 @@
     return sunTab(12 * sunAnomaly(day, monthCount));
   };
 
+  var classCallCheck = function (instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  };
+
+  var createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
   var _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
@@ -262,18 +275,6 @@
           target[key] = source[key];
         }
       }
-    }
-
-    return target;
-  };
-
-  var objectWithoutProperties = function (obj, keys) {
-    var target = {};
-
-    for (var i in obj) {
-      if (keys.indexOf(i) >= 0) continue;
-      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
-      target[i] = obj[i];
     }
 
     return target;
@@ -294,6 +295,21 @@
     thisYear.gender = YEAR_GENDER[(y + 1) % 2];
 
     return thisYear;
+  };
+
+  /**
+     * get Julian date from UNIX date
+     * see explanation:
+     * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
+     *
+     * @property {Date} unixTime - the date object to be converted
+     * @return {number} - julian date
+     */
+  var julianFromUnix = function julianFromUnix(unixTime) {
+    var dateOnly = getDateStr(unixTime);
+    var timeAfterNoon = new Date(dateOnly + 'T18:00:00');
+
+    return Math.floor(timeAfterNoon / MS_IN_YEAR - unixTime.getTimezoneOffset() / MIN_IN_DAY + JULIAN_TO_UNIX);
   };
 
   /**
@@ -363,63 +379,78 @@
   };
 
   /**
-   * get Unix date from Julian date
-   * since we use only date calculations here, there is no need to correct for timezone differences
-   * see explanation:
-   * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
-   *
-   * @param {number} julianDate - the julian date
-   * @return {Date}
-   */
+     * get Unix date from Julian date
+     * since we use only date calculations here, there is no need to correct for timezone differences
+     * see explanation:
+     * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
+     *
+     * @param {number} julianDate - the julian date
+     * @return {string}
+     */
   var unixFromJulian = function unixFromJulian(julianDate) {
     var unixDate = (julianDate - JULIAN_TO_UNIX) * MS_IN_YEAR;
     var unix = new Date(unixDate);
 
-    return unix.toJSON().split('T')[0];
+    return getDateStr(unix);
   };
 
   /**
-   * Calculates full information about a Tibetan month: whether it is duplicated or not,
-   * and the western start and end date for it.
-   * The start_date and end_date correspond to the leap month if isLeapMonth is passed,
-   * otherwise to the main month (i.e the second of the two).
-   *
-   * @param {number} year - the Tibetan year
-   * @param {number} month - the Tibetan month number (1 to 12)
-   * @param {boolean} isLeapMonth - if leap month or not
-   * @returns {Month}
+   * Calculates the Western date for Losar (Tibetan new year) of a given Tibetan
+   * year number (ex. 2137).
+   * @param {number} tibYear - Tibetan year number
+   * @returns {Date}
    */
-  var getMonthFromTibetan = function getMonthFromTibetan(year, month, isLeapMonth) {
-    var hasLeap = isDoubledMonth(year, month);
-    var isLeap = isLeapMonth && hasLeap;
+  var getLosarForYear = function getLosarForYear(year) {
+    var isTibetan = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
-    // calculate the Julian date 1st and last of the month
-    var monthCount = monthCountFromTibetan({ year: year, month: month, isLeapMonth: isLeap });
-    var jdFirst = 1 + Math.floor(trueDateFromMonthCountDay(30, monthCount - 1));
-    var jdLast = Math.floor(trueDateFromMonthCountDay(30, monthCount));
-    var startDate = unixFromJulian(jdFirst);
-    var endDate = unixFromJulian(jdLast);
+    var tibYear = isTibetan ? year : year + YEAR_DIFF;
+    var julianDay = 1 + julianFromTibetan(tibYear - 1, 12, 0, 30);
 
-    return {
-      year: year, month: month, isLeapMonth: isLeap, isDoubledMonth: hasLeap, startDate: startDate, endDate: endDate
-    };
+    return unixFromJulian(julianDay);
+  };
+
+  /**
+     * Figures out the Tibetan year number, month number within the year, and whether
+     * this is a leap month, from a "month count" number.  See Svante Janson,
+     * "Tibetan Calendar Mathematics", p.8 ff.
+     *
+     * @param {number} monthCount: the "month count" since beginning of epoch
+     * @returns {Month}
+     */
+  var getMonthFromMonthCount = function getMonthFromMonthCount(monthCount) {
+    // const x = ceil(12 * S1 * n + ALPHA);
+    var x = Math.ceil((65 * monthCount + BETA) / 67);
+    var tMonth = amod(x, 12);
+    var tYear = Math.ceil(x / 12) - 1 + YEAR0 + YEAR_DIFF;
+    var isLeapMonth = Math.ceil((65 * (monthCount + 1) + BETA) / 67) === x;
+
+    return { year: tYear, month: tMonth, isLeapMonth: isLeapMonth };
   };
 
   /**
      * Calculates full information for a given Tibetan date
      *
-     * For duplicated days, just as with duplicated months, the "main" day or month is
+     * For doubled days, just as with doubled months, the "main" day or month is
      * the second, and the "leap" day or month is the first.
      *
-     * @param {number} year - Tibetan year number (ex. 2135)
-     * @param {number} month - month number (1 to 12)
-     * @param {boolean} isLeapMonth - is this month a leap month
-     * @param {number} day - day number (1 to 30)
-     * @param {boolean} isLeapDay - is this day a leap day
+     * @param {object} arg
+     * @param {number} arg.year - Tibetan year number (ex. 2135)
+     * @param {number} arg.month - month number (1 to 12)
+     * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+     * @param {number} arg.day - day number (1 to 30)
+     * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
      *
      * @returns {Day} day - with all its attributes. isLeapMonth and isLeapDay are checked and corrected compared to input
      */
-  var getDayFromTibetan = function getDayFromTibetan(year, month, isLeapMonth, day, isLeapDay) {
+  var getDayFromTibetan = function getDayFromTibetan(_ref) {
+    var year = _ref.year,
+        month = _ref.month,
+        _ref$isLeapMonth = _ref.isLeapMonth,
+        isLeapMonth = _ref$isLeapMonth === undefined ? false : _ref$isLeapMonth,
+        day = _ref.day,
+        _ref$isLeapDay = _ref.isLeapDay,
+        isLeapDay = _ref$isLeapDay === undefined ? false : _ref$isLeapDay;
+
     var julianDate = julianFromTibetan(year, month, isLeapMonth, day);
 
     // also calculate the Julian date of the previous Tib. day
@@ -456,148 +487,6 @@
       isDoubledDay: hasLeapDayThis,
       westernDate: westernDate
     };
-  };
-
-  /**
-   * generate a month with all its days
-   *
-   * @param {number} year - tibetan year
-   * @param {number} month - month number
-   * @param {boolean} isLeapMonth - if leap month
-   * @return {Month}
-   */
-  var getCalendarForMonth = function getCalendarForMonth(year, month, isLeapMonth) {
-    var thisMonth = getMonthFromTibetan(year, month, isLeapMonth);
-    var days = {};
-    var westernIndex = {};
-    var monthString = '';
-    if (isDoubledMonth(year, month)) {
-      if (isLeapMonth) {
-        monthString = year + '-' + month + '-leap';
-      } else {
-        monthString = year + '-' + month + '-main';
-      }
-    } else {
-      monthString = year + '-' + month;
-    }
-
-    // loop over the days, taking care of duplicate and missing days
-    for (var d = 1; d <= 30; d++) {
-      var day = getDayFromTibetan(year, month, isLeapMonth, d, false);
-      var dateString = monthString + '-' + d;
-
-      if (day.isDoubledDay) {
-        var main = getDayFromTibetan(year, month, isLeapMonth, d, true);
-
-        days[dateString] = { doubled: true };
-        days[dateString + '-main'] = main;
-        days[dateString + '-leap'] = day;
-        westernIndex[main.westernDate] = dateString + '-main';
-        westernIndex[day.westernDate] = dateString + '-leap';
-      } else if (day.skippedDay) {
-        days[dateString] = day;
-      } else {
-        days[dateString] = day;
-        westernIndex[day.westernDate] = dateString;
-      }
-    }
-
-    thisMonth.days = days;
-    thisMonth.westernIndex = westernIndex;
-    return thisMonth;
-  };
-
-  /**
-       * Figures out a year's info from a Western calendar year number, ex. 2008.
-       *
-       * @param wYear: Western calendar year number, ex. 2008
-       * @returns {Year}
-       */
-  var getYearFromWestern = function getYearFromWestern(wYear) {
-    return yearAttributes({
-      rabjungCycle: Math.ceil((wYear - RABJUNG_BEGINNING + 1) / RABJUNG_CYCLE_LENGTH),
-      rabjungYear: amod(wYear - RABJUNG_BEGINNING + 1, RABJUNG_CYCLE_LENGTH),
-      tibYear: wYear + YEAR_DIFF,
-      westernYear: wYear
-    });
-  };
-
-  /**
-     * Figures out a year's info from a Tibetan calendar year number, ex. 2135.
-     *
-     * @param tYear - Tibetan calendar year number, ex. 2135.
-     * @returns {Year}
-     */
-  var getYearFromTibetan = function getYearFromTibetan(tYear) {
-     return getYearFromWestern(tYear - YEAR_DIFF);
-  };
-
-  /** internal helper function */
-  var getEssentialMonth = function getEssentialMonth(_ref) {
-    var days = _ref.days,
-        westernIndex = _ref.westernIndex,
-        rest = objectWithoutProperties(_ref, ['days', 'westernIndex']);
-    return rest;
-  };
-
-  /**
-   * Generate a calendar for a whole Tibetan year, given by Tib. year number.
-   * @param tibYear
-   * @return {Year} - the year's info, including each of the months as an array within .months
-   *     Each month includes all the days as an array within .days
-   */
-  var getCalendarForYear = function getCalendarForYear(tYear) {
-    var isTibetan = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-    var tibYear = isTibetan ? tYear : tYear + YEAR_DIFF;
-    var year = getYearFromTibetan(tibYear);
-
-    var months = {};
-    var days = {};
-    var westernIndex = {};
-
-    for (var m = 1; m <= 12; m++) {
-      if (isDoubledMonth(tibYear, m)) {
-        var mainMonth = getCalendarForMonth(tibYear, m, true);
-        var leapMonth = getCalendarForMonth(tibYear, m, false);
-
-        months[tibYear + '-' + m] = { doubled: true };
-        months[tibYear + '-' + m + '-main'] = getEssentialMonth(mainMonth);
-        months[tibYear + '-' + m + '-leap'] = getEssentialMonth(leapMonth);
-        days = _extends({}, days, mainMonth.days, leapMonth.days);
-        westernIndex = _extends({}, westernIndex, mainMonth.westernIndex, leapMonth.westernIndex);
-      } else {
-        var month = getCalendarForMonth(tibYear, m, false);
-
-        months[tibYear + '-' + m] = getEssentialMonth(month);
-        days = _extends({}, days, month.days);
-        westernIndex = _extends({}, westernIndex, month.westernIndex);
-      }
-    }
-
-    year.months = months;
-    year.days = days;
-    year.westernIndex = westernIndex;
-
-    return year;
-  };
-
-  /**
-     * Figures out the Tibetan year number, month number within the year, and whether
-     * this is a leap month, from a "month count" number.  See Svante Janson,
-     * "Tibetan Calendar Mathematics", p.8 ff.
-     *
-     * @param {number} monthCount: the "month count" since beginning of epoch
-     * @returns {Month}
-     */
-  var getMonthFromMonthCount = function getMonthFromMonthCount(monthCount) {
-    // const x = ceil(12 * S1 * n + ALPHA);
-    var x = Math.ceil((65 * monthCount + BETA) / 67);
-    var tMonth = amod(x, 12);
-    var tYear = Math.ceil(x / 12) - 1 + YEAR0 + YEAR_DIFF;
-    var isLeapMonth = Math.ceil((65 * (monthCount + 1) + BETA) / 67) === x;
-
-    return { year: tYear, month: tMonth, isLeapMonth: isLeapMonth };
   };
 
   /**
@@ -642,7 +531,7 @@
     // so we found it;
     var winnerJd = void 0;
     var winnerTrueDate = void 0;
-    // if the western date is the 1st of a duplicated tib. day, then jd[0] == jd - 1 and
+    // if the western date is the 1st of a doubled tib. day, then jd[0] == jd - 1 and
     // jd[1] == jd + 1, and the corresponding tib. day number is the one from jd[1].
     if (jds[0] === jd) {
       winnerJd = jds[0]; // eslint-disable-line prefer-destructuring
@@ -662,17 +551,47 @@
         month = _getMonthFromMonthCou.month,
         isLeapMonth = _getMonthFromMonthCou.isLeapMonth;
 
-    return getDayFromTibetan(year, month, isLeapMonth, day, isLeapDay);
+    return getDayFromTibetan({
+      year: year, month: month, isLeapMonth: isLeapMonth, day: day, isLeapDay: isLeapDay
+    });
+  };
+
+  /**
+       * Figures out a year's info from a Western calendar year number, ex. 2008.
+       *
+       * @param {number} wYear: Western calendar year number, ex. 2008
+       * @returns {Year}
+       */
+  var getYearFromWestern = function getYearFromWestern(wYear) {
+    return yearAttributes({
+      rabjungCycle: Math.ceil((wYear - RABJUNG_BEGINNING + 1) / RABJUNG_CYCLE_LENGTH),
+      rabjungYear: amod(wYear - RABJUNG_BEGINNING + 1, RABJUNG_CYCLE_LENGTH),
+      tibYear: wYear + YEAR_DIFF,
+      westernYear: wYear
+    });
+  };
+
+  /**
+     * Figures out a year's info from a Tibetan calendar year number, ex. 2135.
+     *
+     * @param {number} tYear - Tibetan calendar year number, ex. 2135.
+     * @returns {Year}
+     */
+  var getYearFromTibetan = function getYearFromTibetan(tYear) {
+     return getYearFromWestern(tYear - YEAR_DIFF);
   };
 
   /**
        * Figures out a year's info based on the Tibetan calendar, ex. the 3rd year of the 15th Rabjung calendrical cycle.
-       *
-       * @param rabjungCycle : number of the cycle
-       * @param rabjungYear : number of the year within the cycle, from 1 to 60.
+       * @param {object} arg
+       * @param {number} arg.rabjungCycle : number of the cycle
+       * @param {number} arg.rabjungYear : number of the year within the cycle, from 1 to 60.
        * @returns {null | Year}
        */
-  var getYearFromRabjung = function getYearFromRabjung(rabjungCycle, rabjungYear) {
+  var getYearFromRabjung = function getYearFromRabjung(_ref) {
+    var rabjungCycle = _ref.rabjungCycle,
+        rabjungYear = _ref.rabjungYear;
+
     if (rabjungCycle < 1 || rabjungYear > RABJUNG_CYCLE_LENGTH) {
       throw new Error('Year number must be between 1 and ' + RABJUNG_CYCLE_LENGTH);
     }
@@ -688,29 +607,285 @@
   };
 
   /**
-   * Calculates the Western date for Losar (Tibetan new year) of a given Tibetan
-   * year number (ex. 2137).
-   * @param {number} tibYear - Tibetan year number
-   * @returns {Date}
+   * A TibetanYear class
+   * @param {...(object,number)} [arg] undefined will return tibeatn year for current year | number will return tibetan year unless isWestern is true | object will return tibeatn year according to rabjung cycle
+   * @param {number} arg.rabjungCycle number of the cycle
+   * @param {number} arg.rabjungYear number of the year within the cycle, from 1 to 60.
+   * @param {bool} [isWestern=false] optional second argument, if set to true and fist arg is a number it will be treated as western year date
+  */
+
+  var TibetanYear = function () {
+    function TibetanYear(arg) {
+      var isWestern = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      classCallCheck(this, TibetanYear);
+
+      var yearInit = void 0;
+
+      if (!arg) {
+        var westernDate = new Date();
+        var tibDate = new TibetanDate(westernDate.toISOString());
+        yearInit = getYearFromTibetan(tibDate.year);
+      } else if (typeof arg === 'number') {
+        if (isWestern) {
+          yearInit = getYearFromWestern(arg);
+        } else {
+          yearInit = getYearFromTibetan(arg);
+        }
+      } else {
+        yearInit = getYearFromRabjung(arg);
+      }
+
+      this.rabjungCycle = yearInit.rabjungCycle;
+      this.rabjungYear = yearInit.rabjungYear;
+      this.tibYearNum = yearInit.tibYear;
+      this.westernYear = yearInit.westernYear;
+      this.animal = yearInit.animal;
+      this.element = yearInit.element;
+      this.gender = yearInit.gender;
+
+      this.months = [];
+    }
+
+    // Need to call this method at least once in order to calculate the month.
+    // This is in order to reduce initial object size.
+
+
+    TibetanYear.prototype.getMonths = function getMonths() {
+      if (this.months.length) {
+        return this.months;
+      }
+      // loop over the month, taking care of duplicates
+      for (var m = 1; m <= 12; m++) {
+        var month = new TibetanMonth({ year: this.tibYearNum, month: m });
+        this.months.push(month);
+        if (isDoubledMonth(this.tibYearNum, m)) {
+          var leapMonth = new TibetanMonth({ year: this.tibYearNum, month: m, isLeapMonth: true });
+          this.months.push(leapMonth);
+        }
+      }
+      return this.months;
+    };
+
+    return TibetanYear;
+  }();
+
+  /**
+   * Calculates full information about a Tibetan month: whether it is doubled or not,
+   * and the western start and end date for it.
+   * The start_date and end_date correspond to the leap month if isLeapMonth is true,
+   * otherwise to the main month (i.e the second of the two).
+   *
+   * @param {object} arg
+   * @param {number} arg.year - the Tibetan year
+   * @param {number} arg.month - the Tibetan month number (1 to 12)
+   * @param {boolean} [arg.isLeapMonth=false] - if leap month or not
+   * @returns {Month}
    */
-  var getLosarForYear = function getLosarForYear(year) {
-    var isTibetan = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var getMonthFromTibetan = function getMonthFromTibetan(_ref) {
+    var year = _ref.year,
+        month = _ref.month,
+        _ref$isLeapMonth = _ref.isLeapMonth,
+        isLeapMonth = _ref$isLeapMonth === undefined ? false : _ref$isLeapMonth;
 
-    var tibYear = isTibetan ? year : year + YEAR_DIFF;
-    var julianDay = 1 + julianFromTibetan(tibYear - 1, 12, 0, 30);
+    var hasLeap = isDoubledMonth(year, month);
+    var isLeap = isLeapMonth && hasLeap;
 
-    return unixFromJulian(julianDay);
+    // calculate the Julian date 1st and last of the month
+    var monthCount = monthCountFromTibetan({ year: year, month: month, isLeapMonth: isLeap });
+    var jdFirst = 1 + Math.floor(trueDateFromMonthCountDay(30, monthCount - 1));
+    var jdLast = Math.floor(trueDateFromMonthCountDay(30, monthCount));
+    var startDate = unixFromJulian(jdFirst);
+    var endDate = unixFromJulian(jdLast);
+
+    return {
+      year: year, month: month, isLeapMonth: isLeap, isDoubledMonth: hasLeap, startDate: startDate, endDate: endDate
+    };
   };
 
-  exports.getCalendarForMonth = getCalendarForMonth;
-  exports.getCalendarForYear = getCalendarForYear;
-  exports.getDayFromTibetan = getDayFromTibetan;
-  exports.getDayFromWestern = getDayFromWestern;
-  exports.getYearFromRabjung = getYearFromRabjung;
-  exports.getYearFromTibetan = getYearFromTibetan;
-  exports.getYearFromWestern = getYearFromWestern;
+  /**
+   * A TibetanMonth class
+   * @param {...(object,string)} [arg] undefined will return tibeatn month for current month | string will return tibetan day for month of `new Date(arg)` | object will return tibeatn month according to objecct definition
+     * @param {number} arg.year - Tibetan year number (ex. 2135)
+     * @param {number} arg.month - month number (1 to 12)
+     * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+   */
+
+  var TibetanMonth = function () {
+    function TibetanMonth(arg) {
+      classCallCheck(this, TibetanMonth);
+
+      var westernDate = void 0;
+      var tibDate = void 0;
+
+      if (!arg) {
+        westernDate = new Date();
+        tibDate = new TibetanDate(westernDate.toISOString());
+      } else if (typeof arg === 'string') {
+        westernDate = new Date(arg);
+        tibDate = new TibetanDate(westernDate.toISOString());
+      } else {
+        this.year = arg.year;
+        this.month = arg.month;
+        this.isLeapMonth = arg.isLeapMonth || false;
+      }
+
+      if (tibDate) {
+        this.year = tibDate.year;
+        this.month = tibDate.month;
+        this.isLeapMonth = tibDate.monthObj.isLeapMonth;
+      }
+
+      var monthObj = getMonthFromTibetan({
+        year: this.year,
+        month: this.month,
+        isLeapMonth: this.isLeapMonth
+      });
+
+      this.isDoubledMonth = monthObj.isDoubledMonth;
+      this.startDateStr = monthObj.startDate;
+      this.endDateStr = monthObj.endDate;
+
+      this.days = [];
+    }
+
+    // Need to call this method at least once in order to calculate the dates.
+    // This is in order to reduce initial object size.
+    TibetanMonth.prototype.getDays = function getDays() {
+      if (this.days.length) {
+        return this.days;
+      }
+      // loop over the days, taking care of duplicate and missing days
+      for (var d = 1; d <= 30; d++) {
+        var day = new TibetanDate({
+          year: this.year,
+          month: this.month,
+          isLeapMonth: this.isLeapMonth,
+          day: d,
+          isLeapDay: false
+        });
+        if (!day.isSkippedDay) {
+          this.days.push(day);
+        }
+
+        if (day.isDoubledDay) {
+          var main = new TibetanDate({
+            year: this.year,
+            month: this.month,
+            isLeapMonth: this.isLeapMonth,
+            day: d,
+            isLeapDay: true
+          });
+          this.days.push(main);
+        }
+      }
+      return this.days;
+    };
+
+    createClass(TibetanMonth, [{
+      key: 'yearObj',
+      get: function get$$1() {
+        return new TibetanYear(this.year);
+      }
+    }]);
+    return TibetanMonth;
+  }();
+
+  /**
+   * A TibetanDate class
+   * @param {...(object,string)} [arg] undefined will return tibeatn date for today | string will return tibetan day for `new Date(arg)` | object will return tibeatn day according to objecct definition
+     * @param {number} arg.year - Tibetan year number (ex. 2135)
+     * @param {number} arg.month - month number (1 to 12)
+     * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+     * @param {number} arg.day - day number (1 to 30)
+     * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
+   */
+
+  var TibetanDate = function () {
+    function TibetanDate(arg) {
+      classCallCheck(this, TibetanDate);
+
+      var tibDate = void 0;
+      if (!arg) {
+        this.westernDate = new Date();
+        tibDate = getDayFromWestern(this.westernDate);
+      } else if (typeof arg === 'string') {
+        this.westernDate = new Date(arg);
+        tibDate = getDayFromWestern(this.westernDate);
+      } else {
+        tibDate = getDayFromTibetan(arg);
+        this.westernDate = new Date(tibDate.westernDate);
+      }
+
+      this.isSkippedDay = tibDate.skippedDay;
+      this.isPreviousSkipped = tibDate.isPreviousSkipped;
+      // the first of doubled days
+      this.isLeapDay = tibDate.isLeapDay;
+      this.isDoubledDay = tibDate.isDoubledDay;
+      this.date = tibDate.day;
+      this.year = tibDate.year;
+      this.month = tibDate.month.month;
+      this.monthObj = new TibetanMonth({
+        year: tibDate.year,
+        month: tibDate.month.month,
+        isLeapMonth: tibDate.isLeapMonth
+      });
+    }
+
+    /** GETTERS */
+
+
+    /** METHODS */
+    TibetanDate.prototype.getWesternDate = function getWesternDate() {
+      return this.westernDate;
+    };
+
+    TibetanDate.prototype.getDate = function getDate() {
+      return this.date;
+    };
+
+    TibetanDate.prototype.getDay = function getDay() {
+      return this.westernDate.getDay();
+    };
+
+    TibetanDate.prototype.getMonth = function getMonth() {
+      return this.month;
+    };
+
+    TibetanDate.prototype.getMonthObj = function getMonthObj() {
+      return this.monthObj;
+    };
+
+    TibetanDate.prototype.getYear = function getYear() {
+      return this.year;
+    };
+
+    TibetanDate.prototype.getYearObj = function getYearObj() {
+      return this.yearObj;
+    };
+
+    createClass(TibetanDate, [{
+      key: 'day',
+      get: function get$$1() {
+        return this.westernDate.getDay();
+      }
+    }, {
+      key: 'yearObj',
+      get: function get$$1() {
+        return new TibetanYear(this.year);
+      }
+    }, {
+      key: 'westernDateStr',
+      get: function get$$1() {
+        return getDateStr(this.westernDate);
+      }
+    }]);
+    return TibetanDate;
+  }();
+
   exports.getLosarForYear = getLosarForYear;
-  exports.getMonthFromTibetan = getMonthFromTibetan;
+  exports.TibetanDate = TibetanDate;
+  exports.TibetanMonth = TibetanMonth;
+  exports.TibetanYear = TibetanYear;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

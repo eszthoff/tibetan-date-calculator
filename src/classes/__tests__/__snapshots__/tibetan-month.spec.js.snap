@@ -35,3 +35,18 @@ TibetanMonth {
   "year": 2146,
 }
 `;
+
+exports[`TibetanMonth should not calculate days when requested (includes skipped and doubled days) 1`] = `30`;
+
+exports[`TibetanMonth should return year object correctly) 1`] = `
+TibetanYear {
+  "animal": "Pig",
+  "element": "Earth",
+  "gender": "Female",
+  "months": Array [],
+  "rabjungCycle": 17,
+  "rabjungYear": 33,
+  "tibYearNum": 2146,
+  "westernYear": 2019,
+}
+`;

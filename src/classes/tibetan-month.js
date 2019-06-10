@@ -1,9 +1,9 @@
 import TibetanDate from './tibetan-date'; // eslint-disable-line import/no-cycle
+import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
 import getMonthFromTibetan from '../generators/get-month-from-tibetan';
-import getYearFromTibetan from '../generators/get-year-from-tibetan';
 
 /**
- * A TibetanDate class
+ * A TibetanMonth class
  * @param {...(object,string)} [arg] undefined will return tibeatn month for current month | string will return tibetan day for month of `new Date(arg)` | object will return tibeatn month according to objecct definition
    * @param {number} arg.year - Tibetan year number (ex. 2135)
    * @param {number} arg.month - month number (1 to 12)
@@ -46,7 +46,7 @@ class TibetanMonth {
   }
 
   get yearObj() {
-    return getYearFromTibetan(this.year);
+    return new TibetanYear(this.year);
   }
 
   // Need to call this method at least once in order to calculate the dates.

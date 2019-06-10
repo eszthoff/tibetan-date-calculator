@@ -24,11 +24,17 @@ describe('TibetanMonth', () => {
     const month = new TibetanMonth();
     expect(month.days.length).toEqual(0);
   });
-  it('should not calculate days when requested', () => {
-    const month = new TibetanMonth();
+  it('should not calculate days when requested (includes skipped and doubled days)', () => {
+    const month = new TibetanMonth({ year: 2146, month: 1 });
     const days = month.getDays();
 
     expect(month.days.length).not.toEqual(0);
-    expect(days.length).toEqual(29);
+    expect(days.length).toMatchSnapshot();
+  });
+  it('should return year object correctly)', () => {
+    const month = new TibetanMonth();
+    const { yearObj } = month;
+
+    expect(yearObj).toMatchSnapshot();
   });
 });

@@ -20,7 +20,7 @@ describe('TibetanYear', () => {
   });
   it('should create a correct class when invoked with object arg', () => {
     expect(new TibetanYear({
-        rabjungCycle: 17, rabjungYear: 33
+      rabjungCycle: 17, rabjungYear: 33
     })).toMatchSnapshot();
   });
   it('should not calculate months when initially incoved', () => {

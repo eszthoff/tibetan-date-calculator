@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TibetanMonth should create a correct class when invoked with object arg 1`] = `
+TibetanMonth {
+  "days": Array [],
+  "endDateStr": "2019-06-03",
+  "isDoubledMonth": false,
+  "isLeapMonth": false,
+  "month": 3,
+  "startDateStr": "2019-05-05",
+  "year": 2146,
+}
+`;
+
+exports[`TibetanMonth should create a correct class when invoked with string arg 1`] = `
+TibetanMonth {
+  "days": Array [],
+  "endDateStr": "2019-07-02",
+  "isDoubledMonth": false,
+  "isLeapMonth": false,
+  "month": 4,
+  "startDateStr": "2019-06-04",
+  "year": 2146,
+}
+`;
+
+exports[`TibetanMonth should create a correct class when invoked without arg 1`] = `
+TibetanMonth {
+  "days": Array [],
+  "endDateStr": "2019-07-02",
+  "isDoubledMonth": false,
+  "isLeapMonth": false,
+  "month": 4,
+  "startDateStr": "2019-06-04",
+  "year": 2146,
+}
+`;

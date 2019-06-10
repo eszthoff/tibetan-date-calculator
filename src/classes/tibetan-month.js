@@ -16,10 +16,10 @@ class TibetanMonth {
 
     if (!arg) {
       westernDate = new Date();
-      tibDate = TibetanDate(westernDate);
+      tibDate = new TibetanDate(westernDate.toISOString());
     } else if (typeof arg === 'string') {
       westernDate = new Date(arg);
-      tibDate = TibetanDate(westernDate);
+      tibDate = new TibetanDate(westernDate.toISOString());
     } else {
       this.year = arg.year;
       this.month = arg.month;

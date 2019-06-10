@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TibetanYear should create a correct class when invoked with number arg 1`] = `
+TibetanYear {
+  "animal": "Dog",
+  "element": "Earth",
+  "gender": "Male",
+  "months": Array [],
+  "rabjungCycle": 17,
+  "rabjungYear": 32,
+  "tibYearNum": 2145,
+  "westernYear": 2018,
+}
+`;
+
+exports[`TibetanYear should create a correct class when invoked with number arg and western set to true 1`] = `
+TibetanYear {
+  "animal": "Snake",
+  "element": "Water",
+  "gender": "Female",
+  "months": Array [],
+  "rabjungCycle": 17,
+  "rabjungYear": 27,
+  "tibYearNum": 2140,
+  "westernYear": 2013,
+}
+`;
+
+exports[`TibetanYear should create a correct class when invoked with object arg 1`] = `
+TibetanYear {
+  "animal": "Pig",
+  "element": "Earth",
+  "gender": "Female",
+  "months": Array [],
+  "rabjungCycle": 17,
+  "rabjungYear": 33,
+  "tibYearNum": 2146,
+  "westernYear": 2019,
+}
+`;
+
+exports[`TibetanYear should create a correct class when invoked without arg 1`] = `
+TibetanYear {
+  "animal": "Pig",
+  "element": "Earth",
+  "gender": "Female",
+  "months": Array [],
+  "rabjungCycle": 17,
+  "rabjungYear": 33,
+  "tibYearNum": 2146,
+  "westernYear": 2019,
+}
+`;

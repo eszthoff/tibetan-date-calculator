@@ -1,8 +1,8 @@
 import {
-  simpleMonthMock, leapMonthMock, mainMonthMock, month214502, month214008leap, month214008main
+  simpleMonthMock, leapMonthMock, mainMonthMock
 } from './month-mock';
 import { dayInDuplicateMonthMock, skippedDayMock, duplicateDayMock } from './day-mock';
-import { yearMock, year2018, year2013 } from './year-mock';
+import { yearMock } from './year-mock';
 
 const astroMock = {
   day: 11,
@@ -24,10 +24,5 @@ export {
   simpleMonthMock,
   leapMonthMock,
   mainMonthMock,
-  yearMock,
-  month214502,
-  month214008leap,
-  month214008main,
-  year2018,
-  year2013
+  yearMock
 };

@@ -1,6 +1,4 @@
-import json2013 from './2013';
-import json2018 from './2018';
-
+/* eslint-disable import/prefer-default-export */
 const yearMock = {
   rabjungCycle: 17,
   rabjungYear: 32,
@@ -11,12 +9,6 @@ const yearMock = {
   animal: 'Dog'
 };
 
-const year2013 = JSON.parse(json2013);
-
-const year2018 = JSON.parse(json2018);
-
 export {
-  yearMock,
-  year2018,
-  year2013
+  yearMock
 };

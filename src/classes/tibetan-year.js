@@ -7,10 +7,14 @@ import { isDoubledMonth } from '../helpers';
 
 /**
  * A TibetanYear class
- * @param {...(object,number)} [arg] undefined will return tibeatn year for current year | number will return tibetan year unless isWestern is true | object will return tibeatn year according to rabjung cycle
+ * @param {...(object,number)} [arg] undefined will return tibeatn year for
+ * current year | number will return tibetan year unless isWestern is true |
+ * object will return tibeatn year according to rabjung cycle
  * @param {number} arg.rabjungCycle number of the cycle
- * @param {number} arg.rabjungYear number of the year within the cycle, from 1 to 60.
- * @param {bool} [isWestern=false] optional second argument, if set to true and fist arg is a number it will be treated as western year date
+ * @param {number} arg.rabjungYear number of the year within the cycle,
+ * from 1 to 60.
+ * @param {bool} [isWestern=false] optional second argument, if set to true
+ * and fist arg is a number it will be treated as western year date
 */
 class TibetanYear {
   constructor(arg, isWestern = false) {

@@ -1,7 +1,3 @@
-import json214502 from './214502';
-import json214008leap from './214008leap';
-import json214008main from './214008main';
-
 const simpleMonthMock = {
   info: {
     year: 2145,
@@ -53,15 +49,8 @@ const mainMonthMock = {
   monthCount: 14936
 };
 
-const month214502 = JSON.parse(json214502);
-const month214008leap = JSON.parse(json214008leap);
-const month214008main = JSON.parse(json214008main);
-
 export {
   simpleMonthMock,
   leapMonthMock,
-  mainMonthMock,
-  month214502,
-  month214008leap,
-  month214008main
+  mainMonthMock
 };

@@ -4,10 +4,12 @@ import getMonthFromTibetan from '../generators/get-month-from-tibetan';
 
 /**
  * A TibetanMonth class
- * @param {...(object,string)} [arg] undefined will return tibeatn month for current month | string will return tibetan day for month of `new Date(arg)` | object will return tibeatn month according to objecct definition
-   * @param {number} arg.year - Tibetan year number (ex. 2135)
-   * @param {number} arg.month - month number (1 to 12)
-   * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+ * @param {...(object,string)} [arg] undefined will return tibeatn month for
+ * current month | string will return tibetan day for month of `new Date(arg)` |
+ * object will return tibeatn month according to objecct definition
+ * @param {number} arg.year - Tibetan year number (ex. 2135)
+ * @param {number} arg.month - month number (1 to 12)
+ * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
  */
 class TibetanMonth {
   constructor(arg) {

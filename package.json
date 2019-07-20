@@ -1,7 +1,7 @@
 {
   "name": "tibetan-date-calculator",
   "description": "A library to caclulate tibetan calendar details. It is based on Svante Janson's paper www2.math.uu.se/~svante/papers/calendars/tibet.pdf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Rigpa",
   "license": "MIT",
   "main": "dist/index.js",

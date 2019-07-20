@@ -606,10 +606,14 @@ var getYearFromRabjung = function getYearFromRabjung(_ref) {
 
 /**
  * A TibetanYear class
- * @param {...(object,number)} [arg] undefined will return tibeatn year for current year | number will return tibetan year unless isWestern is true | object will return tibeatn year according to rabjung cycle
+ * @param {...(object,number)} [arg] undefined will return tibeatn year for
+ * current year | number will return tibetan year unless isWestern is true |
+ * object will return tibeatn year according to rabjung cycle
  * @param {number} arg.rabjungCycle number of the cycle
- * @param {number} arg.rabjungYear number of the year within the cycle, from 1 to 60.
- * @param {bool} [isWestern=false] optional second argument, if set to true and fist arg is a number it will be treated as western year date
+ * @param {number} arg.rabjungYear number of the year within the cycle,
+ * from 1 to 60.
+ * @param {bool} [isWestern=false] optional second argument, if set to true
+ * and fist arg is a number it will be treated as western year date
 */
 
 var TibetanYear = function () {
@@ -702,10 +706,12 @@ var getMonthFromTibetan = function getMonthFromTibetan(_ref) {
 
 /**
  * A TibetanMonth class
- * @param {...(object,string)} [arg] undefined will return tibeatn month for current month | string will return tibetan day for month of `new Date(arg)` | object will return tibeatn month according to objecct definition
-   * @param {number} arg.year - Tibetan year number (ex. 2135)
-   * @param {number} arg.month - month number (1 to 12)
-   * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+ * @param {...(object,string)} [arg] undefined will return tibeatn month for
+ * current month | string will return tibetan day for month of `new Date(arg)` |
+ * object will return tibeatn month according to objecct definition
+ * @param {number} arg.year - Tibetan year number (ex. 2135)
+ * @param {number} arg.month - month number (1 to 12)
+ * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
  */
 
 var TibetanMonth = function () {
@@ -761,9 +767,6 @@ var TibetanMonth = function () {
         day: d,
         isLeapDay: false
       });
-      if (!day.isSkippedDay) {
-        this.days.push(day);
-      }
 
       if (day.isDoubledDay) {
         var main = new TibetanDate({
@@ -774,6 +777,10 @@ var TibetanMonth = function () {
           isLeapDay: true
         });
         this.days.push(main);
+      }
+
+      if (!day.isSkippedDay) {
+        this.days.push(day);
       }
     }
     return this.days;
@@ -790,12 +797,14 @@ var TibetanMonth = function () {
 
 /**
  * A TibetanDate class
- * @param {...(object,string)} [arg] undefined will return tibeatn date for today | string will return tibetan day for `new Date(arg)` | object will return tibeatn day according to objecct definition
-   * @param {number} arg.year - Tibetan year number (ex. 2135)
-   * @param {number} arg.month - month number (1 to 12)
-   * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
-   * @param {number} arg.day - day number (1 to 30)
-   * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
+ * @param {...(object,string)} [arg] undefined will return tibeatan date
+ * for today | string will return tibetan day for `new Date(arg)` | object
+ * will return tibetan day according to object definition
+ * @param {number} arg.year - Tibetan year number (ex. 2135)
+ * @param {number} arg.month - month number (1 to 12)
+ * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
+ * @param {number} arg.day - day number (1 to 30)
+ * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
  */
 
 var TibetanDate = function () {

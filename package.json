@@ -36,9 +36,13 @@
     "url": "git+ssh://git@gitlab.com/TibetanCalendar/TibetanDateCalcualtor.git"
   },
   "keywords": [
-    "javascript",
     "tibetan",
-    "calendar"
+    "calendar",
+    "lunar",
+    "lunar-calendar",
+    "dates",
+    "date converter",
+    "javascript"
   ],
   "bugs": {
     "url": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor/issues"

@@ -66,9 +66,6 @@ class TibetanMonth {
         day: d,
         isLeapDay: false
       });
-      if (!day.isSkippedDay) {
-        this.days.push(day);
-      }
 
       if (day.isDoubledDay) {
         const main = new TibetanDate({
@@ -79,6 +76,10 @@ class TibetanMonth {
           isLeapDay: true
         });
         this.days.push(main);
+      }
+
+      if (!day.isSkippedDay) {
+        this.days.push(day);
       }
     }
     return this.days;

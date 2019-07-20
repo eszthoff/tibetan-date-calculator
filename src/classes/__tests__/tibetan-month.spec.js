@@ -1,5 +1,6 @@
 import MockDate from 'mockdate';
 import TibetanMonth from '../tibetan-month';
+import { trueDateFromMonthCountDay } from '../../conversions';
 
 describe('TibetanMonth', () => {
   beforeAll(() => {
@@ -24,12 +25,45 @@ describe('TibetanMonth', () => {
     const month = new TibetanMonth();
     expect(month.days.length).toEqual(0);
   });
-  it('should not calculate days when requested (includes skipped and doubled days)', () => {
-    const month = new TibetanMonth({ year: 2146, month: 1 });
+  it('should calculate days when requested (includes skipped and doubled days)', () => {
+    const month = new TibetanMonth({ year: 2146, month: 5 });
     const days = month.getDays();
 
     expect(month.days.length).not.toEqual(0);
-    expect(days.length).toMatchSnapshot();
+    expect(days).toMatchSnapshot();
+  });
+  it('should not include skipped days', () => {
+    const month = new TibetanMonth({ year: 2146, month: 5 });
+    const days = month.getDays();
+
+    expect(days.some(day => day.isPreviousSkipped)).toBeTruthy();
+    expect(days.every(day => !day.isSkippedDay)).toBeTruthy();
+  });
+  it('should list days in the correct order according to tibetan date', () => {
+    const month = new TibetanMonth({ year: 2146, month: 5 });
+    const days = month.getDays();
+    const isDateAfterPrev = (day, i, arr) => {
+      if (i === 0 && day.date === 1) {
+        return true;
+      }
+
+      return day.date >= arr[i - 1].date;
+    };
+
+    expect(days.every(isDateAfterPrev)).toBeTruthy();
+  });
+  it('should list days in the correct order according to western date', () => {
+    const month = new TibetanMonth({ year: 2146, month: 5 });
+    const days = month.getDays();
+    const isDateAfterPrev = (day, i, arr) => {
+      if (i === 0 && day.date === 1) {
+        return true;
+      }
+
+      return day.westernDate > arr[i - 1].westernDate;
+    };
+
+    expect(days.every(isDateAfterPrev)).toBeTruthy();
   });
   it('should return year object correctly)', () => {
     const month = new TibetanMonth();

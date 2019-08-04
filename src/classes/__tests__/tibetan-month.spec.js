@@ -1,6 +1,5 @@
 import MockDate from 'mockdate';
 import TibetanMonth from '../tibetan-month';
-import { trueDateFromMonthCountDay } from '../../conversions';
 
 describe('TibetanMonth', () => {
   beforeAll(() => {
@@ -20,6 +19,16 @@ describe('TibetanMonth', () => {
     expect(new TibetanMonth({
       year: 2146, month: 3, isLeapMonth: false
     })).toMatchSnapshot();
+  });
+  it('should set isLeapMonth to true for first of doubled months', () => {
+    const month = new TibetanMonth('2019/02/10');
+    expect(month.isDoubledMonth).toBeTruthy();
+    expect(month.isLeapMonth).toBeTruthy();
+  });
+  it('should set isLeapMonth to true for second of doubled months', () => {
+    const month = new TibetanMonth('2019/03/10');
+    expect(month.isDoubledMonth).toBeTruthy();
+    expect(month.isLeapMonth).toBeFalsy();
   });
   it('should not calculate days when initially incoved', () => {
     const month = new TibetanMonth();

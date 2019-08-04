@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getDayFromWestern() should return the correct object 1`] = `
+exports[`getDayFromWestern() should return the correct object for day in leap month 1`] = `
 Object {
   "day": 4,
   "isDoubledDay": false,
@@ -17,7 +17,7 @@ Object {
 }
 `;
 
-exports[`getDayFromWestern() should return the correct object 2`] = `
+exports[`getDayFromWestern() should return the correct object for day in main doubled month 1`] = `
 Object {
   "day": 4,
   "isDoubledDay": false,
@@ -34,7 +34,7 @@ Object {
 }
 `;
 
-exports[`getDayFromWestern() should return the correct object 3`] = `
+exports[`getDayFromWestern() should return the correct object for leap day 1`] = `
 Object {
   "day": 8,
   "isDoubledDay": true,
@@ -51,7 +51,7 @@ Object {
 }
 `;
 
-exports[`getDayFromWestern() should return the correct object 4`] = `
+exports[`getDayFromWestern() should return the correct object for main duplicate day 1`] = `
 Object {
   "day": 8,
   "isDoubledDay": true,

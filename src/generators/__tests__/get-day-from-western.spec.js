@@ -2,13 +2,34 @@ import getDayFromWestern from '../get-day-from-western';
 import { dayInDuplicateMonthMock, skippedDayMock, duplicateDayMock } from '../../__mocks__';
 
 describe('getDayFromWestern()', () => {
-  it('should return the correct object', () => {
-    expect(getDayFromWestern(new Date(dayInDuplicateMonthMock.westernLeap)))
+  it('should return the correct object for day in leap month', () => {
+    const day = getDayFromWestern(new Date(dayInDuplicateMonthMock.westernLeap));
+    expect(day)
       .toMatchSnapshot();
-    expect(getDayFromWestern(new Date(dayInDuplicateMonthMock.westernMain)))
-      .toMatchSnapshot();
-    expect(getDayFromWestern(new Date(skippedDayMock.western))).not.toEqual(skippedDayMock.dayObject);
-    expect(getDayFromWestern(new Date(duplicateDayMock.westernLeap))).toMatchSnapshot();
-    expect(getDayFromWestern(new Date(duplicateDayMock.westernMain))).toMatchSnapshot();
+    expect(day.month.isDoubledMonth).toBeTruthy();
+    expect(day.month.isLeapMonth).toBeTruthy();
+  });
+  it('should return the correct object for day in main doubled month', () => {
+    const day = getDayFromWestern(new Date(dayInDuplicateMonthMock.westernMain));
+    expect(day).toMatchSnapshot();
+    expect(day.month.isDoubledMonth).toBeTruthy();
+    expect(day.month.isLeapMonth).toBeFalsy();
+  });
+  it('should not return the object with skipped day', () => {
+    const day = getDayFromWestern(new Date(skippedDayMock.western));
+    expect(day).not.toEqual(skippedDayMock.dayObject);
+    expect(day.day).toEqual(skippedDayMock.day - 1);
+  });
+  it('should return the correct object for leap day', () => {
+    const day = getDayFromWestern(new Date(duplicateDayMock.westernLeap));
+    expect(day).toMatchSnapshot();
+    expect(day.isDoubledDay).toBeTruthy();
+    expect(day.isLeapDay).toBeTruthy();
+  });
+  it('should return the correct object for main duplicate day', () => {
+    const day = getDayFromWestern(new Date(duplicateDayMock.westernMain));
+    expect(day).toMatchSnapshot();
+    expect(day.isDoubledDay).toBeTruthy();
+    expect(day.isLeapDay).toBeFalsy();
   });
 });

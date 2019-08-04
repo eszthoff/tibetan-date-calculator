@@ -830,7 +830,7 @@ var TibetanDate = function () {
     this.monthObj = new TibetanMonth({
       year: tibDate.year,
       month: tibDate.month.month,
-      isLeapMonth: tibDate.isLeapMonth
+      isLeapMonth: tibDate.month.isLeapMonth
     });
   }
 

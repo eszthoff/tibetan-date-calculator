@@ -2,7 +2,7 @@ A Javascript library to calculate Tibetan calendrical dates according
 to the Phugpa tradition. 
 
 The calculations are basically implementation the formulas in Svante Janson,
-["Tibetan Calendar Mathematics"](www2.math.uu.se/~svante/papers/calendars/tibet.pdf). We are using year 806 as the epoch for all calculations. See the paper for details.
+["Tibetan Calendar Mathematics"](http://www2.math.uu.se/~svante/papers/calendars/tibet.pdf). We are using year 806 as the epoch for all calculations. See the paper for details.
 
 # Installation
 npm install tibetan-date-calculator

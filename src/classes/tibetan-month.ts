@@ -1,6 +1,13 @@
 import TibetanDate from './tibetan-date'; // eslint-disable-line import/no-cycle
 import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
 import getMonthFromTibetan from '../generators/get-month-from-tibetan';
+import { number } from 'prop-types';
+
+type Arg = (string | {
+  year: number,
+  month: number,
+  isLeapMonth?: boolean
+})
 
 /**
  * A TibetanMonth class
@@ -12,7 +19,15 @@ import getMonthFromTibetan from '../generators/get-month-from-tibetan';
  * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
  */
 class TibetanMonth {
-  constructor(arg) {
+  year: number;
+  month: number;
+  isLeapMonth: boolean;
+  isDoubledMonth: boolean;
+  startDateStr: string;
+  endDateStr: string;
+  days: TibetanDate[];
+
+  constructor(arg: Arg) {
     let westernDate;
     let tibDate;
 
@@ -47,13 +62,13 @@ class TibetanMonth {
     this.days = [];
   }
 
-  get yearObj() {
+  get yearObj(): TibetanYear {
     return new TibetanYear(this.year);
   }
 
   // Need to call this method at least once in order to calculate the dates.
   // This is in order to reduce initial object size.
-  getDays() {
+  getDays(): TibetanDate[] {
     if (this.days.length) {
       return this.days;
     }

@@ -14,7 +14,7 @@ import { getDateStr } from '../helpers';
    * @param {number} julianDate - the julian date
    * @return {string}
    */
-const unixFromJulian = (julianDate) => {
+const unixFromJulian = (julianDate: number): string => {
   const unixDate = (julianDate - JULIAN_TO_UNIX) * MS_IN_YEAR;
   const unix = new Date(unixDate);
 

@@ -1,5 +1,6 @@
 import { unixFromJulian, monthCountFromTibetan, trueDateFromMonthCountDay as getTrueDate } from '../conversions';
 import { isDoubledMonth } from '../helpers';
+import { Month } from '../types'
 
 
 /**
@@ -14,7 +15,7 @@ import { isDoubledMonth } from '../helpers';
  * @param {boolean} [arg.isLeapMonth=false] - if leap month or not
  * @returns {Month}
  */
-const getMonthFromTibetan = ({ year, month, isLeapMonth = false }) => {
+const getMonthFromTibetan = ({ year, month, isLeapMonth = false }: { year: number, month: number, isLeapMonth?: boolean }): Month => {
   const hasLeap = isDoubledMonth(year, month);
   const isLeap = isLeapMonth && hasLeap;
 

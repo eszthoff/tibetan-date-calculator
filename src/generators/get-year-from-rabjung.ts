@@ -4,7 +4,8 @@ import {
   YEAR_DIFF
 } from '../constants';
 import { yearAttributes } from '../helpers';
-
+import { Year } from '../types'
+ 
 /**
      * Figures out a year's info based on the Tibetan calendar, ex. the 3rd year of the 15th Rabjung calendrical cycle.
      * @param {object} arg
@@ -12,7 +13,7 @@ import { yearAttributes } from '../helpers';
      * @param {number} arg.rabjungYear : number of the year within the cycle, from 1 to 60.
      * @returns {null | Year}
      */
-const getYearFromRabjung = ({ rabjungCycle, rabjungYear }) => {
+const getYearFromRabjung = ({ rabjungCycle, rabjungYear }: { rabjungCycle: number, rabjungYear: number }): (Year | null) => {
   if (rabjungCycle < 1 || rabjungYear > RABJUNG_CYCLE_LENGTH) {
     throw new Error(`Year number must be between 1 and ${RABJUNG_CYCLE_LENGTH}`);
   }

@@ -14,7 +14,7 @@ import getTrueDate from './true-date-from-month-count-day';
  * @param {number} day - Tibetan day
  * @returns {number} - Julian date
  */
-const julianFromTibetan = (year, month, isLeapMonth, day) => {
+const julianFromTibetan = (year: number, month: number, isLeapMonth: boolean, day: number): number => {
   const monthCount = monthCountFromTibetan({ year, month, isLeapMonth });
 
   return Math.floor(getTrueDate(day, monthCount));

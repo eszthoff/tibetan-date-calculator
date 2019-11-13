@@ -12,7 +12,7 @@ import {
      * @param {number} month - month number
      * @returns {boolean}
      */
-const isDoubledMonth = (tYear, month) => {
+const isDoubledMonth = (tYear: number, month: number): boolean => {
   const mp = 12 * (tYear - YEAR_DIFF - YEAR0) + month;
 
   return ((2 * mp) % 65 === BETA % 65) || ((2 * mp) % 65 === (BETA + 1) % 65);

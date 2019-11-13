@@ -2,6 +2,7 @@ import { YEAR_DIFF } from '../constants';
 import { julianFromTrueDate, julianFromUnix, monthCountFromTibetan } from '../conversions';
 import getMonthFromMonthCount from './get-month-from-month-count';
 import getDayFromTibetan from './get-day-from-tibetan';
+import { Day } from '../types'
 
 /**
    * Calculates a Tibetan date for a given western date. This does a binary search, and is therefore
@@ -13,7 +14,7 @@ import getDayFromTibetan from './get-day-from-tibetan';
    * @param {Date} date - the western date
    * @return {Day}
    */
-const getDayFromWestern = (date) => {
+const getDayFromWestern = (date: Date): Day => {
   // const date = new Date(wYear, wMonth - 1, wDay);
   const wYear = date.getFullYear();
   const jd = julianFromUnix(date);

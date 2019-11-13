@@ -1,12 +1,14 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import typescript from 'rollup-plugin-typescript2';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
 import pkg from './package.json';
 
 export default [
   // browser-friendly UMD build
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
       file: pkg.browser,
       format: 'umd',
@@ -15,9 +17,14 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
+      typescript(),
       babel({
         exclude: ['node_modules/**'],
-        plugins: ['external-helpers']
+        plugins: ['external-helpers'],
+        extensions: [
+          ...DEFAULT_EXTENSIONS,
+          '.ts'
+        ]
       })
     ]
   },
@@ -26,9 +33,14 @@ export default [
     input: 'src/index.js',
     plugins: [
       resolve(),
+      typescript(),
       babel({
         exclude: ['node_modules/**'],
-        plugins: ['external-helpers']
+        plugins: ['external-helpers'],
+        extensions: [
+          ...DEFAULT_EXTENSIONS,
+          '.ts'
+        ]
       })
     ],
     output: [

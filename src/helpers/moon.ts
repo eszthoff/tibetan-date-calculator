@@ -11,14 +11,14 @@ import { frac } from './math';
    * @param {number} monthCount - month count since beginning of epoch
    * @returns {number}
    */
-const moonAnomaly = (day, monthCount) => monthCount * A1 + day * A2 + A0;
+const moonAnomaly = (day: number, monthCount: number) => monthCount * A1 + day * A2 + A0;
 
 /**
    * Moon tab for integer values
    * @param {number} i
    * @returns {number}
    */
-const moonTabInt = (i) => {
+const moonTabInt = (i: number) => {
   const iMod = i % 28;
   if (iMod <= 7) {
     return MOON_TAB[iMod];
@@ -37,7 +37,7 @@ const moonTabInt = (i) => {
    * @param {number} i
    * @returns {number}
    */
-const moonTab = (i) => {
+const moonTab = (i: number) => {
   let a = moonTabInt(Math.floor(i));
   const x = frac(i);
   if (x) {
@@ -54,7 +54,7 @@ const moonTab = (i) => {
    * @param {number} monthCount - month count since beginning of epoch
    * @returns {number}
    */
-const moonEqu = (day, monthCount) => moonTab(28 * moonAnomaly(day, monthCount));
+const moonEqu = (day: number, monthCount: number): number => moonTab(28 * moonAnomaly(day, monthCount));
 
 export default moonEqu;
 export {

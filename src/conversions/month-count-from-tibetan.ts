@@ -5,6 +5,7 @@ import {
   BETA_STAR
 } from '../constants';
 import { isDoubledMonth } from '../helpers';
+import { Month } from '../types'
 
 /**
      * This is the reverse of fromMonthCount(n): from a Tibetan year, month number
@@ -13,7 +14,7 @@ import { isDoubledMonth } from '../helpers';
      * @param {Month} monthObject
      * @returns {number} month count since epoch
      */
-const monthCountFromTibetan = ({ year, month, isLeapMonth }) => {
+const monthCountFromTibetan = ({ year, month, isLeapMonth }: Month): number => {
   // the formulas on Svante's paper use western year numbers
   const wYear = year - YEAR_DIFF;
   const solarMonth = 12 * (wYear - YEAR0) + month - MONTH0;

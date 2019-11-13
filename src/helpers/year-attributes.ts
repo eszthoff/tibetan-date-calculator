@@ -3,6 +3,7 @@ import {
   YEAR_ELEMENTS,
   YEAR_GENDER,
 } from '../constants';
+import { Year } from '../types';
 
 /**
    * figure out the animal and element for a tibetan year
@@ -10,7 +11,7 @@ import {
    * @param {Year} year
    * @return {Year} with additional attributes
    */
-const yearAttributes = (year) => {
+const yearAttributes = (year: Year): Year => {
   const thisYear = { ...year };
   const y = thisYear.tibYear;
 

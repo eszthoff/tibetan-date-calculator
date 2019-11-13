@@ -9,7 +9,7 @@ import { meanDate, moon, sun } from '../helpers';
  * @param {number} monthCount - month count since beginning of epoch
  * @returns {number}
  */
-const trueDateFromMonthCountDay = (day, monthCount) => (
+const trueDateFromMonthCountDay = (day: number, monthCount: number): number => (
   meanDate(day, monthCount)
     + moon(day, monthCount) / 60
     - sun(day, monthCount) / 60

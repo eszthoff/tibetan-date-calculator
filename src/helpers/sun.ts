@@ -9,7 +9,7 @@ import { frac } from './math';
    * @param {number} monthCount - month count since beginning of epoch
    * @returns {number}
    */
-const meanSun = (day, monthCount) => monthCount * S1 + day * S2 + S0;
+const meanSun = (day: number, monthCount: number) => monthCount * S1 + day * S2 + S0;
 
 
 /**
@@ -18,14 +18,14 @@ const meanSun = (day, monthCount) => monthCount * S1 + day * S2 + S0;
    * @param {number} monthCount - month count since beginning of epoch
    * @returns {number}
    */
-const sunAnomaly = (day, monthCount) => meanSun(day, monthCount) - 1 / 4;
+const sunAnomaly = (day: number, monthCount: number) => meanSun(day, monthCount) - 1 / 4;
 
 /**
    * sun tab for integer values
    * @param {number} i
    * @returns {number}
    */
-const sunTabInt = (i) => {
+const sunTabInt = (i: number) => {
   const iMod = i % 12;
   if (iMod <= 3) {
     return SUN_TAB[iMod];
@@ -44,7 +44,7 @@ const sunTabInt = (i) => {
    * @param {number} i
    * @returns {number}
    */
-const sunTab = (i) => {
+const sunTab = (i: number) => {
   let a = sunTabInt(Math.floor(i));
   const x = frac(i);
   if (x) {
@@ -61,7 +61,7 @@ const sunTab = (i) => {
    * @param {number} monthCount - month count since beginning of epoch
    * @returns {number}
    */
-const sunEqu = (day, monthCount) => sunTab(12 * sunAnomaly(day, monthCount));
+const sunEqu = (day: number, monthCount: number): number => sunTab(12 * sunAnomaly(day, monthCount));
 
 export default sunEqu;
 export {

@@ -7,9 +7,9 @@ import { julianFromTibetan, unixFromJulian } from '../conversions';
  * @param {number} tibYear - Tibetan year number
  * @returns {Date}
  */
-const getLosarForYear = (year, isTibetan = true) => {
+const getLosarForYear = (year: number, isTibetan: boolean = true): string => {
   const tibYear = isTibetan ? year : year + YEAR_DIFF;
-  const julianDay = 1 + julianFromTibetan(tibYear - 1, 12, 0, 30);
+  const julianDay = 1 + julianFromTibetan(tibYear - 1, 12, false, 30);
 
   return unixFromJulian(julianDay);
 };

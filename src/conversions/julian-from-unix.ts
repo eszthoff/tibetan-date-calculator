@@ -13,7 +13,7 @@ import { getDateStr } from '../helpers';
    * @property {Date} unixTime - the date object to be converted
    * @return {number} - julian date
    */
-const julianFromUnix = (unixTime) => {
+const julianFromUnix = (unixTime: Date): number => {
   const dateOnly = getDateStr(unixTime);
   const timeAfterNoon = new Date(`${dateOnly}T18:00:00`);
 

@@ -4,7 +4,7 @@
  * @param {number} a - a number to check
  * @returns {number} the fractional part of a number
  */
-const frac = a => a % 1;
+const frac = (a: number) => a % 1;
 
 /**
  * Modulo of a number (a % b), but from 1..b instead of 0..b-1.
@@ -18,6 +18,6 @@ const frac = a => a % 1;
  * @return {number}
  */
 // TODO: add control for b <= 0. Not urgent as this is not what we expect in calendar calculations (?)
-const amod = (a, b) => (a % b) || b;
+const amod = (a: number, b: number): number => (a % b) || b;
 
 export { frac, amod };

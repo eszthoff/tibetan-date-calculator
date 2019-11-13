@@ -9,6 +9,6 @@ import {
  * @param {number} monthCount - month count since beginning of epoch
  * @returns {number}
  */
-const meanDate = (day, monthCount) => monthCount * M1 + day * M2 + M0;
+const meanDate = (day: number, monthCount: number): number => monthCount * M1 + day * M2 + M0;
 
 export default meanDate;

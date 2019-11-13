@@ -4,6 +4,7 @@ import {
   YEAR_DIFF,
 } from '../constants';
 import { amod } from '../helpers';
+import { Month } from '../types'
 
 
 /**
@@ -14,7 +15,7 @@ import { amod } from '../helpers';
    * @param {number} monthCount: the "month count" since beginning of epoch
    * @returns {Month}
    */
-const getMonthFromMonthCount = (monthCount) => {
+const getMonthFromMonthCount = (monthCount: number): Month => {
   // const x = ceil(12 * S1 * n + ALPHA);
   const x = Math.ceil((65 * monthCount + BETA) / 67);
   const tMonth = amod(x, 12);

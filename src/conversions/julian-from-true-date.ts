@@ -4,7 +4,7 @@ import getTrueDate from './true-date-from-month-count-day';
    * @param {number} dayCount - the day count since beginning of epoch defined as dayNo + 30 * monthCount
    * @return {number} - julian date
    */
-const julianFromTrueDate = (dayCount) => {
+const julianFromTrueDate = (dayCount: number): number => {
   const monthCount = Math.floor((dayCount - 1) / 30);
   const calculatedDay = dayCount % 30 || 30;
 

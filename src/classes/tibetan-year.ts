@@ -4,6 +4,13 @@ import getYearFromTibetan from '../generators/get-year-from-tibetan';
 import getYearFromWestern from '../generators/get-year-from-western';
 import getYearFromRabjung from '../generators/get-year-from-rabjung';
 import { isDoubledMonth } from '../helpers';
+import { YEAR_ANIMALS, YEAR_ELEMENTS, YEAR_GENDER} from '../constants';
+
+
+type Arg = (number | {
+  rabjungCycle: number,
+  rabjungYear: number
+})
 
 /**
  * A TibetanYear class
@@ -17,7 +24,16 @@ import { isDoubledMonth } from '../helpers';
  * and fist arg is a number it will be treated as western year date
 */
 class TibetanYear {
-  constructor(arg, isWestern = false) {
+  rabjungCycle: number;
+    rabjungYear: number;
+    tibYearNum: number;
+    westernYear: number;
+    animal: typeof YEAR_ANIMALS[number];
+    element: typeof YEAR_ELEMENTS[number];
+    gender: typeof YEAR_GENDER[number];
+    months: TibetanMonth[];
+  
+  constructor(arg: Arg, isWestern: boolean = false) {
     let yearInit;
 
     if (!arg) {
@@ -47,7 +63,7 @@ class TibetanYear {
 
   // Need to call this method at least once in order to calculate the month.
   // This is in order to reduce initial object size.
-  getMonths() {
+  getMonths(): TibetanMonth[] {
     if (this.months.length) {
       return this.months;
     }

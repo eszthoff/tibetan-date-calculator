@@ -4,6 +4,20 @@ import { getDateStr } from '../helpers';
 import TibetanMonth from './tibetan-month'; // eslint-disable-line import/no-cycle
 import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
 
+type Arg = (string | {
+  year: number,
+  month: number,
+  isLeapMonth?: boolean,
+  day: number,
+  isLeapDay?: boolean
+})
+
+type SimpleMonth = {
+  month: number,
+  isLeapMonth: boolean,
+  isDoubledMonth: boolean,
+}
+
 /**
  * A TibetanDate class
  * @param {...(object,string)} [arg] undefined will return tibeatan date
@@ -16,7 +30,18 @@ import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
  * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
  */
 class TibetanDate {
-  constructor(arg) {
+  year: number;
+    month: SimpleMonth;
+    skippedDay: boolean;
+    isPreviousSkipped: boolean;
+    isLeapDay: boolean;
+    isDoubledDay: boolean;
+    westernDate: Date;
+    isSkippedDay: boolean;
+    date: number;
+    monthObj: TibetanMonth;
+
+  constructor(arg: Arg) {
     let tibDate;
     if (!arg) {
       this.westernDate = new Date();
@@ -45,44 +70,44 @@ class TibetanDate {
   }
 
   /** GETTERS */
-  get day() {
+  get day(): number {
     return this.westernDate.getDay();
   }
 
-  get yearObj() {
+  get yearObj(): TibetanYear {
     return new TibetanYear(this.year);
   }
 
-  get westernDateStr() {
+  get westernDateStr(): string {
     return getDateStr(this.westernDate);
   }
 
   /** METHODS */
-  getWesternDate() {
+  getWesternDate(): Date {
     return this.westernDate;
   }
 
-  getDate() {
+  getDate(): number {
     return this.date;
   }
 
-  getDay() {
+  getDay(): number {
     return this.westernDate.getDay();
   }
 
-  getMonth() {
+  getMonth(): SimpleMonth {
     return this.month;
   }
 
-  getMonthObj() {
+  getMonthObj(): TibetanMonth {
     return this.monthObj;
   }
 
-  getYear() {
+  getYear(): number {
     return this.year;
   }
 
-  getYearObj() {
+  getYearObj(): TibetanYear {
     return this.yearObj;
   }
 }

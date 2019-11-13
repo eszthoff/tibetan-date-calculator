@@ -2,6 +2,7 @@ import {
   julianFromTibetan, monthCountFromTibetan, trueDateFromMonthCountDay, unixFromJulian
 } from '../conversions';
 import { getDayBefore, isDoubledMonth } from '../helpers';
+import { Day } from '../types';
 
 /**
    * Calculates full information for a given Tibetan date
@@ -24,7 +25,13 @@ const getDayFromTibetan = ({
   isLeapMonth = false,
   day,
   isLeapDay = false
-}) => {
+}: {
+  year: number,
+  month: number,
+  isLeapMonth?: boolean,
+  day: number,
+  isLeapDay?: boolean
+}): Day => {
   let julianDate = julianFromTibetan(year, month, isLeapMonth, day);
 
   // also calculate the Julian date of the previous Tib. day

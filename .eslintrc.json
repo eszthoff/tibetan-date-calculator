@@ -7,9 +7,7 @@
         "project": "tsconfig.json",
         "ecmaVersion":  2018,
         "sourceType":  "module",
-        "ecmaFeatures":  {
-            "jsx": true
-        }
+        "createDefaultProgram": true
     },
     "rules": {
         "max-len": [1, 120, 2],

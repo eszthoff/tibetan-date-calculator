@@ -29,7 +29,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "jest": "^23.2.0",
+    "jest": "^24.9.0",
     "mockdate": "^2.0.2",
     "rollup": "^1.27.0",
     "rollup-plugin-babel": "^3.0.7",
@@ -55,5 +55,18 @@
   "bugs": {
     "url": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor/issues"
   },
-  "homepage": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor#README"
+  "homepage": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor#README",
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.{js,jsx,ts,tsx}"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
 }

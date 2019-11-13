@@ -41,7 +41,7 @@ class TibetanDate {
     date: number;
     monthObj: TibetanMonth;
 
-  constructor(arg: Arg) {
+  constructor(arg?: Arg) {
     let tibDate;
     if (!arg) {
       this.westernDate = new Date();

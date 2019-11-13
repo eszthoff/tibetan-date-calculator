@@ -27,7 +27,7 @@ class TibetanMonth {
   endDateStr: string;
   days: TibetanDate[];
 
-  constructor(arg: Arg) {
+  constructor(arg?: Arg) {
     let westernDate;
     let tibDate;
 

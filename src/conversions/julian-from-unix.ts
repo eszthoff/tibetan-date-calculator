@@ -18,7 +18,7 @@ const julianFromUnix = (unixTime: Date): number => {
   const timeAfterNoon = new Date(`${dateOnly}T18:00:00`);
 
   return Math.floor(
-    timeAfterNoon / MS_IN_YEAR
+    + timeAfterNoon / MS_IN_YEAR
     - unixTime.getTimezoneOffset() / MIN_IN_DAY
     + JULIAN_TO_UNIX
   );

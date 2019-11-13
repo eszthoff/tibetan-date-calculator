@@ -33,7 +33,7 @@ class TibetanYear {
     gender: typeof YEAR_GENDER[number];
     months: TibetanMonth[];
   
-  constructor(arg: Arg, isWestern: boolean = false) {
+  constructor(arg?: Arg, isWestern: boolean = false) {
     let yearInit;
 
     if (!arg) {

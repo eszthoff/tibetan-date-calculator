@@ -1,7 +1,7 @@
 {
   "name": "tibetan-date-calculator",
   "description": "A library to caclulate tibetan calendar details. It is based on Svante Janson's paper www2.math.uu.se/~svante/papers/calendars/tibet.pdf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Rigpa",
   "license": "MIT",
   "main": "dist/index.js",
@@ -14,22 +14,22 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^4.19.1",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "jest": "^23.2.0",
+    "jest": "^24.9.0",
     "mockdate": "^2.0.2",
-    "rollup": "^0.63.4",
-    "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-commonjs": "^9.1.3",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup": "^1.27.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.7.2"
   },
   "repository": {
     "type": "git",
@@ -47,5 +47,17 @@
   "bugs": {
     "url": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor/issues"
   },
-  "homepage": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor#README"
+  "homepage": "https://gitlab.com/TibetanCalendar/TibetanDateCalcualtor#README",
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
 }

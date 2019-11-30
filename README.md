@@ -48,16 +48,16 @@ These can be accessed directly `tibDate.property`
 | property            | type           | description                                          |
 | ------------------- | -------------- | ---------------------------------------------------- |
 | `westernDate`       | `Date`         | a JS Date object cooresponding to this date          |
-| `year`              | `number`       |  |
-| `month`             | `number`       |  | 
-| `date`              | `number`       |  |
-| `day`               | `number`       | same as calling `westernDate.getDay()` |
+| `year`              | `number`       | Tibetan year number (ex. 2135)                       |
+| `month`             | `number`       | Tibetan month number (1 to 12)                       | 
+| `date`              | `number`       | Tibetan date number (1 to 30)                        |
+| `day`               | `number`       | day of the week, same as calling `westernDate.getDay()` |
 | `yearObj`           | `TibetanYear`  |  |
 | `monthObj`          | `TibetanMonth` |  |
 | `isDoubledDay`      | `boolean`      |  |
 | `isLeapDay`         | `boolean`      |  |
 | `isSkippedDay`      | `boolean`      | is this date skipped in the Tibetan calendar         |
-| `isPreviousSkipped` | `boolean`      |  |
+| `isPreviousSkipped` | `boolean`      | is the previous date skipped (e.g. date=3 is 2 skipped) |
 | `westernDateStr`    | `string`       |  |
 
 #### Methods
@@ -104,20 +104,20 @@ These can be accessed directly `tibDate.property`
 
 | property            | type           | description                                          |
 | ------------------- | -------------- | ---------------------------------------------------- |
-| `year`              | `number`       |  |
-| `month`             | `number`       |  | 
-| `isLeapMonth`       | `boolean`      |  |
-| `isDoubledMonth`    | `boolean`      |  |
-| `startDateStr`      | `string`       |  |
-| `endDateStr`        | `string`       |  |
-| `yearObj`           | `TibetanYear`  |  |
-| `days`              | `Array`        | need to call `getDays()` on the instance at least once to calculate it |
+| `year`              | `number`       | Tibetan year number (ex. 2135)                       |
+| `month`             | `number`       | Tibetan month number (1 to 12)                       | 
+| `isLeapMonth`       | `boolean`      | is this month a leap month (first of repeated months)|
+| `isDoubledMonth`    | `boolean`      | is this month doubled (either leap or main)          |
+| `startDateStr`      | `string`       | western date string for the first date of the month  |
+| `endDateStr`        | `string`       | western date string for the last date of the month   |
+| `yearObj`           | `TibetanYear`  | TibetanYear object                                   |
+| `days`              | `TibetanDate[]`| need to call `getDays()` on the instance at least once to calculate it |
 
 #### Methods
 
 | method              | returns        | description                                          |
 | ------------------- | -------------- | ---------------------------------------------------- |
-| `getDays()`         | `Array`        | generates an array of `TibetanDays` within this month. Once called, the `days` property will be populated too.  |
+| `getDays()`         | `TibetanDate[]`| generates an array of `TibetanDays` within this month. Once called, the `days` property will be populated too.  |
 
 ## TibetanYear
 
@@ -155,12 +155,12 @@ These can be accessed directly `tibDate.property`
 | `animal`        | `string`  |  |
 | `element`       | `string`  |  |
 | `gender`        | `string`  |  |
-| `months`         | `Array`   | need to call `getMonth()` on the instance at least once to calculate it |
+| `months`        | `TibetanMonth[]`| need to call `getMonth()` on the instance at least once to calculate it |
 
 #### Methods
 
-| method              | returns        | description                                          |
-| ------------------- | -------------- | ---------------------------------------------------- |
-| `getMonths()`       | `Array`        | generates an array of `TibetanMonth` within this year. Once called, the `months` property will be populated too.  |
+| method              | returns         | description                                          |
+| ------------------- | --------------- | ---------------------------------------------------- |
+| `getMonths()`       | `TibetanMonth[]`| generates an array of `TibetanMonth` within this year. Once called, the `months` property will be populated too.  |
 
 ## Examples ##

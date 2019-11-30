@@ -15,7 +15,9 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript(),
+      typescript({
+        useTsconfigDeclarationDir: true,
+      }),
     ]
   },
   // CommonJS (for Node) and ES module (for bundlers) build.
@@ -23,10 +25,13 @@ export default [
     input: 'src/index.ts',
     plugins: [
       resolve(),
-      typescript(),
+      typescript({
+        useTsconfigDeclarationDir: true,
+      }),
     ],
     output: [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'es' },
     ]
-  }];
+  }
+];

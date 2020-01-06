@@ -7,9 +7,9 @@ declare type Arg = (string | {
 });
 /**
  * A TibetanMonth class
- * @param {...(object,string)} [arg] undefined will return tibeatn month for
+ * @param {...(object,string)} [arg] undefined will return tibetan month for
  * current month | string will return tibetan day for month of `new Date(arg)` |
- * object will return tibeatn month according to objecct definition
+ * object will return tibetan month according to object definition
  * @param {number} arg.year - Tibetan year number (ex. 2135)
  * @param {number} arg.month - month number (1 to 12)
  * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month

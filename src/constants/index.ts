@@ -10,14 +10,14 @@ export const RABJUNG_CYCLE_LENGTH = 60 as const;
 export const YEAR_DIFF = 127 as const;
 // difference between Unix and Julian date starts
 export const JULIAN_TO_UNIX = 2440587.5 as const;
-// number of miliseconds in a year
+// number of milliseconds in a year
 export const MS_IN_YEAR = 86400000 as const;
 // number of minutes in day
 export const MIN_IN_DAY = 1440 as const;
 
 // calendrical constants: month calculations
 
-// begining of epoch based on Kalachakra. Used as 0 for month counts since this time
+// beginning of epoch based on Kalachakra. Used as 0 for month counts since this time
 export const YEAR0 = 806 as const;
 export const MONTH0 = 3 as const;
 // constants given in Svante's article

@@ -3,3 +3,4 @@ coverage/
 
 // IDE specific
 .idea
+.vscode

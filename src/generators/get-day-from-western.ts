@@ -22,7 +22,7 @@ const getDayFromWestern = (date: Date): Day => {
   const monthCounts = tibYears.map(y => monthCountFromTibetan({ year: y, month: 1, isLeapMonth: true }));
   const trueDate = monthCounts.map(m => 1 + 30 * m);
   const jds = trueDate.map(n => julianFromTrueDate(n));
-  //   croak "Binary search algo is wrong" unless $jd1 <= $jd && $jd <= $jd2;
+  //   croak "Binary search algorithm is wrong" unless $jd1 <= $jd && $jd <= $jd2;
 
   while (trueDate[0] < trueDate[1] - 1 && jds[0] < jds[1]) {
     const nTrueDate = Math.floor((trueDate[0] + trueDate[1]) / 2);

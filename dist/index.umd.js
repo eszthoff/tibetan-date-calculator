@@ -14,12 +14,12 @@
   var YEAR_DIFF = 127;
   // difference between Unix and Julian date starts
   var JULIAN_TO_UNIX = 2440587.5;
-  // number of miliseconds in a year
+  // number of milliseconds in a year
   var MS_IN_YEAR = 86400000;
   // number of minutes in day
   var MIN_IN_DAY = 1440;
   // calendrical constants: month calculations
-  // begining of epoch based on Kalachakra. Used as 0 for month counts since this time
+  // beginning of epoch based on Kalachakra. Used as 0 for month counts since this time
   var YEAR0 = 806;
   var MONTH0 = 3;
   // constants given in Svante's article
@@ -64,17 +64,22 @@
    * unless a is a multiple of b. In that case:
    *    a % b = 0 but amod(a, b) = b.
    *
-   * @param {number} a - number to be devided
-   * @param {number} b - the number to be devided with
+   * @param {number} a - number to be divided
+   * @param {number} b - the number to be divided with
    * @return {number}
    */
   // TODO: add control for b <= 0. Not urgent as this is not what we expect in calendar calculations (?)
   var amod = function (a, b) { return (a % b) || b; };
 
-  var getDateStr = function (date) { return date.toISOString().split('T')[0]; };
+  var getDateStr = function (date) {
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var dayNr = date.getDate();
+      return year + "-" + ("0" + month).slice(-2) + "-" + ("0" + dayNr).slice(-2);
+  };
 
   /**
-   * substract 1 day from a date
+   * Subtract 1 day from a date
    * @param {number} day - the tibetan day
    * @param {number} monthCount - month count since beginning of epoch
    * @returns {{day, monthCount}}
@@ -333,7 +338,8 @@
      * @return {string}
      */
   var unixFromJulian = function (julianDate) {
-      var unixDate = (julianDate - JULIAN_TO_UNIX) * MS_IN_YEAR;
+      var localTimezoneOffset = new Date().getTimezoneOffset();
+      var unixDate = (julianDate - JULIAN_TO_UNIX + localTimezoneOffset / MIN_IN_DAY) * MS_IN_YEAR;
       var unix = new Date(unixDate);
       return getDateStr(unix);
   };
@@ -437,7 +443,7 @@
       var monthCounts = tibYears.map(function (y) { return monthCountFromTibetan({ year: y, month: 1, isLeapMonth: true }); });
       var trueDate = monthCounts.map(function (m) { return 1 + 30 * m; });
       var jds = trueDate.map(function (n) { return julianFromTrueDate(n); });
-      //   croak "Binary search algo is wrong" unless $jd1 <= $jd && $jd <= $jd2;
+      //   croak "Binary search algorithm is wrong" unless $jd1 <= $jd && $jd <= $jd2;
       while (trueDate[0] < trueDate[1] - 1 && jds[0] < jds[1]) {
           var nTrueDate = Math.floor((trueDate[0] + trueDate[1]) / 2);
           var njd = julianFromTrueDate(nTrueDate);
@@ -518,9 +524,9 @@
 
   /**
    * A TibetanYear class
-   * @param {...(object,number)} [arg] undefined will return tibeatn year for
+   * @param {...(object,number)} [arg] undefined will return tibetan year for
    * current year | number will return tibetan year unless isWestern is true |
-   * object will return tibeatn year according to rabjung cycle
+   * object will return tibetan year according to rabjung cycle
    * @param {number} arg.rabjungCycle number of the cycle
    * @param {number} arg.rabjungYear number of the year within the cycle,
    * from 1 to 60.
@@ -573,6 +579,12 @@
           }
           return this.months;
       };
+      TibetanYear.prototype.toString = function () {
+          return "" + this.tibYearNum;
+      };
+      TibetanYear.prototype.toRabjungString = function () {
+          return "The " + this.rabjungYear + ". year of the " + this.rabjungCycle + ". rabjung cycle";
+      };
       return TibetanYear;
   }());
 
@@ -605,9 +617,9 @@
 
   /**
    * A TibetanMonth class
-   * @param {...(object,string)} [arg] undefined will return tibeatn month for
+   * @param {...(object,string)} [arg] undefined will return tibetan month for
    * current month | string will return tibetan day for month of `new Date(arg)` |
-   * object will return tibeatn month according to objecct definition
+   * object will return tibetan month according to object definition
    * @param {number} arg.year - Tibetan year number (ex. 2135)
    * @param {number} arg.month - month number (1 to 12)
    * @param {boolean} [arg.isLeapMonth=false] - is this month a leap month
@@ -682,12 +694,19 @@
           }
           return this.days;
       };
+      TibetanMonth.prototype.toString = function () {
+          var double = '';
+          if (this.isDoubledMonth) {
+              double = this.isLeapMonth ? '-leap' : '-main';
+          }
+          return this.yearObj.toString() + "-" + this.month + double;
+      };
       return TibetanMonth;
   }());
 
   /**
    * A TibetanDate class
-   * @param {...(object,string)} [arg] undefined will return tibeatan date
+   * @param {...(object,string)} [arg] undefined will return tibetan date
    * for today | string will return tibetan day for `new Date(arg)` | object
    * will return tibetan day according to object definition
    * @param {number} arg.year - Tibetan year number (ex. 2135)
@@ -768,6 +787,13 @@
       };
       TibetanDate.prototype.getYearObj = function () {
           return this.yearObj;
+      };
+      TibetanDate.prototype.toString = function () {
+          var double = '';
+          if (this.isDoubledDay) {
+              double = this.isLeapDay ? '-leap' : '-main';
+          }
+          return this.monthObj.toString() + "-" + this.date + double;
       };
       return TibetanDate;
   }());

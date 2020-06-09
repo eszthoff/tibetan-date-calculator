@@ -25,5 +25,6 @@ declare class TibetanMonth {
     constructor(arg?: Arg);
     get yearObj(): TibetanYear;
     getDays(): TibetanDate[];
+    toString(): string;
 }
 export default TibetanMonth;

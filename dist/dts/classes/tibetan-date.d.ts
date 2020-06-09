@@ -14,7 +14,7 @@ declare type SimpleMonth = {
 };
 /**
  * A TibetanDate class
- * @param {...(object,string)} [arg] undefined will return tibeatan date
+ * @param {...(object,string)} [arg] undefined will return tibetan date
  * for today | string will return tibetan day for `new Date(arg)` | object
  * will return tibetan day according to object definition
  * @param {number} arg.year - Tibetan year number (ex. 2135)
@@ -47,5 +47,6 @@ declare class TibetanDate {
     getMonthObj(): TibetanMonth;
     getYear(): number;
     getYearObj(): TibetanYear;
+    toString(): string;
 }
 export default TibetanDate;

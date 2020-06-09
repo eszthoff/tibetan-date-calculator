@@ -34,4 +34,12 @@ describe('TibetanYear', () => {
     expect(year.months.length).not.toEqual(0);
     expect(months.length).toEqual(13);
   });
+  it('should return the correct string when `toRabjungString` is called', () => {
+    const year = new TibetanYear();
+    expect(year.toRabjungString()).toEqual('The 33. year of the 17. rabjung cycle');
+  });
+  it('should return the correct string when `toString` is called', () => {
+    const year = new TibetanYear();
+    expect(year.toString()).toEqual('2146');
+  });
 });

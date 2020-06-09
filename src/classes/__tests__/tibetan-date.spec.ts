@@ -62,4 +62,13 @@ describe('TibetanDate', () => {
       expect(tDate.getYearObj()).toEqual(tDate.yearObj);
     });
   });
+  it('should return the correct string when `toString` is called in not double day', () => {
+    expect(new TibetanDate().toString()).toEqual('2146-4-4');
+  });
+  it('should return the correct string when `toString` is called in leap of double month', () => {
+    expect(new TibetanDate('2020/04/24').toString()).toEqual('2147-3-2-leap');
+  });
+  it('should return the correct string when `toString` is called in main of double month', () => {
+    expect(new TibetanDate('2020/04/25').toString()).toEqual('2147-3-2-main');
+  });
 });

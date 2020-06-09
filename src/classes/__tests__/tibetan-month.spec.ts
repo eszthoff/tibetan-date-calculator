@@ -80,4 +80,13 @@ describe('TibetanMonth', () => {
 
     expect(yearObj).toMatchSnapshot();
   });
+  it('should return the correct string when `toString` is called in not double month', () => {
+    expect(new TibetanMonth().toString()).toEqual('2146-4');
+  });
+  it('should return the correct string when `toString` is called in leap of double month', () => {
+    expect(new TibetanMonth('2019/02/10').toString()).toEqual('2146-1-leap');
+  });
+  it('should return the correct string when `toString` is called in main of double month', () => {
+    expect(new TibetanMonth('2019/03/10').toString()).toEqual('2146-1-main');
+  });
 });

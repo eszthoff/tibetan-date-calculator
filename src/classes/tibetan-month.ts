@@ -1,12 +1,11 @@
 import TibetanDate from './tibetan-date'; // eslint-disable-line import/no-cycle
 import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
 import getMonthFromTibetan from '../generators/get-month-from-tibetan';
-import { number } from 'prop-types';
 
 type Arg = (string | {
-  year: number,
-  month: number,
-  isLeapMonth?: boolean
+  year: number;
+  month: number;
+  isLeapMonth?: boolean;
 })
 
 /**
@@ -20,11 +19,17 @@ type Arg = (string | {
  */
 class TibetanMonth {
   year: number;
+
   month: number;
+
   isLeapMonth: boolean;
+
   isDoubledMonth: boolean;
+
   startDateStr: string;
+
   endDateStr: string;
+
   days: TibetanDate[];
 
   constructor(arg?: Arg) {
@@ -98,6 +103,15 @@ class TibetanMonth {
       }
     }
     return this.days;
+  }
+
+  toString(): string {
+    let double = '';
+    if (this.isDoubledMonth) {
+      double = this.isLeapMonth ? '-leap' : '-main';
+    }
+
+    return `${this.yearObj.toString()}-${this.month}${double}`;
   }
 }
 

@@ -75,6 +75,7 @@ These can be accessed directly `tibDate.property`
 | `getDay()`          | `number`       | same as the property `day`          |
 | `getMonthObj()`     | `TibetanMonth` | same as the property `monthObj`     | 
 | `getYearObj()`      | `TibeatnYear`  | same as the property `yearObj`      | 
+| `toString()`        | `string`       | returns 'year-month(-leap|-main)-date(-leap|-main)' |
 
 ## TibetanMonth
 
@@ -114,6 +115,7 @@ These can be accessed directly `tibDate.property`
 | `endDateStr`        | `string`       | western date string for the last date of the month   |
 | `yearObj`           | `TibetanYear`  | TibetanYear object                                   |
 | `days`              | `TibetanDate[]`| list of days in the month, skipped days are not included. Need to call `getDays()` on the instance at least once to calculate it |
+| `toString()`        | `string`        | returns 'year-month(-leap|-main)'                     |
 
 #### Methods
 
@@ -164,5 +166,7 @@ These can be accessed directly `tibDate.property`
 | method              | returns         | description                                          |
 | ------------------- | --------------- | ---------------------------------------------------- |
 | `getMonths()`       | `TibetanMonth[]`| generates an array of `TibetanMonth` within this year. Once called, the `months` property will be populated too.  |
+| `toRabjungString()` | `string`        | returns 'The X. year of the Y. rabjung cycle'        |
+| `toString()`        | `string`        | returns the Tibetan year number as string            |
 
 ## Examples ##

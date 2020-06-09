@@ -5,17 +5,17 @@ import TibetanMonth from './tibetan-month'; // eslint-disable-line import/no-cyc
 import TibetanYear from './tibetan-year'; // eslint-disable-line import/no-cycle
 
 type Arg = (string | {
-  year: number,
-  month: number,
-  isLeapMonth?: boolean,
-  day: number,
-  isLeapDay?: boolean
+  year: number;
+  month: number;
+  isLeapMonth?: boolean;
+  day: number;
+  isLeapDay?: boolean;
 })
 
 type SimpleMonth = {
-  month: number,
-  isLeapMonth: boolean,
-  isDoubledMonth: boolean,
+  month: number;
+  isLeapMonth: boolean;
+  isDoubledMonth: boolean;
 }
 
 /**
@@ -30,86 +30,104 @@ type SimpleMonth = {
  * @param {boolean} [arg.isLeapDay=false] - is this day a leap day
  */
 class TibetanDate {
-  year: number;
+    year: number;
+
     month: SimpleMonth;
+
     skippedDay: boolean;
+
     isPreviousSkipped: boolean;
+
     isLeapDay: boolean;
+
     isDoubledDay: boolean;
+
     westernDate: Date;
+
     isSkippedDay: boolean;
+
     date: number;
+
     monthObj: TibetanMonth;
 
-  constructor(arg?: Arg) {
-    let tibDate;
-    if (!arg) {
-      this.westernDate = new Date();
-      tibDate = getDayFromWestern(this.westernDate);
-    } else if (typeof arg === 'string') {
-      this.westernDate = new Date(arg);
-      tibDate = getDayFromWestern(this.westernDate);
-    } else {
-      tibDate = getDayFromTibetan(arg);
-      this.westernDate = new Date(tibDate.westernDate);
+    constructor(arg?: Arg) {
+      let tibDate;
+      if (!arg) {
+        this.westernDate = new Date();
+        tibDate = getDayFromWestern(this.westernDate);
+      } else if (typeof arg === 'string') {
+        this.westernDate = new Date(arg);
+        tibDate = getDayFromWestern(this.westernDate);
+      } else {
+        tibDate = getDayFromTibetan(arg);
+        this.westernDate = new Date(tibDate.westernDate);
+      }
+
+      this.isSkippedDay = tibDate.skippedDay;
+      this.isPreviousSkipped = tibDate.isPreviousSkipped;
+      // the first of doubled days
+      this.isLeapDay = tibDate.isLeapDay;
+      this.isDoubledDay = tibDate.isDoubledDay;
+      this.date = tibDate.day;
+      this.year = tibDate.year;
+      this.month = tibDate.month.month;
+      this.monthObj = new TibetanMonth({
+        year: tibDate.year,
+        month: tibDate.month.month,
+        isLeapMonth: tibDate.month.isLeapMonth
+      });
     }
 
-    this.isSkippedDay = tibDate.skippedDay;
-    this.isPreviousSkipped = tibDate.isPreviousSkipped;
-    // the first of doubled days
-    this.isLeapDay = tibDate.isLeapDay;
-    this.isDoubledDay = tibDate.isDoubledDay;
-    this.date = tibDate.day;
-    this.year = tibDate.year;
-    this.month = tibDate.month.month;
-    this.monthObj = new TibetanMonth({
-      year: tibDate.year,
-      month: tibDate.month.month,
-      isLeapMonth: tibDate.month.isLeapMonth
-    });
-  }
+    /** GETTERS */
+    get day(): number {
+      return this.westernDate.getDay();
+    }
 
-  /** GETTERS */
-  get day(): number {
-    return this.westernDate.getDay();
-  }
+    get yearObj(): TibetanYear {
+      return new TibetanYear(this.year);
+    }
 
-  get yearObj(): TibetanYear {
-    return new TibetanYear(this.year);
-  }
+    get westernDateStr(): string {
+      return getDateStr(this.westernDate);
+    }
 
-  get westernDateStr(): string {
-    return getDateStr(this.westernDate);
-  }
+    /** METHODS */
+    getWesternDate(): Date {
+      return this.westernDate;
+    }
 
-  /** METHODS */
-  getWesternDate(): Date {
-    return this.westernDate;
-  }
+    getDate(): number {
+      return this.date;
+    }
 
-  getDate(): number {
-    return this.date;
-  }
+    getDay(): number {
+      return this.westernDate.getDay();
+    }
 
-  getDay(): number {
-    return this.westernDate.getDay();
-  }
+    getMonth(): SimpleMonth {
+      return this.month;
+    }
 
-  getMonth(): SimpleMonth {
-    return this.month;
-  }
+    getMonthObj(): TibetanMonth {
+      return this.monthObj;
+    }
 
-  getMonthObj(): TibetanMonth {
-    return this.monthObj;
-  }
+    getYear(): number {
+      return this.year;
+    }
 
-  getYear(): number {
-    return this.year;
-  }
+    getYearObj(): TibetanYear {
+      return this.yearObj;
+    }
 
-  getYearObj(): TibetanYear {
-    return this.yearObj;
-  }
+    toString(): string {
+      let double = '';
+      if (this.isDoubledDay) {
+        double = this.isLeapDay ? '-leap' : '-main';
+      }
+
+      return `${this.monthObj.toString()}-${this.date}${double}`;
+    }
 }
 
 export default TibetanDate;

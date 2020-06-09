@@ -29,6 +29,8 @@ __arg__: __`String`__
 
 This will return tibetan date object for the _wester date_ `new Date(arg)`.
 
+__Note__: using date string without time stamp (e.g. '2019-06-21') can create bugs when run in different timezones due to the way native Date object handles it. See [Date documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
+
 __arg__: __`Object`__
 
 This will return tibetan day according to object definition:
@@ -47,7 +49,7 @@ These can be accessed directly `tibDate.property`
 
 | property            | type           | description                                          |
 | ------------------- | -------------- | ---------------------------------------------------- |
-| `westernDate`       | `Date`         | a JS Date object cooresponding to this date          |
+| `westernDate`       | `Date`         | a JS Date object corresponding to this date          |
 | `year`              | `number`       | Tibetan year number (ex. 2135)                       |
 | `month`             | `number`       | Tibetan month number (1 to 12)                       | 
 | `date`              | `number`       | Tibetan date number (1 to 30)                        |
@@ -58,7 +60,7 @@ These can be accessed directly `tibDate.property`
 | `isLeapDay`         | `boolean`      |  |
 | `isSkippedDay`      | `boolean`      | is this date skipped in the Tibetan calendar         |
 | `isPreviousSkipped` | `boolean`      | is the previous date skipped (e.g. date=3 is 2 skipped) |
-| `westernDateStr`    | `string`       |  |
+| `westernDateStr`    | `string`       | YYYY-MM-DD |
 
 #### Methods
 
@@ -111,13 +113,13 @@ These can be accessed directly `tibDate.property`
 | `startDateStr`      | `string`       | western date string for the first date of the month  |
 | `endDateStr`        | `string`       | western date string for the last date of the month   |
 | `yearObj`           | `TibetanYear`  | TibetanYear object                                   |
-| `days`              | `TibetanDate[]`| need to call `getDays()` on the instance at least once to calculate it |
+| `days`              | `TibetanDate[]`| list of days in the month, skipped days are not included. Need to call `getDays()` on the instance at least once to calculate it |
 
 #### Methods
 
 | method              | returns        | description                                          |
 | ------------------- | -------------- | ---------------------------------------------------- |
-| `getDays()`         | `TibetanDate[]`| generates an array of `TibetanDays` within this month. Once called, the `days` property will be populated too.  |
+| `getDays()`         | `TibetanDate[]`| generates an array of `TibetanDays` within this month, excluding skipped days. Once called, the `days` property will be populated too.  |
 
 ## TibetanYear
 

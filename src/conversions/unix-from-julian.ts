@@ -1,5 +1,6 @@
 import {
   MS_IN_YEAR,
+  MIN_IN_DAY,
   JULIAN_TO_UNIX
 } from '../constants';
 import { getDateStr } from '../helpers';
@@ -15,7 +16,8 @@ import { getDateStr } from '../helpers';
    * @return {string}
    */
 const unixFromJulian = (julianDate: number): string => {
-  const unixDate = (julianDate - JULIAN_TO_UNIX) * MS_IN_YEAR;
+  const localTimezoneOffset = new Date().getTimezoneOffset();
+  const unixDate = (julianDate - JULIAN_TO_UNIX + localTimezoneOffset / MIN_IN_DAY) * MS_IN_YEAR;
   const unix = new Date(unixDate);
 
   return getDateStr(unix);

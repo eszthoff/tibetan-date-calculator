@@ -14,15 +14,9 @@ describe('TibetanDate', () => {
   });
 
   it('should create a correct class when invoked without arg', () => {
-    // this might fail if run in a timezone other then CET
-    // the westernDate in the snapshot might have a different time,
-    // the date however should always match
     expect(new TibetanDate()).toMatchSnapshot();
   });
   it('should create a correct class when invoked with string arg', () => {
-    // this might fail if run in a timezone other then CET
-    // the westernDate in the snapshot might have a different time,
-    // the date however should always match
     expect(new TibetanDate('2019/06/22 12:00')).toMatchSnapshot();
   });
   it('should create a correct class when invoked with object arg', () => {

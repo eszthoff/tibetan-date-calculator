@@ -60,7 +60,7 @@ class TibetanDate {
         tibDate = getDayFromWestern(this.westernDate);
       } else {
         tibDate = getDayFromTibetan(arg);
-        this.westernDate = new Date(tibDate.westernDate);
+        this.westernDate = tibDate.westernDate;
       }
 
       this.isSkippedDay = tibDate.skippedDay;

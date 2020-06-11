@@ -12,7 +12,7 @@ Object {
     "month": 8,
   },
   "skippedDay": false,
-  "westernDate": "2013-09-09",
+  "westernDate": 2013-09-09T10:00:00.000Z,
   "year": 2140,
 }
 `;
@@ -29,7 +29,7 @@ Object {
     "month": 8,
   },
   "skippedDay": false,
-  "westernDate": "2013-10-08",
+  "westernDate": 2013-10-08T10:00:00.000Z,
   "year": 2140,
 }
 `;
@@ -46,7 +46,7 @@ Object {
     "month": 2,
   },
   "skippedDay": false,
-  "westernDate": "2013-03-19",
+  "westernDate": 2013-03-19T10:00:00.000Z,
   "year": 2140,
 }
 `;
@@ -63,7 +63,7 @@ Object {
     "month": 2,
   },
   "skippedDay": false,
-  "westernDate": "2013-03-20",
+  "westernDate": 2013-03-20T10:00:00.000Z,
   "year": 2140,
 }
 `;

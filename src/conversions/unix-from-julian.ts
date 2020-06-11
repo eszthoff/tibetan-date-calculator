@@ -3,7 +3,6 @@ import {
   MIN_IN_DAY,
   JULIAN_TO_UNIX
 } from '../constants';
-import { getDateStr } from '../helpers';
 
 
 /**
@@ -13,14 +12,14 @@ import { getDateStr } from '../helpers';
    * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
    *
    * @param {number} julianDate - the julian date
-   * @return {string}
+   * @return {Date}
    */
-const unixFromJulian = (julianDate: number): string => {
+const unixFromJulian = (julianDate: number): Date => {
   const localTimezoneOffset = new Date().getTimezoneOffset();
   const unixDate = (julianDate - JULIAN_TO_UNIX + localTimezoneOffset / MIN_IN_DAY) * MS_IN_YEAR;
   const unix = new Date(unixDate);
 
-  return getDateStr(unix);
+  return unix;
 };
 
 

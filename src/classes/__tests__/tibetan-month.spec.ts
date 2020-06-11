@@ -51,7 +51,7 @@ describe('TibetanMonth', () => {
   it('should list days in the correct order according to tibetan date', () => {
     const month = new TibetanMonth({ year: 2146, month: 5 });
     const days = month.getDays();
-    const isDateAfterPrev = (day, i, arr) => {
+    const isDateAfterPrev = (day, i, arr): boolean => {
       if (i === 0 && day.date === 1) {
         return true;
       }
@@ -64,7 +64,7 @@ describe('TibetanMonth', () => {
   it('should list days in the correct order according to western date', () => {
     const month = new TibetanMonth({ year: 2146, month: 5 });
     const days = month.getDays();
-    const isDateAfterPrev = (day, i, arr) => {
+    const isDateAfterPrev = (day, i, arr): boolean => {
       if (i === 0 && day.date === 1) {
         return true;
       }

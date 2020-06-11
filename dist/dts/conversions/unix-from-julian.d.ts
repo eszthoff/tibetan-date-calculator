@@ -5,7 +5,7 @@
    * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
    *
    * @param {number} julianDate - the julian date
-   * @return {string}
+   * @return {Date}
    */
-declare const unixFromJulian: (julianDate: number) => string;
+declare const unixFromJulian: (julianDate: number) => Date;
 export default unixFromJulian;

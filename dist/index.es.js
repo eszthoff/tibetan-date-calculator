@@ -329,13 +329,13 @@ var julianFromTrueDate = function (dayCount) {
    * https://stackoverflow.com/questions/11759992/calculating-jdayjulian-day-in-javascript
    *
    * @param {number} julianDate - the julian date
-   * @return {string}
+   * @return {Date}
    */
 var unixFromJulian = function (julianDate) {
     var localTimezoneOffset = new Date().getTimezoneOffset();
     var unixDate = (julianDate - JULIAN_TO_UNIX + localTimezoneOffset / MIN_IN_DAY) * MS_IN_YEAR;
     var unix = new Date(unixDate);
-    return getDateStr(unix);
+    return unix;
 };
 
 /**
@@ -348,7 +348,7 @@ var getLosarForYear = function (year, isTibetan) {
     if (isTibetan === void 0) { isTibetan = true; }
     var tibYear = isTibetan ? year : year + YEAR_DIFF;
     var julianDay = 1 + julianFromTibetan(tibYear - 1, 12, false, 30);
-    return unixFromJulian(julianDay);
+    return getDateStr(unixFromJulian(julianDay));
 };
 
 /**
@@ -602,8 +602,8 @@ var getMonthFromTibetan = function (_a) {
     var monthCount = monthCountFromTibetan({ year: year, month: month, isLeapMonth: isLeap });
     var jdFirst = 1 + Math.floor(trueDateFromMonthCountDay(30, monthCount - 1));
     var jdLast = Math.floor(trueDateFromMonthCountDay(30, monthCount));
-    var startDate = unixFromJulian(jdFirst);
-    var endDate = unixFromJulian(jdLast);
+    var startDate = getDateStr(unixFromJulian(jdFirst));
+    var endDate = getDateStr(unixFromJulian(jdLast));
     return {
         year: year, month: month, isLeapMonth: isLeap, isDoubledMonth: hasLeap, startDate: startDate, endDate: endDate,
     };
@@ -722,7 +722,7 @@ var TibetanDate = /** @class */ (function () {
         }
         else {
             tibDate = getDayFromTibetan(arg);
-            this.westernDate = new Date(tibDate.westernDate);
+            this.westernDate = tibDate.westernDate;
         }
         this.isSkippedDay = tibDate.skippedDay;
         this.isPreviousSkipped = tibDate.isPreviousSkipped;
